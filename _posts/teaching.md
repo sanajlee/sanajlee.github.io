@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teaching
-sidebar_link: active
+sidebar_link: true
 ---
 
 ### Courses

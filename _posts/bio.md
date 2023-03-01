@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio
-sidebar_link: active
+sidebar_link: true
 ---
 
 ### Experiences
