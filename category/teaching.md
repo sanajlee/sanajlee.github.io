@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: category
 title: Teaching
 sidebar_link: true
 ---
