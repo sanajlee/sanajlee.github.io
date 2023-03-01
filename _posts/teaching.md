@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Teaching
+sidebar_link: true
 ---
 
 ### Courses

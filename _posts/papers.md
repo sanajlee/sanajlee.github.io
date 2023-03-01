@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Research
+sidebar_link: true
 ---
 
 ### Ongoing
