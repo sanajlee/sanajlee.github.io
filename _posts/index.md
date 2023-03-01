@@ -1,7 +1,7 @@
 ---
-layout: index
+layout: post
 title: Home
-sidebar_link: false
+sidebar_link: true
 ---
 
 <img style="float: right;  margin-left: 20px; margin-bottom: 10px; width:200px; height:266px;" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg">
