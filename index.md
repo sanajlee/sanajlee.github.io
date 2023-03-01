@@ -3,11 +3,8 @@ layout: post
 title: Home
 sidebar_link: false
 ---
-<!-- 
-<img align="right" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg" width="200" height="266"> -->
-<img style="float: right;  margin-left: 20px; margin-bottom: 10px; width:200px; height:266px;" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg">
 
-<!-- <br> -->
+<img style="float: right;  margin-left: 20px; margin-bottom: 10px; width:200px; height:266px;" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg">
 
 Hi there! My name is Sangah Lee 이상아, an assistant professor in the Department of Linguistics at Seoul National University.
 
