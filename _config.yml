@@ -5,7 +5,7 @@ remote_theme:     fongandrew/hydeout
 
 # Setup
 title:            Sangah Lee
-tagline:          'hydeout CV'
+tagline:          ''
 description:      A Computational Linguist
 url:              https://sanajlee.github.io
 baseurl:          ''
