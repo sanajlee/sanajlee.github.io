@@ -1,6 +1,7 @@
 ---
 layout: category
 title: Bio
+sidebar_link: true
 ---
 
 ### Experiences
