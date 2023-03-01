@@ -5,7 +5,7 @@ sidebar_link: false
 ---
 <!-- 
 <img align="right" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg" width="200" height="266"> -->
-<img style="float: right;  margin-right: 20px; margin-bottom: 10px; width:200px; height:266px;" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg">
+<img style="float: right;  margin-left: 20px; margin-bottom: 10px; width:200px; height:266px;" src="https://raw.githubusercontent.com/sanajlee/sanajlee.github.io/main/frz_small.jpg">
 
 <!-- <br> -->
 
