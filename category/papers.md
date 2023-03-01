@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Research
-sidebar_link: true
+sidebar_link: false
 ---
 
 ### Ongoing

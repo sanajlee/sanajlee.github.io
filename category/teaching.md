@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Teaching
-sidebar_link: true
+sidebar_link: false
 ---
 
 ### Courses
