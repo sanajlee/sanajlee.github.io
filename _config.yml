@@ -88,12 +88,11 @@ content:
     layout: list
     content:
       - layout: left
-        title: Department of Linguistics, Seoul National University
-        sub_title: Ph.D. in Linguistics
-        caption: 2016-2021
-        quote: >
-          Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
+        title: Ph.D. in Linguistics
+        sub_title: Dept. of Linguistics, SNU
+        caption: 2016-2021          
         description: | # this will include new lines to allow paragraphs
+        Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
           Advisor: Hyopil Shin
   - title: A Little More About Me
     layout: text
