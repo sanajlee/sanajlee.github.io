@@ -69,7 +69,14 @@ content:
         caption: 2022.9. - present
         description: | # this will include new lines to allow paragraphs
           Assistant Professor
+      - layout: right
+        title: Seoul National University
+        sub_title: Faculty of Liberal Education
+        caption: 2022.3. - 2022.8.
+        description: | # this will include new lines to allow paragraphs
+          Assistant Teaching Professor
 
+          
   - title: Education
     layout: list
     content:
