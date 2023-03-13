@@ -69,23 +69,20 @@ content:
         description: | # this will include new lines to allow paragraphs
           Department of Linguistics, Seoul National University
       - layout: left
-        title: Seoul National University
-        sub_title: Faculty of Liberal Education
-        caption: 2022.3. - 2022.8.
+        title: Assistant Teaching Professor
+        sub_title: 2022.3. - 2022.8.
         description: | # this will include new lines to allow paragraphs
-          Assistant Teaching Professor
+          Faculty of Liberal Education, Seoul National University
       - layout: left
-        title: Seoul National University
-        sub_title: Department of Linguistics
-        caption: 2021.9. - 2022.2.
+        title: Lecturer
+        sub_title: 2021.9. - 2022.2.
         description: | # this will include new lines to allow paragraphs
-          Lecturer
+          Department of Linguistics, Seoul National University
       - layout: left
-        title: Seoul National University
-        sub_title: Graduate School of Data Science
-        caption: 2021.3. - 2022.2.
+        title: PostDoctoral Researcher
+        sub_title: 2021.3. - 2022.2.
         description: | # this will include new lines to allow paragraphs
-          Postdoctoral Researcher
+          Graduate School of Data Science, Seoul National University
 
   - title: Education
     layout: list
