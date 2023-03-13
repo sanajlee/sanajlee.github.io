@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Home
-sidebar_link: true
+sidebar_link: False
 ---
 
 Hi there! My name is Sangah Lee 이상아, an assistant professor in the Department of Linguistics at Seoul National University.
