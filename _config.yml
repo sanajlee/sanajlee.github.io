@@ -64,10 +64,11 @@ content:
     layout: list
     content:
       - layout: right
-        title: Department of Linguistics, Seoul National University
-        sub_title: Assistant Professor
+        title: Seoul National University
+        sub_title: Department of Linguistics
         caption: 2022.9. - present
-
+        description: | # this will include new lines to allow paragraphs
+          Assistant Professor
 
   - title: Education
     layout: list
