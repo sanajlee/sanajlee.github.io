@@ -64,11 +64,10 @@ content:
     layout: list
     content:
       - layout: left
-        title: Seoul National University
-        sub_title: Department of Linguistics
-        caption: 2022.9. - present
+        title: Assistant Professor
+        sub_title: 2022.9. - present
         description: | # this will include new lines to allow paragraphs
-          Assistant Professor
+          Department of Linguistics, Seoul National University
       - layout: left
         title: Seoul National University
         sub_title: Faculty of Liberal Education
@@ -91,14 +90,14 @@ content:
   - title: Education
     layout: list
     content:
-      - layout: top-right
-        title: Institution name
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
+      - layout: left
+        title: Department of Linguistics, Seoul National University
+        sub_title: Ph.D. in Linguistics
+        caption: 2016-2021
         quote: >
-          Short institution or course description (optional)
+          Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
+          Advisor: Hyopil Shin
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
