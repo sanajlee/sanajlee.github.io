@@ -94,12 +94,24 @@ content:
         description: | # this will include new lines to allow paragraphs
         Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
           Advisor: Hyopil Shin
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+      - layout: left
+        title: M.A.
+        sub_title: Dept. of Linguistics, SNU
+        caption: 2013-2016         
+        description: | # this will include new lines to allow paragraphs
+        Dissertation: "An Automatic Analysis of Argumentation Schemes of Korean Texts"
+          Advisor: Hyopil Shin
+      - layout: left
+        title: B.A.; B.Eng.(double majors)
+        sub_title: Dept. of Linguistics; CSE, SNU
+        caption: 2008-2013            
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+  # - title: A Little More About Me
+  #   layout: text
+  #   content: | # this will include new lines to allow paragraphs
+  #     This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+
+  #     Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 
 # Footer
 footer_show_references: true
