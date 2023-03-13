@@ -75,8 +75,19 @@ content:
         caption: 2022.3. - 2022.8.
         description: | # this will include new lines to allow paragraphs
           Assistant Teaching Professor
-
-
+      - layout: top-middle
+        title: Seoul National University
+        sub_title: Department of Linguistics
+        caption: 2021.9. - 2022.2.
+        description: | # this will include new lines to allow paragraphs
+          Lecturer
+      - layout: top-middle
+        title: Seoul National University
+        sub_title: Graduate School of Data Science
+        caption: 2021.3. - 2022.2.
+        description: | # this will include new lines to allow paragraphs
+          Postdoctoral Researcher
+          
   - title: Education
     layout: list
     content:
