@@ -11,8 +11,9 @@ sidebar_link: true
 
 
 ### Papers
-* Sangah Lee, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022), <span style="color:#9AC6CD">[Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings](http://www.kiise.or.kr/e_journal/2022/10/JOK/pdf/07.pdf)</span>, KIISE Vol.49, No.10, pp.848-858.
+* Sangah Lee, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022), <span style="color:#9AC6CD">[Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings](http://www.kiise.or.kr/e_journal/2022/10/JOK/pdf/07.pdf)</span>, Journal of KIISE, Vol.49, No.10, pp.848-858.
 * Sangah Lee and Hyopil Shin (2021), <span style="color:#9AC6CD">[The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts](https://aclanthology.org/2021.wnut-1.45/)</span>, 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
+* Sangah Lee and Hyopil Shin (2021), <span style="color:#9AC6CD">[Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis](http://www.kiise.or.kr/e_journal/2021/7/JOK/pdf/11.pdf)</span>, Journal of KIISE, Vol. 40, No. 7, pp.815-824.
 * Sangah Lee and Hyopil Shin (2021), <span style="color:#9AC6CD">[Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10544359)</span>, Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.
 * Sangah Lee, Hansol Jang, Yunmee Baik, Suzi Park and Hyopil Shin (2020), <span style="color:#9AC6CD">[A Small-Scale Korean-Specific BERT Language Model](http://www.kiise.or.kr/e_journal/2020/7/JOK/pdf/08.pdf)</span>, Journal of KIISE, Vol.47, No.7, pp.682-692.
 * Sangah Lee and Hyopil Shin (2018), <span style="color:#9AC6CD">[An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features](http://www.kiise.or.kr/e_journal/2018/12/JOK/pdf/10.pdf)</span>, Journal of KIISE, Vol.45, No.12, pp.1292-1301.
