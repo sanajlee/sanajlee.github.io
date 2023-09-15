@@ -31,7 +31,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 * **\[2013\]** B.A. in Linguistics; B.Eng. in Computer Science and Engineering (double majors) @ Seoul National University
 
 
-# Publicatinos
+# Publications
 * Sangah Lee (2023), Studies on Clauses in Computational Linguistics Focused on Korean Corpora, Journal of Korean Linguistics, No.107. (in press)
 * Sangah Lee, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022), Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings, KIISE Vol.49, No.10, pp.848-858.
 * Sangah Lee and Hyopil Shin (2021), The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts, 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
