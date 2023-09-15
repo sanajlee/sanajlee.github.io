@@ -13,6 +13,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 # Research Topics
 
 * Various topics on Large Language Models, especially in Korean
+  * Transformer-based models participated: [KR-BERT](https://github.com/snunlp/KR-BERT), [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM), [KR-BERT-KOSAC](https://github.com/snunlp/KR-BERT-KOSAC), [KR-ELECTRA](https://github.com/snunlp/KR-ELECTRA)
 * Multilingual scenarios of NLP
 * Low-resource languages and their morpheme-aware tokenization
 * And many other things with methods of computational linguistics!
