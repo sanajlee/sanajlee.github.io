@@ -2,9 +2,6 @@
 layout: default
 ---
 
-[Link to another page](./another-page.html).
-
-
 # About Me
 
 Hi there! My name is Sangah Lee 이상아\[李尙娥\], an assistant professor in the Department of Linguistics at Seoul National University.
@@ -15,23 +12,23 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 # Experience
 
-* \[2022.9 - present\] Assistant Professor @ Dept. of Linguistics, Seoul National University
-* \[2022.3 - 2022.8\] Assistant Teaching Professor @ Faculty of Liberal Education, Seoul National University
-* \[2021.9 - 2022.2] Lecturer @ Dept. of Linguistics, Seoul National University
-* \[2021.3 - 2022.2\] PostDoctoral Researcher @ Graduate School of Data Science, Seoul National University
+* **\[2022.9 - present\]** Assistant Professor @ Dept. of Linguistics, Seoul National University
+* **\[2022.3 - 2022.8\]** Assistant Teaching Professor @ Faculty of Liberal Education, Seoul National University
+* **\[2021.9 - 2022.2]** Lecturer @ Dept. of Linguistics, Seoul National University
+* **\[2021.3 - 2022.2\]** PostDoctoral Researcher @ Graduate School of Data Science, Seoul National University
 
 
 # Education
 
-* \[2021\] Ph.D. in Linguistics @ Dept. of Linguistics, Seoul National University
+* **\[2021\]** Ph.D. in Linguistics @ Dept. of Linguistics, Seoul National University
   * Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
   * Advisor: Hyopil Shin
 
-* \[2016\] M.A. @ Dept. of Linguistics, Seoul National University
+* **\[2016\]** M.A. @ Dept. of Linguistics, Seoul National University
   * Dissertation: "An Automatic Analysis of Argumentation Schemes of Korean Texts"
   * Advisor: Hyopil Shin
 
-* \[2013\] B.A. in Linguistics; B.Eng. in Computer Science and Engineering (double majors) @ Seoul National University
+* **\[2013\]** B.A. in Linguistics; B.Eng. in Computer Science and Engineering (double majors) @ Seoul National University
 
 
 # Publicatinos
@@ -56,8 +53,8 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 
 # Courses
-* \[Fall\] Language and Computer (Undergraduate), Seminar on Computational Liguistics (Graduate)
-* \[Spring\] Computational Linguistics (Undergraduate), Studies on Computational Linguistics II (Graduate)
+* **\[Fall\]** Language and Computer (Undergraduate), Seminar on Computational Liguistics (Graduate)
+* **\[Spring\]** Computational Linguistics (Undergraduate), Studies on Computational Linguistics II (Graduate)
 
 
 
