@@ -14,6 +14,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 * Various topics on Large Language Models, especially in Korean
   * Transformer-based models participated: [KR-BERT](https://github.com/snunlp/KR-BERT), [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM), [KR-BERT-KOSAC](https://github.com/snunlp/KR-BERT-KOSAC), [KR-ELECTRA](https://github.com/snunlp/KR-ELECTRA)
+  * LLM participated: [DAG LLM](https://dag.snu.ac.kr/)
 * Multilingual scenarios of NLP
 * Low-resource languages and their morpheme-aware tokenization
 * And many other things with methods of computational linguistics!
@@ -48,7 +49,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 * *Sangah Lee* and Hyopil Shin (2021), *Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices*, Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.
 * *Sangah Lee*, Hansol Jang, Yunmee Baik, Suzi Park and Hyopil Shin (2020), *A Small-Scale Korean-Specific BERT Language Model*, Journal of KIISE, Vol.47, No.7, pp.682-692.
 * *Sangah Lee* and Hyopil Shin (2018), *An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features*, Journal of KIISE, Vol.45, No.12, pp.1292-1301.
-* *Sangah Lee and Hyopil Shin (2016), *Stance Classification of Online Debate Texts based on Discourse Relations*, Language Research, Vol.52, No.3, pp.511-532.
+* *Sangah Lee* and Hyopil Shin (2016), *Stance Classification of Online Debate Texts based on Discourse Relations*, Language Research, Vol.52, No.3, pp.511-532.
 
 
 # Conference Presentations
