@@ -42,7 +42,8 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 
 # Publications
-* *Sangah Lee* (2023), *Studies on Clauses in Computational Linguistics Focused on Korean Corpora*, Journal of Korean Linguistics, No.107. (in press)
+* Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), *Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*, 3rd Multilingual Represenation Learning (MRL) Workshop.
+* *Sangah Lee* (2023), *Studies on Clauses in Computational Linguistics Focused on Korean Corpora*, Journal of Korean Linguistics, No.107, pp. 445-468.
 * *Sangah Lee*, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022), *Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings*, KIISE Vol.49, No.10, pp.848-858.
 * *Sangah Lee* and Hyopil Shin (2021), *The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts*, 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
 * *Sangah Lee* and Hyopil Shin (2021), *Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis*, Journal of KIISE, Vol.48, No.7, pp.815-824.
