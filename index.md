@@ -42,6 +42,8 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 
 # Publications
+* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), *ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*, LREC-COLING 2024 (accepted).
+* Kyuhee Kim, Surin Lee, and *Sangah Lee* (2024), *K-Act2Emo: Korean Commonsense Knowledge Graph for Indirect Emotional Expression*, arXiv:2403.14253.
 * Dongjun Jang, *Sangah Lee*, Sungjoo Byun, Jinwoong Kim, Jean Seo, Minseok Kim, Soyeon Kim, Chaeyoung Oh, Jaeyoon Kim, Hyemi Jo, and Hyopil Shin (2023), *DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling For Korean NLP*, arXiv:2311.13784v1.
 * Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), *Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*, 3rd Multilingual Represenation Learning (MRL) Workshop.
 * *Sangah Lee* (2023), *Studies on Clauses in Computational Linguistics Focused on Korean Corpora*, Journal of Korean Linguistics, No.107, pp. 445-468.
