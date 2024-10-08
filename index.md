@@ -15,7 +15,8 @@ I am a computational linguist interested in multilingual and low-resource scenar
 * Various topics on Large Language Models, especially in Korean
   * Transformer-based models participated: [KR-BERT](https://github.com/snunlp/KR-BERT), [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM), [KR-BERT-KOSAC](https://github.com/snunlp/KR-BERT-KOSAC), [KR-ELECTRA](https://github.com/snunlp/KR-ELECTRA)
   * LLM participated: [DAG LLM](https://dag.snu.ac.kr/)
-* Multilingual scenarios of NLP
+* Multilingual, multicultural scenarios of NLP
+* Linguistic probing of LLMs
 * Low-resource languages and their morpheme-aware tokenization
 * And many other things with methods of computational linguistics!
 
@@ -42,7 +43,9 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 
 # Publications
-* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), *ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*, LREC-COLING 2024 (accepted).
+* Seung Joo Yoo and *Sangah Lee* (2024), *Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*, Proceedings of the Annual Meeting of the Cognitive Science Society.
+* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), *ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*, Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).
+* Kyuhee Kim, Surin Lee, and *Sangah Lee* (2024), *KoCoNovel: Annotated Dataset of Character Coreference in Korean Novels*, arXiv:2404.01140.
 * Kyuhee Kim, Surin Lee, and *Sangah Lee* (2024), *K-Act2Emo: Korean Commonsense Knowledge Graph for Indirect Emotional Expression*, arXiv:2403.14253.
 * Dongjun Jang, *Sangah Lee*, Sungjoo Byun, Jinwoong Kim, Jean Seo, Minseok Kim, Soyeon Kim, Chaeyoung Oh, Jaeyoon Kim, Hyemi Jo, and Hyopil Shin (2023), *DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling For Korean NLP*, arXiv:2311.13784v1.
 * Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), *Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*, 3rd Multilingual Represenation Learning (MRL) Workshop.
@@ -56,7 +59,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 * *Sangah Lee* and Hyopil Shin (2016), *Stance Classification of Online Debate Texts based on Discourse Relations*, Language Research, Vol.52, No.3, pp.511-532.
 
 
-# Conference Presentations
+# Presentations
 * Nayoung Park and *Sangah Lee* (2023), *The Phonological Constraints on Korean Lexical Subclasses*, The 9th International Conference on Phonology and Morphology (ICPM9).
 * *Sangah Lee* (2022), *Computational Linguistics and the Study of Korean Syntax*, The Society of Korean Linguistics.
 * *Sangah Lee* and Hyopil Shin (2020), *A Method of Infusing Additional Features into Pre-Trained BERT Models for Sentiment Analysis*, Korea Software Congress 2020.
