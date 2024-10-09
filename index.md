@@ -43,6 +43,7 @@ I am a computational linguist interested in multilingual and low-resource scenar
 
 
 # Publications
+* Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee* (2024), *ManWav: The First Manchu ASR Model*, Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024).
 * Seung Joo Yoo and *Sangah Lee* (2024), *Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*, Proceedings of the Annual Meeting of the Cognitive Science Society.
 * *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), *ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*, Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).
 * Kyuhee Kim, Surin Lee, and *Sangah Lee* (2024), *KoCoNovel: Annotated Dataset of Character Coreference in Korean Novels*, arXiv:2404.01140.
