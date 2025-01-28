@@ -8,12 +8,12 @@ published: true
 <div class="page" markdown="1">
 
 {% capture page_subtitle %}
-<img
+<!-- <img
     class="me"
     alt="{{ author.name }}"
     src="uploads/profile.jpeg"
     srcset="uploads/profile.jpeg"
-/>
+/> -->
 {% endcapture %}
 
 <!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
