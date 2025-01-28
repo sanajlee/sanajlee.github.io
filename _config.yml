@@ -7,7 +7,7 @@ url                          : "sanajlee" # the base hostname & protocol for you
 blog:
   title                      : sancl
   description                  : >
-                               Sana Lee, A Computatinal Linguist
+                               sancl
 
 # Layout configuration
   logo_path                  : "assets/img/dactl.svg" # path to logo file
