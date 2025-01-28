@@ -59,5 +59,9 @@ I'm involved in the [Computational Linguistics Lab](http://knlp.snu.ac.kr/) of D
 * **\[2013\]** B.A. in Linguistics; B.Eng. in Computer Science and Engineering (double majors) @ Seoul National University
 
 
+## Courses
+* **\[Fall\]** Language and Computer (Undergraduate), Seminar on Computational Liguistics (Graduate)
+* **\[Spring\]** Computational Linguistics (Undergraduate), Studies on Computational Linguistics II (Graduate)
+
 
 </div>
