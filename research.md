@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Publications
-permalink: /publications/
+title: Research
+permalink: /research
 published: true
 ---
 
 <div class="page" markdown="1">
 
-{% capture page_subtitle %}
+<!-- {% capture page_subtitle %}
 <img
     class="me"
     alt="{{ author.name }}"
@@ -15,7 +15,7 @@ published: true
     srcset="{{ site.author.photo2x | relative_url }} 2x"
 />
 {% endcapture %}
-
+ -->
 <!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
 
 ## Publications
