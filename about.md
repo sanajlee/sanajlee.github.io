@@ -12,7 +12,7 @@ published: true
     class="me"
     alt="{{ author.name }}"
     src="uploads/profile.jpeg"
-    srcset="{{ site.author.photo2x | relative_url }} 2x"
+    srcset="uploads/profile.jpeg"
 />
 {% endcapture %}
 
