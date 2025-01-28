@@ -16,7 +16,7 @@ published: true
 />
 {% endcapture %}
  -->
-{% include page/title.html title=page.title subtitle=page_subtitle %}
+<!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
 
 ## Publications
 * Semoon Hoe and *Sangah Lee* (2024), *A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*, Language and Information, Vol.28, No.3, pp.111-142.
