@@ -5,9 +5,9 @@ url                          : "sanajlee" # the base hostname & protocol for you
                                   # `http://<username>.github.io` - for GitHub
 
 blog:
-  title                      : dactl
+  title                      : sancl
   description                  : >
-                               this should contain a proper description
+                               Sana Lee, A Computatinal Linguist
 
 # Layout configuration
   logo_path                  : "assets/img/dactl.svg" # path to logo file
