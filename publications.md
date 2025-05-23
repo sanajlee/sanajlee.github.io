@@ -19,6 +19,7 @@ published: true
 <!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
 
 ## Publications
+* Kyuhee Kim and *Sangah Lee* (2025), *Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*, ACL Findings (accepted)
 * Semoon Hoe and *Sangah Lee* (2024), *A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*, Language and Information, Vol.28, No.3, pp.111-142.
 * Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee* (2024), *ManWav: The First Manchu ASR Model*, Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024).
 * Seung Joo Yoo and *Sangah Lee* (2024), *Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*, Proceedings of the Annual Meeting of the Cognitive Science Society.
