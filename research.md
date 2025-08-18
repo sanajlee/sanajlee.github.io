@@ -20,13 +20,13 @@ published: true
 
 
 ## Linguistic Probing of Language Models
-
 Do language models understand structural & theoretical knowledge of language? Language models are known to be aware of structural linguistic knowledge and can process such liguistic things with specific parts(layers or neurons) of them. I'm collaborating with syntaticians (and/or) semanticists, dealing with some linguistic phenomena which seems not likely to be "understood" by language models. 
-* Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003167870), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
+* Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](https://github.com/sanajlee/sanajlee.github.io/blob/master/priming_paper.pdf), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
 
 
 ## (Human-like) Reasoning Abilities of LLMs
 I'm interested about the intermediate reasoning steps that LLMs produce while solving problems - espeically linguistic or cognitive ones. We can obtain their rationales in the form of natural language, and assess the rationales in various points of view. Maybe stuffs from pedagogy or language acquisition can help too.
+* Kyuhee Kim and *Sangah Lee* (2025), [*Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*](https://aclanthology.org/2025.findings-acl.794/), Findings of the Association for Computational Linguistics: ACL 2025.
 * Seung Joo Yoo and *Sangah Lee* (2024), [*Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*](https://escholarship.org/uc/item/3f28f61v), Proceedings of the Annual Meeting of the Cognitive Science Society.
 
 
