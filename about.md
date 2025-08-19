@@ -24,7 +24,7 @@ My name is Sangah Lee 이상아\[李尙娥\], an assistant professor in the Depa
 I am a computational linguist interested in reasoning abilities of LLMs, linguistic probing of LLMs, and multilingual/low-resource scenarios of language modeling.
 I'm involved in the [Computational Linguistics Lab](http://knlp.snu.ac.kr/) of Dept. of Linguistics, SNU.
 
-![img](IMG_1945.png)
+![img](https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true)
 
 
 ## Research Topics
