@@ -26,7 +26,7 @@ I'm involved in the [Computational Linguistics Lab](http://knlp.snu.ac.kr/) of D
 
 <!-- ![img](https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true){ width=50% height=50% } -->
 <div>
-<img src="https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true" width="100"/>
+<img src="https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true" width="300"/>
 </div>
 
 
