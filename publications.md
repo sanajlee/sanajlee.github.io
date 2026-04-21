@@ -75,7 +75,7 @@ published: true
 <li>
 <span class="pub-title"><a href="papers/priming.pdf">A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean</a></span><br>
 <span class="pub-authors">Semoon Hoe and Sangah Lee (2024)</span><br>
-<span class="pub-venue">Language and Information, Vol.28, No.3, pp.111-142.</span>
+<span class="pub-venue">Language and Information, Vol.28, No.3, pp.111-142 (In Korean).</span>
 </li>
 
 <li>
@@ -123,13 +123,13 @@ published: true
 <li>
 <span class="pub-title"><a href="">Studies on Clauses in Computational Linguistics Focused on Korean Corpora</a></span><br>
 <span class="pub-authors">Sangah Lee (2023)</span><br>
-<span class="pub-venue">Journal of Korean Linguistics, No.107, pp. 445-468.</span>
+<span class="pub-venue">Journal of Korean Linguistics, No.107, pp. 445-468 (In Korean).</span>
 </li>
 
 <li>
 <span class="pub-title"><a href="papers/contract.pdf">Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings</a></span><br>
 <span class="pub-authors">Sangah Lee, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022)</span><br>
-<span class="pub-venue">KIISE Vol.49, No.10, pp.848-858.</span>
+<span class="pub-venue">KIISE Vol.49, No.10, pp.848-858 (In Korean).</span>
 </li>
 
 <li>
@@ -141,7 +141,7 @@ published: true
 <li>
 <span class="pub-title"><a href="">Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
-<span class="pub-venue">KIISE Vol.49, No.10, pp.848-858.</span>
+<span class="pub-venue">KIISE Vol.49, No.10, pp.848-858 (In Korean).</span>
 </li>
 
 <li>
@@ -159,13 +159,13 @@ published: true
 <li>
 <span class="pub-title"><a href="">An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
-<span class="pub-venue">Journal of KIISE, Vol.45, No.12, pp.1292-1301.</span>
+<span class="pub-venue">Journal of KIISE, Vol.45, No.12, pp.1292-1301 (In Korean).</span>
 </li>
 
 <li>
 <span class="pub-title"><a href="">Stance Classification of Online Debate Texts based on Discourse Relations</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
-<span class="pub-venue">Language Research, Vol.52, No.3, pp.511-532.</span>
+<span class="pub-venue">Language Research, Vol.52, No.3, pp.511-532 (In Korean).</span>
 </li>
 
 </ol>
