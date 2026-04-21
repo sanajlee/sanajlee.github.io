@@ -23,10 +23,10 @@ published: true
 .person-card {
   display: flex;
   gap: 1rem;
-  align-items: stretch;
+  align-items: center;
 
   border: 1px solid #e8e8e8;
-  border-radius: 14px;
+  border-radius: 5px;
   padding: 1rem;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
