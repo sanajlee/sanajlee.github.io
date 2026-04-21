@@ -23,7 +23,7 @@ published: true
 .person-card {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: stretch;
 
   border: 1px solid #e8e8e8;
   border-radius: 14px;
@@ -44,7 +44,9 @@ published: true
 
 /* 텍스트 영역 */
 .person-text {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* ← 여기서 중앙 정렬 */
 }
 
 .person-name {
