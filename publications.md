@@ -170,6 +170,8 @@ published: true
 
 </ol>
 
+<br>
+
 # Presentations
 
 <ol class="pub-list">
