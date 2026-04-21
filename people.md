@@ -91,7 +91,7 @@ You can introduce current students, alumni, and collaborators here.
 <div class="people-grid">
 
   <div class="person-card">
-    <img class="person-photo" src="/assets/img/people/sample1.jpg" alt="손욱염">
+    <img class="person-photo" src="uploads/chiikawa.jpg" alt="손욱염">
     
     <div class="person-text">
       <div class="person-name">손욱염 Sun, Xuran</div>
@@ -102,7 +102,6 @@ You can introduce current students, alumni, and collaborators here.
       </div>
     </div>
   </div>
-
 </div>
 
 ### Alumni
@@ -110,7 +109,7 @@ You can introduce current students, alumni, and collaborators here.
 <div class="people-grid">
 
   <div class="person-card">
-    <img class="person-photo" src="/assets/img/people/alumni1.jpg" alt="강민지">
+    <img class="person-photo" src="uploads/kitty.png" alt="강민지">
     
     <div class="person-text">
       <div class="person-name">강민지 Kang, Minji</div>
