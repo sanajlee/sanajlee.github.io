@@ -30,8 +30,10 @@ I'm involved in the [Computational Linguistics Lab](http://knlp.snu.ac.kr/) of D
 * Various topics on Large Language Models
     * PLMs participated: [KR-BERT](https://github.com/snunlp/KR-BERT), [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM), [KR-BERT-KOSAC](https://github.com/snunlp/KR-BERT-KOSAC), [KR-ELECTRA](https://github.com/snunlp/KR-ELECTRA)
     * LLMs participated: [DAG LLM](https://dag.snu.ac.kr/)
-* Linguistic probing of LLMs
-* Reasoning abilities of LLMs
+    * Benchmark participated: [KoBALT](https://huggingface.co/datasets/snunlp/KoBALT-700)
+* Mechanistic Interpretability of LLMs
+  * Linguistic probing of LLMs
+  * Reasoning abilities of LLMs
 * Argument Mining
 * Multilingual, multicultural scenarios of NLP
 * Low-resource languages and their morpheme-aware tokenization
