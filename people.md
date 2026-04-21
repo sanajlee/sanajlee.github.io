@@ -82,10 +82,6 @@ published: true
 
 ## People
 
-<div class="people-note">
-You can introduce current students, alumni, and collaborators here.
-</div>
-
 ### Current Students
 
 <div class="people-grid">
