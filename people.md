@@ -87,7 +87,7 @@ published: true
 <div class="people-grid">
 
   <div class="person-card">
-    <img class="person-photo" src="uploads/chiikawa.jpg" alt="손욱염">
+    <img class="person-photo" src="uploads/hachiware.png" alt="손욱염">
     
     <div class="person-text">
       <div class="person-name">손욱염 Sun, Xuran</div>
