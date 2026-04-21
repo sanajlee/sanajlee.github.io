@@ -23,7 +23,7 @@ published: true
 .person-card {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
 
   border: 1px solid #e8e8e8;
   border-radius: 14px;
