@@ -5,7 +5,7 @@ permalink: /publications
 published: true
 ---
 
-<div class="page" markdown="1">
+<!-- <div class="page" markdown="1"> -->
 
 <!-- {% capture page_subtitle %}
 <img
@@ -193,4 +193,4 @@ The 27th Annual Conference on Human & Cognitive Language Technology
 </sm>
 
 
-</div>
+<!-- </div> -->
