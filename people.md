@@ -44,9 +44,7 @@ published: true
 
 /* 텍스트 영역 */
 .person-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* ← 여기서 중앙 정렬 */
+  flex: 1;
 }
 
 .person-name {
