@@ -139,13 +139,13 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis</a></span><br>
+<span class="pub-title"><a href="papers/krbertkosac.pdf">Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
 <span class="pub-venue">KIISE Vol.49, No.10, pp.848-858 (In Korean).</span>
 </li>
 
 <li>
-<span class="pub-title"><a href="">Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices</a></span><br>
+<span class="pub-title"><a href="papers/argfacet.pdf">Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
 <span class="pub-venue">Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.</span>
 </li>
@@ -157,13 +157,13 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features</a></span><br>
+<span class="pub-title"><a href="https://scispace.com/pdf/an-analysis-of-linear-argumentation-structure-of-korean-2l47v3rolv.pdf">An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
 <span class="pub-venue">Journal of KIISE, Vol.45, No.12, pp.1292-1301 (In Korean).</span>
 </li>
 
 <li>
-<span class="pub-title"><a href="">Stance Classification of Online Debate Texts based on Discourse Relations</a></span><br>
+<span class="pub-title"><a href="papers/discourse">Stance Classification of Online Debate Texts based on Discourse Relations</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
 <span class="pub-venue">Language Research, Vol.52, No.3, pp.511-532 (In Korean).</span>
 </li>
