@@ -55,7 +55,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge</a></span><br>
+<span class="pub-title"><a href="papers/latentlang.pdf">Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge</a></span><br>
 <span class="pub-authors">Sangah Lee (2025)</span><br>
 <span class="pub-venue">Language and Information, Vol.29, No.3, pp.229-256.</span>
 </li>
@@ -73,7 +73,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean</a></span><br>
+<span class="pub-title"><a href="papers/priming.pdf">A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean</a></span><br>
 <span class="pub-authors">Semoon Hoe and Sangah Lee (2024)</span><br>
 <span class="pub-venue">Language and Information, Vol.28, No.3, pp.111-142.</span>
 </li>
@@ -127,7 +127,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings</a></span><br>
+<span class="pub-title"><a href="papers/contract.pdf">Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings</a></span><br>
 <span class="pub-authors">Sangah Lee, Seokgi Kim, Eunjin Kim, Minji Kang, and Hyopil Shin (2022)</span><br>
 <span class="pub-venue">KIISE Vol.49, No.10, pp.848-858.</span>
 </li>
@@ -151,7 +151,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="https://arxiv.org/pdf/2008.03979">A Small-Scale Korean-Specific BERT Language Model</a></span><br>
+<span class="pub-title"><a href="https://arxiv.org/pdf/2008.03979">KR-BERT: A Small-Scale Korean-Specific BERT Language Model</a></span><br>
 <span class="pub-authors">Sangah Lee, Hansol Jang, Yunmee Baik, Suzi Park and Hyopil Shin (2020)</span><br>
 <span class="pub-venue">Journal of KIISE, Vol.47, No.7, pp.682-692.</span>
 </li>
