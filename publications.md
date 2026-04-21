@@ -22,18 +22,21 @@ published: true
 
 
 1. [**ARISE: Agentic Rubric-Guided Iterative Survey Engine for Automated Scholarly Paper Generation**]()
+
 *Zi Wang, Xingqiao Wang, Sangah Lee, and Xiaowei Xu (2026)*
 <sm>
 To appear at HAXD 2026
 </sm>
 
 1. [**Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge**]()
+
 *Sangah Lee (2025)*
 <sm>
 Language and Information, Vol.29, No.3, pp.229-256.
 </sm>
 
 1. [**Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition**](https://aclanthology.org/2025.findings-acl.794.pdf)
+
 *Kyuhee Kim and Sangah Lee (2025)*
 <sm>
 Findings of the Association for Computational Linguistics: ACL 2025
