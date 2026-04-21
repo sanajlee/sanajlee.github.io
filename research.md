@@ -28,7 +28,8 @@ Do language models understand structural & theoretical knowledge of language? La
 
 ## (Human-like) Reasoning Abilities of LLMs
 I'm interested about the intermediate reasoning steps that LLMs produce while solving problems - espeically linguistic or cognitive ones. We can obtain their rationales in the form of natural language, and assess the rationales in various points of view. Maybe stuffs from pedagogy or language acquisition can help too.
-* Kyuhee Kim and *Sangah Lee* (2025), [*Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*](https://aclanthology.org/2025.findings-acl.794.pdf), Findings of the Association for Computational Linguistics: ACL 2025.(https://escholarship.org/content/qt3f28f61v/qt3f28f61v_noSplash_fec2deeee2a04a7f7c0683aedd2fb478.pdf?t=sev1vq)(https://escholarship.org/uc/item/3f28f61v), Proceedings of the Annual Meeting of the Cognitive Science Society.
+* Kyuhee Kim and *Sangah Lee* (2025), [*Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*](https://aclanthology.org/2025.findings-acl.794.pdf), Findings of the Association for Computational Linguistics: ACL 2025.
+* Seung Joo Yoo and *Sangah Lee* (2024), [*Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*](https://escholarship.org/content/qt3f28f61v/qt3f28f61v_noSplash_fec2deeee2a04a7f7c0683aedd2fb478.pdf?t=sev1vq), Proceedings of the Annual Meeting of the Cognitive Science Society.
 
 
 ## Dealing with Low-Resource Language(s)
