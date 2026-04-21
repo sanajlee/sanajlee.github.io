@@ -22,8 +22,8 @@ published: true
 ## Linguistic Probing of Language Models
 
 Do language models understand structural & theoretical knowledge of language? Language models are known to be aware of structural linguistic knowledge and can process such liguistic things with specific parts(layers or neurons) of them. I'm collaborating with syntaticians (and/or) semanticists, dealing with some linguistic phenomena which seems not likely to be "understood" by language models. 
-* *Sangah Lee* (2025), [*Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge*](), Language and Information, Vol.29, No.3, pp.229-256.
-* Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003167870), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
+* *Sangah Lee* (2025), [*Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge*](papers/latentlang.pdf), Language and Information, Vol.29, No.3, pp.229-256.
+* Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](papers/priming.pdf), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
 
 
 ## (Human-like) Reasoning Abilities of LLMs
@@ -42,9 +42,9 @@ Yes, you like Manchu. Not only Manchu language, there are so many things to do w
 
 ## Argument Mining
 What do people think about a controversial topic? That's a kind of argumentative data, related to the topic "Argument Mining." Particularly I'd like to collect and summarize diverse evidences that people propse when they support or attack a stance about the topic. It will require many steps: analyzing the argumentative structure of given texts, identifying necessary arguments or evidences, summarizing or clustering those evidences, and so on.
-* *Sangah Lee* and Hyopil Shin (2021), [*Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002700895), Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.
-* *Sangah Lee* and Hyopil Shin (2018), [*An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features*](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07575594), Journal of KIISE, Vol.45, No.12, pp.1292-1301. (In Korean)
-* *Sangah Lee* and Hyopil Shin (2016), [*Stance Classification of Online Debate Texts based on Discourse Relations*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002185479), Language Research, Vol.52, No.3, pp.511-532. (In Korean)
+* *Sangah Lee* and Hyopil Shin (2021), [*Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices*](papers/argfacet.pdf), Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.
+* *Sangah Lee* and Hyopil Shin (2018), [*An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features*](https://scispace.com/pdf/an-analysis-of-linear-argumentation-structure-of-korean-2l47v3rolv.pdf), Journal of KIISE, Vol.45, No.12, pp.1292-1301. (In Korean)
+* *Sangah Lee* and Hyopil Shin (2016), [*Stance Classification of Online Debate Texts based on Discourse Relations*](papers/discourse), Language Research, Vol.52, No.3, pp.511-532. (In Korean)
 
 
 
