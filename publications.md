@@ -45,7 +45,7 @@ published: true
 </style>
 
 # Publications
-
+<br>
 <ol class="pub-list">
 
 <li>
@@ -171,9 +171,10 @@ published: true
 </ol>
 
 <br>
+<br>
 
 # Presentations
-
+<br>
 <ol class="pub-list">
 
 <li>
