@@ -22,20 +22,21 @@ published: true
 ## Linguistic Probing of Language Models
 
 Do language models understand structural & theoretical knowledge of language? Language models are known to be aware of structural linguistic knowledge and can process such liguistic things with specific parts(layers or neurons) of them. I'm collaborating with syntaticians (and/or) semanticists, dealing with some linguistic phenomena which seems not likely to be "understood" by language models. 
+* *Sangah Lee* (2025), [*Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge*](), Language and Information, Vol.29, No.3, pp.229-256.
 * Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003167870), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
 
 
 ## (Human-like) Reasoning Abilities of LLMs
 I'm interested about the intermediate reasoning steps that LLMs produce while solving problems - espeically linguistic or cognitive ones. We can obtain their rationales in the form of natural language, and assess the rationales in various points of view. Maybe stuffs from pedagogy or language acquisition can help too.
-* Seung Joo Yoo and *Sangah Lee* (2024), [*Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*](https://escholarship.org/uc/item/3f28f61v), Proceedings of the Annual Meeting of the Cognitive Science Society.
+* Kyuhee Kim and *Sangah Lee* (2025), [*Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*](https://aclanthology.org/2025.findings-acl.794.pdf), Findings of the Association for Computational Linguistics: ACL 2025.(https://escholarship.org/content/qt3f28f61v/qt3f28f61v_noSplash_fec2deeee2a04a7f7c0683aedd2fb478.pdf?t=sev1vq)(https://escholarship.org/uc/item/3f28f61v), Proceedings of the Annual Meeting of the Cognitive Science Society.
 
 
 ## Dealing with Low-Resource Language(s)
 Yes, you like Manchu. Not only Manchu language, there are so many things to do with non-English languages, especially low-resourced ones, in NLP. Especially I'm interested in tokenizers for languages which are not written in Latin alphabets or which are highly agglutinative (yes, Korean!).
-* Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee* (2024), [*ManWav: The First Manchu ASR Model*](https://aclanthology.org/2024.fieldmatters-1.2/), Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024).
-* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), [*ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*](https://aclanthology.org/2024.lrec-main.961/), Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).
-* Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), [*Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*](https://aclanthology.org/2023.mrl-1.10/), 3rd Multilingual Represenation Learning (MRL) Workshop.
-* *Sangah Lee* and Hyopil Shin (2021), [*The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts*](https://aclanthology.org/2021.wnut-1.45/), 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
+* Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee* (2024), [*ManWav: The First Manchu ASR Model*](https://aclanthology.org/2024.fieldmatters-1.2.pdf), Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024).
+* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), [*ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*](https://aclanthology.org/2024.lrec-main.961.pdf), Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).
+* Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), [*Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*](https://aclanthology.org/2023.mrl-1.10.pdf), 3rd Multilingual Represenation Learning (MRL) Workshop.
+* *Sangah Lee* and Hyopil Shin (2021), [*The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts*](https://aclanthology.org/2021.wnut-1.45.pdf), 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
 
 
 ## Argument Mining
