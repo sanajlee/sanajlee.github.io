@@ -121,7 +121,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="">Studies on Clauses in Computational Linguistics Focused on Korean Corpora</a></span><br>
+<span class="pub-title">Studies on Clauses in Computational Linguistics Focused on Korean Corpora</span><br>
 <span class="pub-authors">Sangah Lee (2023)</span><br>
 <span class="pub-venue">Journal of Korean Linguistics, No.107, pp. 445-468 (In Korean).</span>
 </li>
