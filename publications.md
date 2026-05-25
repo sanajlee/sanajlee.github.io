@@ -163,7 +163,7 @@ published: true
 </li>
 
 <li>
-<span class="pub-title"><a href="papers/discourse">Stance Classification of Online Debate Texts based on Discourse Relations</a></span><br>
+<span class="pub-title"><a href="papers/discourse.pdf">Stance Classification of Online Debate Texts based on Discourse Relations</a></span><br>
 <span class="pub-authors">Sangah Lee and Hyopil Shin (2021)</span><br>
 <span class="pub-venue">Language Research, Vol.52, No.3, pp.511-532 (In Korean).</span>
 </li>
