@@ -85,7 +85,9 @@ Postdoctoral Researcher, Graduate School of Data Science, Seoul National Univers
 
 <div class="about-ending">
   <p class="about-off-duty">
-    Mostly language models. Sometimes amplifiers.
+    Mostly language models.
+
+    Sometimes amplifiers.
   </p>
 
   <img
