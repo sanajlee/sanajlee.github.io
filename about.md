@@ -87,10 +87,11 @@ Postdoctoral Researcher, Graduate School of Data Science, Seoul National Univers
   <p class="about-off-duty">
     Mostly language models.
   </p>
+  <br>
   <p class="about-off-duty">
     Sometimes amplifiers.
   </p>
-  
+
   <img
     class="about-hamster"
     src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
