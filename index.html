@@ -1,15 +1,161 @@
 ---
-layout: page
-title: Welcome!
+layout: default
+title: Sana Lee
+description: Computational linguist studying language model behavior, mechanistic interpretability, multilingual and latent language, and linguistic reasoning.
 ---
 
-<div class="page" markdown="1">
+<section class="hero">
+  <div class="hero__copy">
+    <p class="hero__hello">Hi! I'm</p>
+    <h1>SANGAH LEE</h1>
 
-<!-- {% capture page_subtitle %} -->
-<img src="uploads/samakkk.jpeg" width="600"/>
-<!-- {% endcapture %} -->
+    <p class="hero__tagline">
+      I study how language models represent, reason with,
+      and sometimes mess up language.
+    </p>
 
-<!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
+    <p class="hero__position">
+      Associate Professor<br>
+      Department of Linguistics · Seoul National University
+    </p>
 
+    <div class="button-row">
+      <a class="tiny-button" href="{{ '/publications' | relative_url }}">papers</a>
+      <a class="tiny-button" href="https://github.com/sanajlee" target="_blank" rel="noopener">github</a>
+      <a class="tiny-button" href="mailto:{{ site.author.mail }}">email</a>
+    </div>
+  </div>
 
-</div>
+  <div class="hero__art">
+    <img
+      src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
+      alt="A pink hamster playing a blue Telecaster guitar"
+    >
+    <span class="music-note music-note--one">♪</span>
+    <span class="music-note music-note--two">♫</span>
+  </div>
+</section>
+
+<section class="home-section research-section">
+  <div class="section-title-row">
+    <h2>WHAT I WORK ON THESE DAYS</h2>
+  </div>
+
+  <div class="research-intro">
+    <h3>Language Model Behavior</h3>
+
+    <p>
+      I study what language models know about language,
+      how that knowledge is represented internally,
+      and how it shapes their behavior.
+    </p>
+  </div>
+
+  <div class="research-axes">
+
+    <article>
+      <span class="research-number">01</span>
+      <h3>Representations &amp; Interpretability</h3>
+      <p>
+        How linguistic information is represented inside language models,
+        and what those representations reveal about model behavior.
+      </p>
+    </article>
+
+    <article>
+      <span class="research-number">02</span>
+      <h3>Multilinguality &amp; Latent Language</h3>
+      <p>
+        How models represent and mediate information across languages,
+        including language-specific knowledge and latent language.
+      </p>
+    </article>
+
+    <article>
+      <span class="research-number">03</span>
+      <h3>Linguistic Knowledge &amp; Reasoning</h3>
+      <p>
+        How models use linguistic knowledge in reasoning,
+        and when apparent reasoning is actually memorization.
+      </p>
+    </article>
+
+  </div>
+
+  <a class="research-more" href="{{ '/research' | relative_url }}">
+    more about my research →
+  </a>
+</section>
+
+<section class="home-section home-section--papers">
+  <div class="section-title-row">
+    <h2>SELECTED PAPERS</h2>
+    <a class="text-link" href="{{ '/publications' | relative_url }}">
+      all papers →
+    </a>
+  </div>
+
+  <div class="selected-papers">
+
+    {% assign selected_pubs = site.data.publications | where: "selected", true %}
+
+    {% for pub in selected_pubs %}
+      <article class="selected-paper">
+
+        <div class="selected-paper__year">
+          {{ pub.year }}
+        </div>
+
+        <div>
+          <h3>
+            {% if pub.paper %}
+              <a href="{{ pub.paper }}" {% if pub.paper contains 'http' %}target="_blank" rel="noopener"{% endif %}>
+                {{ pub.title }}
+              </a>
+            {% else %}
+              {{ pub.title }}
+            {% endif %}
+          </h3>
+
+          <p>
+            {% for author in pub.authors %}
+              {% if author == "Sangah Lee" %}
+                <span class="me">{{ author }}</span>
+              {% else %}
+                {{ author }}
+              {% endif %}
+
+              {% unless forloop.last %}
+                <span class="author-sep"> · </span>
+              {% endunless %}
+            {% endfor %}
+
+            <span class="pub-sep"> · </span>
+            {{ pub.venue }}
+          </p>
+
+          {% if pub.code or pub.project %}
+            <div class="selected-paper__links">
+
+              {% if pub.code %}
+                <a href="{{ pub.code }}" target="_blank" rel="noopener">
+                  code →
+                </a>
+              {% endif %}
+
+              {% if pub.project %}
+                <a href="{{ pub.project }}" target="_blank" rel="noopener">
+                  project →
+                </a>
+              {% endif %}
+
+            </div>
+          {% endif %}
+
+        </div>
+
+      </article>
+    {% endfor %}
+
+  </div>
+</section>

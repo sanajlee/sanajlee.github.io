@@ -1,0 +1,91 @@
+---
+layout: page
+title: Teaching
+permalink: /teaching
+---
+
+<div class="teaching-page">
+
+  <p class="teaching-lead">
+    My teaching spans the foundations of computational linguistics and current research on large language models. Undergraduate courses emphasize both conceptual foundations and hands-on technical skills, while graduate seminars explore a different LLM-related research theme each semester, ranging from linguistic probing and reasoning to evaluation, fine-tuning, and model behavior.
+  </p>
+
+  {% assign current_courses = site.data.teaching | where: "current", true %}
+
+  {% if current_courses.size > 0 %}
+    <section class="teaching-section">
+      <h2>Current Courses</h2>
+
+      <div class="course-list">
+        {% for course in current_courses %}
+          <article class="course">
+
+            <span class="course-term">
+              {{ course.term }} {{ course.year }} · {{ course.level }}
+            </span>
+
+            <h3>{{ course.title }}</h3>
+
+            {% if course.subtitle %}
+              <p class="course-subtitle">
+                {{ course.subtitle }}
+              </p>
+            {% endif %}
+
+            {% if course.description %}
+              <p>{{ course.description }}</p>
+            {% endif %}
+
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+
+  <section class="teaching-section">
+    <h2>Previous Courses</h2>
+
+    {% assign previous_courses = site.data.teaching | where: "current", false %}
+    {% assign courses_by_year = previous_courses | group_by: "year" %}
+
+    <div class="teaching-history">
+      {% for year in courses_by_year %}
+        <div class="teaching-year">
+
+          <div class="teaching-year__label">
+            {{ year.name }}
+          </div>
+
+          <div class="teaching-year__courses">
+            {% for course in year.items %}
+
+              <article class="course course--compact">
+
+                <span class="course-term">
+                  {{ course.term }} · {{ course.level }}
+                </span>
+
+                <h3>{{ course.title }}</h3>
+
+                {% if course.subtitle %}
+                  <p class="course-subtitle">
+                    {{ course.subtitle }}
+                  </p>
+                {% endif %}
+
+                {% if course.description %}
+                  <p>{{ course.description }}</p>
+                {% endif %}
+
+              </article>
+
+            {% endfor %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

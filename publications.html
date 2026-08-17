@@ -1,0 +1,78 @@
+---
+layout: page
+title: Publications
+permalink: /publications
+---
+
+<div class="publications-page">
+
+  {% assign pubs_by_year = site.data.publications | group_by: "year" %}
+
+  {% for group in pubs_by_year %}
+    <section class="pub-year">
+
+      <div class="pub-year__heading">
+        <span>{{ group.name }}</span>
+      </div>
+
+      <div class="pub-list">
+        {% for pub in group.items %}
+          <article class="pub">
+
+            <h2 class="pub__title">
+              {{ pub.title }}
+            </h2>
+
+            <p class="pub__authors">
+              {% for author in pub.authors %}
+                {% if author == "Sangah Lee" %}
+                  <span class="me">{{ author }}</span>
+                {% else %}
+                  {{ author }}
+                {% endif %}
+
+                {% unless forloop.last %}
+                  <span class="author-sep"> · </span>
+                {% endunless %}
+              {% endfor %}
+            </p>
+
+            <p class="pub__venue">
+              {{ pub.venue }}
+              {% if pub.note %}
+                <span class="pub__note"> · {{ pub.note }}</span>
+              {% endif %}
+            </p>
+
+            {% if pub.paper or pub.code or pub.project %}
+              <div class="pub__links">
+
+                {% if pub.paper %}
+                  <a href="{{ pub.paper }}" target="_blank" rel="noopener">
+                    paper →
+                  </a>
+                {% endif %}
+
+                {% if pub.code %}
+                  <a href="{{ pub.code }}" target="_blank" rel="noopener">
+                    code →
+                  </a>
+                {% endif %}
+
+                {% if pub.project %}
+                  <a href="{{ pub.project }}" target="_blank" rel="noopener">
+                    project →
+                  </a>
+                {% endif %}
+
+              </div>
+            {% endif %}
+
+          </article>
+        {% endfor %}
+      </div>
+
+    </section>
+  {% endfor %}
+
+</div>

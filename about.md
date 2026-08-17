@@ -5,70 +5,93 @@ permalink: /about
 published: true
 ---
 
-<div class="page" markdown="1">
+<div class="about-page" markdown="1">
 
-<!-- {% capture page_subtitle %}
-<img
-    class="me"
-    alt="{{ author.name }}"
-    src="uploads/profile.jpeg"
-    srcset="uploads/profile.jpeg"
-/>
-{% endcapture %} -->
+<p class="about-lead">
+I'm <strong>Sangah Lee</strong>, an associate professor of linguistics at Seoul National University.
+I study language model behavior, with a particular interest in how linguistic knowledge is
+represented internally and how those representations shape model behavior.
+</p>
 
-<!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
+<p>
+My current work focuses on
+<a href="{{ '/research' | relative_url }}">representations & interpretability</a>,
+multilinguality & latent language, and linguistic knowledge & reasoning.
+I approach language models primarily as objects of linguistic inquiry:
+not only asking whether they produce the right answer, but what they represent internally
+and how they arrive there.
+</p>
 
-## About Me
+<div class="about-now">
 
-My name is Sangah Lee 이상아\[李尙娥\], an assistant professor in the Department of Linguistics at Seoul National University.
-I am a computational linguist interested in reasoning abilities of LLMs, linguistic probing of LLMs, and multilingual/low-resource scenarios of language modeling.
-I'm involved in the [Computational Linguistics Lab](http://knlp.snu.ac.kr/) of Dept. of Linguistics, SNU.
-
-<!-- ![img](https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true){ width=50% height=50% } -->
 <div>
-<img src="https://github.com/sanajlee/sanajlee.github.io/blob/master/IMG_1945.jpg?raw=true" width="300"/>
+<span class="about-label">currently</span>
+Associate Professor of Linguistics<br>
+Seoul National University
 </div>
 
+<div>
+<span class="about-label">researching</span>
+language model behavior · interpretability · multilinguality
+</div>
 
-## Research Topics
+<div>
+<span class="about-label">based in</span>
+Seoul, Korea
+</div>
 
-* Various topics on Large Language Models
-    * PLMs participated: [KR-BERT](https://github.com/snunlp/KR-BERT), [KR-BERT-MEDIUM](https://github.com/snunlp/KR-BERT-MEDIUM), [KR-BERT-KOSAC](https://github.com/snunlp/KR-BERT-KOSAC), [KR-ELECTRA](https://github.com/snunlp/KR-ELECTRA)
-    * LLMs participated: [DAG LLM](https://dag.snu.ac.kr/)
-    * Benchmark participated: [KoBALT](https://huggingface.co/datasets/snunlp/KoBALT-700)
-* Mechanistic Interpretability of LLMs
-  * Linguistic probing of LLMs
-  * Reasoning abilities of LLMs
-* Argument Mining
-* Multilingual, multicultural scenarios of NLP
-* Low-resource languages and their morpheme-aware tokenization
-* And many other things with methods of computational linguistics!
-
+</div>
 
 ## Experience
 
-* **\[2022.9 - present\]** Assistant Professor @ Dept. of Linguistics, Seoul National University
-* **\[2022.3 - 2022.8\]** Assistant Teaching Professor @ Faculty of Liberal Education, Seoul National University
-* **\[2021.9 - 2022.2]** Lecturer @ Dept. of Linguistics, Seoul National University
-* **\[2021.3 - 2022.2\]** PostDoctoral Researcher @ Graduate School of Data Science, Seoul National University
+**2026–present**  
+Associate Professor, Department of Linguistics, Seoul National University
+
+**2022–2026**  
+Assistant Professor, Department of Linguistics, Seoul National University
+
+**2022**  
+Assistant Teaching Professor, Faculty of Liberal Education, Seoul National University
+
+**2021–2022**  
+Lecturer, Department of Linguistics, Seoul National University
+
+**2021–2022**  
+Postdoctoral Researcher, Graduate School of Data Science, Seoul National University
+
 
 
 ## Education
 
-* **\[2021\]** Ph.D. in Linguistics @ Dept. of Linguistics, Seoul National University
-  * Dissertation: "The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis"
-  * Advisor: Hyopil Shin
+<strong>2021</strong><br>
+Ph.D. in Linguistics, Seoul National University
 
-* **\[2016\]** M.A. @ Dept. of Linguistics, Seoul National University
-  * Dissertation: "An Automatic Analysis of Argumentation Schemes of Korean Texts"
-  * Advisor: Hyopil Shin
+<div class="about-details">
+  <span>Dissertation: “The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis”</span>
+  <span>Advisor: Hyopil Shin</span>
+</div>
 
-* **\[2013\]** B.A. in Linguistics; B.Eng. in Computer Science and Engineering (double majors) @ Seoul National University
+<strong>2016</strong><br>
+M.A. in Linguistics, Seoul National University  
+
+<div class="about-details">
+  <span>Thesis: “An Automatic Analysis of Argumentation Schemes of Korean Texts”</span>
+  <span>Advisor: Hyopil Shin</span>
+</div>
+
+<strong>2013</strong><br>
+B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University 
 
 
-## Courses
-* **\[Fall\]** Language and Computer (Undergraduate), Seminar on Computational Liguistics (Graduate)
-* **\[Spring\]** Computational Linguistics (Undergraduate), Studies on Computational Linguistics II (Graduate)
 
+<div class="about-ending">
+  <p class="about-off-duty">
+    Mostly language models. Sometimes amplifiers.
+  </p>
 
+  <img
+    class="about-hamster"
+    src="{{ '/assets/img/hamtele.png' | relative_url }}"
+    alt="A pink hamster playing a blue Telecaster"
+  >
 </div>

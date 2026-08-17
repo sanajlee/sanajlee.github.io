@@ -1,0 +1,200 @@
+- year: 2026
+  title: "ARISE: Agentic Rubric-Guided Iterative Survey Engine for Automated Scholarly Paper Generation"
+  authors:
+    - Zi Wang
+    - Xingqiao Wang
+    - Sangah Lee
+    - Xiaowei Xu
+  venue: "The 2nd International Conference on Human-AI Interaction and Experience Design (HAXD26)"
+  paper: "https://arxiv.org/pdf/2511.17689"
+
+- year: 2025
+  title: "Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge"
+  authors:
+    - Sangah Lee
+  venue: "Language and Information, Vol.29, No.3, pp.229–256"
+  paper: "/papers/latentlang.pdf"
+  selected: true
+
+- year: 2025
+  title: "Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition"
+  authors:
+    - Kyuhee Kim
+    - Sangah Lee
+  venue: "Findings of the Association for Computational Linguistics: ACL 2025"
+  paper: "https://aclanthology.org/2025.findings-acl.794.pdf"
+  selected: true
+
+- year: 2025
+  title: "KoBALT: Korean Benchmark For Advanced Linguistic Tasks"
+  authors:
+    - Hyopil Shin
+    - Sangah Lee
+    - Dongjun Jang
+    - Wooseok Song
+    - Jaeyoon Kim
+    - Chaeyoung Oh
+    - Hyemi Jo
+    - Youngchae Ahn
+    - Sihyun Oh
+    - Hyohyeong Chang
+    - Sunkyoung Kim
+    - Jinsik Lee
+  venue: "arXiv"
+  paper: "https://arxiv.org/pdf/2505.16125"
+  selected: true
+
+- year: 2024
+  title: "A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean"
+  authors:
+    - Semoon Hoe
+    - Sangah Lee
+  venue: "Language and Information, Vol.28, No.3, pp.111–142"
+  note: "In Korean"
+  paper: "/papers/priming.pdf"
+
+- year: 2024
+  title: "ManWav: The First Manchu ASR Model"
+  authors:
+    - Jean Seo
+    - Minha Kang
+    - Sungjoo Byun
+    - Sangah Lee
+  venue: "Proceedings of the Third Workshop on NLP Applications to Field Linguistics"
+  paper: "https://aclanthology.org/2024.fieldmatters-1.2.pdf"
+
+- year: 2024
+  title: "Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective"
+  authors:
+    - Seung Joo Yoo
+    - Sangah Lee
+  venue: "Proceedings of the Annual Meeting of the Cognitive Science Society"
+  paper: "https://escholarship.org/uc/item/3f28f61v"
+
+- year: 2024
+  title: "ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language"
+  authors:
+    - Sangah Lee
+    - Sungjoo Byun
+    - Jean Seo
+    - Minha Kang
+  venue: "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)"
+  paper: "https://aclanthology.org/2024.lrec-main.961.pdf"
+
+- year: 2024
+  title: "KoCoNovel: Annotated Dataset of Character Coreference in Korean Novels"
+  authors:
+    - Kyuhee Kim
+    - Surin Lee
+    - Sangah Lee
+  venue: "arXiv"
+  paper: "https://arxiv.org/pdf/2404.01140"
+
+- year: 2024
+  title: "K-Act2Emo: Korean Commonsense Knowledge Graph for Indirect Emotional Expression"
+  authors:
+    - Kyuhee Kim
+    - Surin Lee
+    - Sangah Lee
+  venue: "arXiv"
+  paper: "https://arxiv.org/pdf/2403.14253"
+
+- year: 2023
+  title: "DaG LLM ver 1.0: Pioneering Instruction-Tuned Language Modeling For Korean NLP"
+  authors:
+    - Dongjun Jang
+    - Sangah Lee
+    - Sungjoo Byun
+    - Jinwoong Kim
+    - Jean Seo
+    - Minseok Kim
+    - Soyeon Kim
+    - Chaeyoung Oh
+    - Jaeyoon Kim
+    - Hyemi Jo
+    - Hyopil Shin
+  venue: "arXiv"
+  paper: "https://arxiv.org/pdf/2311.13784"
+
+- year: 2023
+  title: "Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data"
+  authors:
+    - Jean Seo
+    - Sungjoo Byun
+    - Minha Kang
+    - Sangah Lee
+  venue: "3rd Multilingual Representation Learning (MRL) Workshop"
+  paper: "https://aclanthology.org/2023.mrl-1.10.pdf"
+
+- year: 2023
+  title: "Studies on Clauses in Computational Linguistics Focused on Korean Corpora"
+  authors:
+    - Sangah Lee
+  venue: "Journal of Korean Linguistics, No.107, pp.445–468"
+  note: "In Korean"
+
+- year: 2022
+  title: "Contract Eligibility Verification Enhanced by Keyword and Contextual Embeddings"
+  authors:
+    - Sangah Lee
+    - Seokgi Kim
+    - Eunjin Kim
+    - Minji Kang
+    - Hyopil Shin
+  venue: "Journal of KIISE, Vol.49, No.10, pp.848–858"
+  note: "In Korean"
+  paper: "/papers/contract.pdf"
+
+- year: 2021
+  title: "The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts"
+  authors:
+    - Sangah Lee
+    - Hyopil Shin
+  venue: "The 7th Workshop on Noisy User-Generated Text (W-NUT 2021)"
+  paper: "https://aclanthology.org/2021.wnut-1.45.pdf"
+
+- year: 2021
+  title: "Combining Sentiment-Combined Model with Pre-Trained BERT Models for Sentiment Analysis"
+  authors:
+    - Sangah Lee
+    - Hyopil Shin
+  venue: "Journal of KIISE, Vol.48, No.7, pp.815-824"
+  note: "In Korean"
+  paper: "/papers/krbertkosac.pdf"
+
+- year: 2021
+  title: "Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices"
+  authors:
+    - Sangah Lee
+    - Hyopil Shin
+  venue: "Korean Journal of Linguistics, Vol.46, No.1, pp.107–134"
+  paper: "/papers/argfacet.pdf"
+
+- year: 2020
+  title: "KR-BERT: A Small-Scale Korean-Specific BERT Language Model"
+  authors:
+    - Sangah Lee
+    - Hansol Jang
+    - Yunmee Baik
+    - Suzi Park
+    - Hyopil Shin
+  venue: "Journal of KIISE, Vol.47, No.7, pp.682–692"
+  paper: "https://arxiv.org/pdf/2008.03979"
+
+- year: 2018
+  title: "An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features"
+  authors:
+    - Sangah Lee
+    - Hyopil Shin
+  venue: "Journal of KIISE, Vol.45, No.12, pp.1292–1301"
+  note: "In Korean"
+  paper: "/papers/linear.pdf"
+
+- year: 2016
+  title: "Stance Classification of Online Debate Texts based on Discourse Relations"
+  authors:
+    - Sangah Lee
+    - Hyopil Shin
+  venue: "Language Research, Vol.52, No.3, pp.511–532"
+  note: "In Korean"
+  paper: "/papers/discourse.pdf"
