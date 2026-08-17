@@ -91,7 +91,7 @@ B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National
 
   <img
     class="about-hamster"
-    src="{{ '/assets/img/hamtele.png' | relative_url }}"
+    src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
     alt="A pink hamster playing a blue Telecaster"
   >
 </div>
