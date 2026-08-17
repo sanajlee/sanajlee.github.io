@@ -90,7 +90,7 @@ Postdoctoral Researcher, Graduate School of Data Science, Seoul National Univers
 
   <img
     class="about-hamster"
-    src="{{ '/assets/img/hamtele.png' | relative_url }}"
+    src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
     alt="A pink hamster playing a blue Telecaster"
   >
 </div>
