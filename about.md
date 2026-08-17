@@ -78,7 +78,7 @@ Postdoctoral Researcher, Graduate School of Data Science, Seoul National Univers
 </div>
 
 <div class="education-item">
-  <div class="year">2016</div>
+  <div class="year">2013</div>
   <div class="degree">B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University</div>
 </div>
 
