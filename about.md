@@ -83,7 +83,6 @@ M.A. in Linguistics, Seoul National University
 B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University 
 
 
-
 <div class="about-ending">
   <p class="about-off-duty">
     Mostly language models. Sometimes amplifiers.
@@ -91,7 +90,7 @@ B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National
 
   <img
     class="about-hamster"
-    src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
+    src="{{ '/assets/img/hamtele.png' | relative_url }}"
     alt="A pink hamster playing a blue Telecaster"
   >
 </div>
