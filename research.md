@@ -5,46 +5,99 @@ permalink: /research
 published: true
 ---
 
-<div class="page" markdown="1">
+<div class="research-page" markdown="1">
 
-<!-- {% capture page_subtitle %}
-<img
-    class="me"
-    alt="{{ author.name }}"
-    src="{{ site.author.photo | relative_url }}"
-    srcset="{{ site.author.photo2x | relative_url }} 2x"
-/>
-{% endcapture %}
- -->
-<!-- {% include page/title.html title=page.title subtitle=page_subtitle %} -->
+<p class="research-lead">
+I study <strong>language model behavior</strong>: what language models know about language,
+how that knowledge is represented internally, and how it shapes what they eventually do.
+My current work approaches these questions from three closely connected directions.
+</p>
 
 
-## Linguistic Probing of Language Models
-Do language models understand structural & theoretical knowledge of language? Language models are known to be aware of structural linguistic knowledge and can process such liguistic things with specific parts(layers or neurons) of them. I'm collaborating with syntaticians (and/or) semanticists, dealing with some linguistic phenomena which seems not likely to be "understood" by language models. 
-* Semoon Hoe and *Sangah Lee* (2024), [*A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean*](https://github.com/sanajlee/sanajlee.github.io/blob/master/priming_paper.pdf), Language and Information, Vol.28, No.3, pp.111-142. (In Korean)
+## 01. Representations & Interpretability
+
+What happens inside a language model before an answer appears?
+
+I am interested in how linguistic information is represented across layers and components of language models, and in connecting those internal representations to observable behavior. My work uses representation-level analyses to ask where linguistic knowledge emerges, how it changes during processing, and whether internal states can help explain, or causally alter, model behavior.
+
+Current directions include layer-wise analysis, probing and causal interventions, as well as mechanistic approaches such as representation steering and sparse feature analysis.
+
+### Related work
+
+- **Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge**  
+  *Sangah Lee*. Language and Information, 2025.  
+  [[paper]]({{ '/papers/latentlang.pdf' | relative_url }})
+
+- **A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean**  
+  Semoon Hoe and *Sangah Lee*. Language and Information, 2024.  
+  [[paper]]({{ '/papers/priming.pdf' | relative_url }})
 
 
-## (Human-like) Reasoning Abilities of LLMs
-I'm interested about the intermediate reasoning steps that LLMs produce while solving problems - espeically linguistic or cognitive ones. We can obtain their rationales in the form of natural language, and assess the rationales in various points of view. Maybe stuffs from pedagogy or language acquisition can help too.
-* Kyuhee Kim and *Sangah Lee* (2025), [*Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition*](https://aclanthology.org/2025.findings-acl.794/), Findings of the Association for Computational Linguistics: ACL 2025.
-* Seung Joo Yoo and *Sangah Lee* (2024), [*Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective*](https://escholarship.org/uc/item/3f28f61v), Proceedings of the Annual Meeting of the Cognitive Science Society.
+## 02. Multilinguality & Latent Language
+
+What does multilingual processing look like *inside* a language model?
+
+Rather than treating multilinguality only as a difference in task performance across languages, I am interested in internal linguistic asymmetries: whether models rely on English or other dominant languages as intermediate representations, when target-language representations emerge, and how these internal dynamics relate to the final output.
+
+More broadly, I study how language-specific linguistic and cultural knowledge survives — or fails to survive — multilingual model adaptation.
+
+### Related work
+
+- **Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge**  
+  *Sangah Lee*. Language and Information, 2025.  
+  [[paper]]({{ '/papers/latentlang.pdf' | relative_url }})
+
+- **Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition**  
+  Kyuhee Kim and *Sangah Lee*. Findings of ACL 2025.  
+  [[paper]](https://aclanthology.org/2025.findings-acl.794.pdf)
 
 
-## Dealing with Low-Resource Language(s)
-Yes, you like Manchu. Not only Manchu language, there are so many things to do with non-English languages, especially low-resourced ones, in NLP. Especially I'm interested in tokenizers for languages which are not written in Latin alphabets or which are highly agglutinative (yes, Korean!).
-* Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee* (2024), [*ManWav: The First Manchu ASR Model*](https://aclanthology.org/2024.fieldmatters-1.2/), Proceedings of the 3rd Workshop on NLP Applications to Field Linguistics (Field Matters 2024).
-* *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang (2024), [*ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language*](https://aclanthology.org/2024.lrec-main.961/), Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024).
-* Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee* (2023), [*Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data*](https://aclanthology.org/2023.mrl-1.10/), 3rd Multilingual Represenation Learning (MRL) Workshop.
-* *Sangah Lee* and Hyopil Shin (2021), [*The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts*](https://aclanthology.org/2021.wnut-1.45/), 2021 The 7th Workshop on Noisy User-Generated Text (W-NUT).
+## 03. Linguistic Knowledge & Reasoning
+
+When a language model gives the right answer, what kind of competence produced it?
+
+I study how language models use linguistic and culturally situated knowledge during reasoning, and how we can distinguish genuine inference from memorization, heuristics, or other shortcuts. I am especially interested in cases where models appear behaviorally successful while relying on very different internal processes.
+
+This connects linguistic evaluation with broader questions about reasoning, memorization, and the interpretation of model-generated rationales.
+
+### Related work
+
+- **Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition**  
+  Kyuhee Kim and *Sangah Lee*. Findings of ACL 2025.  
+  [[paper]](https://aclanthology.org/2025.findings-acl.794.pdf)
+
+- **Large Language Models Show Human-Like Abstract Thinking Patterns: A Construal-Level Perspective**  
+  Seung Joo Yoo and *Sangah Lee*. CogSci 2024.  
+  [[paper]](https://escholarship.org/content/qt3f28f61v/qt3f28f61v_noSplash_fec2deeee2a04a7f7c0683aedd2fb478.pdf?t=sev1vq)
 
 
-## Argument Mining
-What do people think about a controversial topic? That's a kind of argumentative data, related to the topic "Argument Mining." Particularly I'd like to collect and summarize diverse evidences that people propse when they support or attack a stance about the topic. It will require many steps: analyzing the argumentative structure of given texts, identifying necessary arguments or evidences, summarizing or clustering those evidences, and so on.
-* *Sangah Lee* and Hyopil Shin (2021), [*Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002700895), Korean Journal of Linguistics, Vol.46, No.1, pp.107-134.
-* *Sangah Lee* and Hyopil Shin (2018), [*An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features*](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE07575594), Journal of KIISE, Vol.45, No.12, pp.1292-1301. (In Korean)
-* *Sangah Lee* and Hyopil Shin (2016), [*Stance Classification of Online Debate Texts based on Discourse Relations*](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002185479), Language Research, Vol.52, No.3, pp.511-532. (In Korean)
+## Earlier Work
 
+My earlier work focused on multilingual and low-resource NLP, particularly Korean and Manchu, as well as argument mining and discourse analysis. These projects continue to shape how I think about linguistic structure, language-specific variation, and evaluation in my current work on language models.
 
+### Low-resource & multilingual NLP
 
+- **ManWav: The First Manchu ASR Model**  
+  Jean Seo, Minha Kang, SungJoo Byun, and *Sangah Lee*. Field Matters 2024.
+
+- **ManNER & ManPOS: Pioneering NLP for Endangered Manchu Language**  
+  *Sangah Lee*, Sungjoo Byun, Jean Seo, and Minha Kang. LREC-COLING 2024.
+
+- **Mergen: The First Manchu-Korean Machine Translation Model Trained on Augmented Data**  
+  Jean Seo, Sungjoo Byun, Minha Kang, and *Sangah Lee*. MRL 2023.
+
+- **The Korean Morphologically Tight-Fitting Tokenizer for Noisy User-Generated Texts**  
+  *Sangah Lee* and Hyopil Shin. W-NUT 2021.
+
+### Argument mining & discourse
+
+- **Argument Facet Detection in Online Debates Based on Attention Weights and Clustering with Combined Similarity Matrices**  
+  *Sangah Lee* and Hyopil Shin. Korean Journal of Linguistics, 2021.
+
+- **An Analysis of Linear Argumentation Structure of Korean Debate Texts Using Sequential Modeling and Linguistic Features**  
+  *Sangah Lee* and Hyopil Shin. Journal of KIISE, 2018.
+
+- **Stance Classification of Online Debate Texts based on Discourse Relations**  
+  *Sangah Lee* and Hyopil Shin. Language Research, 2016.
 
 </div>
