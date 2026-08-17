@@ -1,68 +1,21 @@
-<header>
-    <div class="menu">
-      <div class="logo">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Sana Lee home">
+    <img
+      class="site-brand__hamster"
+      src="{{ '/assets/img/hamface.PNG' | relative_url }}"
+      alt=""
+      aria-hidden="true"
+    >
+      <span>SANGAH LEE</span>
+    </a>
 
-        <a href="{{ '/' | prepend: site.baseurl }}">{{ site.blog.title }}</a>
-        <object type="image/svg+xml" data="assets/img/bolt3-svgrepo-com.svg" class="logosvg"></object>
-      </div>
-
-        <ul>
-            <li><a href="{{ '/about' | prepend: site.baseurl }}">about</a></li>
-            <li><a href="{{ '/research' | prepend: site.baseurl }}">research</a></li> 
-            <li><a href="{{ '/publications' | prepend: site.baseurl }}">publications</a></li> 
-
-            <!-- <li><a href="{{ '/archive' | prepend: site.baseurl }}">archive</a></li> -->
-        </ul>
-    </div>
-    <div class="social">
-      <ul>
-        {% if site.author.youtube %}
-        <li>
-            <a href="https://youtube.com/{{ site.author.youtube }}" target="_blank" class="smaller">
-              <span class="icon-youtube"></span>
-            </a>
-        </li>
-        {% endif %}
-        {% if site.author.stackoverflow %}
-        <li>
-            <a href="https://stackoverflow.com/{{ site.author.stackoverflow }}" target="_blank" class="smaller">
-              <span class="icon-stackoverflow"></span>
-            </a>
-        </li>
-        {% endif %}
-        {% if site.author.twitter %}
-        <li>
-            <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" class="smaller">
-              <span class="icon-twitter"></span>
-            </a>
-        </li>
-        {% endif %}
-        {% if site.author.github %}
-        <li>
-            <a href="https://github.com/{{ site.author.github }}" target="_blank" class="smaller">
-              <span class="icon-github"></span>
-            </a>
-        </li>
-        {% endif %}
-        {% if site.author.mail %}
-        <li>
-            <a href="mailto:{{ site.author.mail }}" target="_blank">
-              <span class="icon-mail_outline"></span>
-            </a>
-        </li>
-        {% endif %}
-        {% if site.author.rss == true %}
-        <li>
-            <a href="{{ '/feed.xml' | prepend: site.baseurl }}" target="_blank">
-                <span class="icon-rss_feed"></span>
-            </a>
-        </li>
-        {% endif %}
-        <li>
-            <a href="#" onclick="switchTheme()" title="Switch theme?">
-              <span class="icon-invert_colors" id="theme-switcher"></span>
-            </a>
-        </li>
-      </ul>
-    </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/about' | relative_url }}" {% if page.url == '/about' %}class="is-active"{% endif %}>about</a>
+      <a href="{{ '/research' | relative_url }}" {% if page.url == '/research' %}class="is-active"{% endif %}>research</a>
+      <a href="{{ '/publications' | relative_url }}" {% if page.url == '/publications' %}class="is-active"{% endif %}>papers</a>
+      <a href="{{ '/teaching' | relative_url }}" {% if page.url == '/teaching' %}class="is-active"{% endif %}>teaching</a>
+      <a href="{{ '/people' | relative_url }}" {% if page.url == '/people' %}class="is-active"{% endif %}>people</a>
+    </nav>
+  </div>
 </header>

@@ -1,4 +1,18 @@
-<footer>
-    <span>{{ site.blog.description }}</span>
-    <span>written by {{ site.author.fullname }}</span>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <span>© {{ "now" | date: "%Y" }} Sangah Lee</span>
+    <span class="site-footer__dot">·</span>
+    <span>built with caffeine and questionable CSS decisions</span>
+
+    <span class="site-footer__sleep">
+      <img
+        class="site-footer__hamster"
+        src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+        alt=""
+        aria-hidden="true"
+      >
+      <span>zzz</span>
+    </span>
+
+  </div>
 </footer>

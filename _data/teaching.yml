@@ -1,0 +1,110 @@
+- year: 2026
+  term: Fall
+  title: "Language and Computer"
+  level: "Undergraduate"
+  description: >
+    From basic topics and technical skills for computational linguistics to neural architectures:
+    csv and json, regular expressions, numpy, pytorch, logistic regression, feed-forward networks, RNNs/LSTMs, CNNs.
+  current: True
+
+- year: 2026
+  term: Fall
+  title: "Studies in Computational Linguistics 1"
+  level: "Graduate Seminar"
+  description: >
+    From statistical language modeling to neural architectures and large language models:
+    n-grams, vector semantics, sequence-to-sequence models, attention, Transformers, and modern LLMs.
+  current: True
+
+- year: 2026
+  term: Spring
+  title: "Computational Linguistics"
+  level: "Undergraduate"
+  description: >
+    From statistical language modeling to neural architectures and large language models:
+    n-grams, vector semantics, sequence-to-sequence models, attention, Transformers, and modern LLMs.
+  current: False
+
+- year: 2026
+  term: Spring
+  title: "Studies in Computational Linguistics 2"
+  subtitle: "Understanding and Shaping LLM Behavior"
+  level: "Graduate Seminar"
+  description: >
+    A research seminar on how language models represent, reason, remember, and behave,
+    with topics including interpretability, knowledge, steering, multilinguality,
+    preference, and alignment.
+  current: False
+
+- year: 2025
+  term: Fall
+  title: "Language and Computer"
+  level: "Undergraduate"
+  description: >
+    From basic topics and technical skills for computational linguistics to neural architectures:
+    csv and json, regular expressions, numpy, pytorch, logistic regression, feed-forward networks, RNNs/LSTMs, CNNs, and sequence-to-sequence models.
+  current: False
+
+- year: 2025
+  term: Fall
+  title: "Seminar in Computational Linguistics"
+  subtitle: "Training, Tuning and Utilizing Large Language Models"
+  level: "Graduate Seminar"
+  description: >
+    A research seminar on the application, training, and fine-tuning of Large Language Models (LLMs) to produce actual research outcomes.
+  current: False
+
+- year: 2025
+  term: Spring
+  title: "Computational Linguistics"
+  level: "Undergraduate"
+  description: >
+    From statistical language modeling to neural architectures and large language models:
+    n-grams, vector semantics, sequence-to-sequence models, attention, Transformers, and modern LLMs.
+  current: False
+
+- year: 2025
+  term: Spring
+  title: "Studies in Computational Linguistics 2"
+  subtitle: "Large Language Models and Reasoning"
+  level: "Graduate Seminar"
+  description: >
+    A research seminar on Transformer-based large language models and reasoning abilities of such models.
+  current: False
+
+- year: 2024
+  term: Fall
+  title: "Language and Computer"
+  level: "Undergraduate"
+  description: >
+    From basic topics and technical skills for computational linguistics to neural architectures:
+    csv and json, regular expressions, numpy, pytorch, logistic regression, feed-forward networks, RNNs/LSTMs, CNNs, and sequence-to-sequence models.
+  current: False
+
+- year: 2024
+  term: Fall
+  title: "Seminar in Computational Linguistics"
+  subtitle: "Understanding and Evaluating Large Language Models"
+  level: "Graduate Seminar"
+  description: >
+    A research seminar discussing ways to achieve better generation through evaluating the outputs of generative LLMs.
+  current: False
+
+- year: 2024
+  term: Spring
+  title: "Computational Linguistics"
+  level: "Undergraduate"
+  description: >
+    From statistical language modeling to neural architectures and large language models:
+    n-grams, vector semantics, sequence-to-sequence models, attention, Transformers, and modern LLMs.
+  current: False
+
+- year: 2024
+  term: Spring
+  title: "Studies in Computational Linguistics 2"
+  subtitle: "Large Language Models and Linguistic Probing"
+  level: "Graduate Seminar"
+  description: >
+    A research seminar on Transformer-based large language models and linguistic probing of such models.
+  current: False
+
