@@ -1204,3 +1204,24 @@ iframe {
     white-space: normal;
   }
 }
+
+
+.education-item {
+  margin-bottom: 2.2rem;
+}
+
+.education-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-item .year {
+  margin: 0 0 .3rem;
+}
+
+.education-item .degree {
+  margin: 0 0 .7rem;
+}
+
+.education-item .detail {
+  margin: .15rem 0;
+}

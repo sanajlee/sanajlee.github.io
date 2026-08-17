@@ -63,24 +63,24 @@ Postdoctoral Researcher, Graduate School of Data Science, Seoul National Univers
 
 ## Education
 
-<strong>2021</strong><br>
-Ph.D. in Linguistics, Seoul National University
-
-<div class="about-details">
-  <span>Dissertation: “The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis”</span>
-  <span>Advisor: Hyopil Shin</span>
+<div class="education-item">
+  <div class="year">2021</div>
+  <div class="degree">Ph.D. in Linguistics, Seoul National University</div>
+  <p class="detail">Dissertation: “The Construction of a Korean Pre-Trained Model and an Enhanced Application on Sentiment Analysis”</p>
+  <p class="detail">Advisor: Hyopil Shin</p>
 </div>
 
-<strong>2016</strong><br>
-M.A. in Linguistics, Seoul National University  
-
-<div class="about-details">
-  <span>Thesis: “An Automatic Analysis of Argumentation Schemes of Korean Texts”</span>
-  <span>Advisor: Hyopil Shin</span>
+<div class="education-item">
+  <div class="year">2016</div>
+  <div class="degree">M.A. in Linguistics, Seoul National University </div>
+  <p class="detail">Thesis: “An Automatic Analysis of Argumentation Schemes of Korean Texts”</p>
+  <p class="detail">Advisor: Hyopil Shin</p>
 </div>
 
-<strong>2013</strong><br>
-B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University 
+<div class="education-item">
+  <div class="year">2016</div>
+  <div class="degree">B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University</div>
+</div>
 
 
 <div class="about-ending">
