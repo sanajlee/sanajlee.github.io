@@ -1236,29 +1236,20 @@ iframe {
 .scratch-zone {
   position: relative;
   height: 0;
+  margin: 0;
+  padding: 0;
   z-index: 5;
 }
 
 .scratch-sticky {
   position: absolute;
-
-  width: 270px;
-  min-height: 190px;
-
   right: 2.5rem;
   top: -2rem;
 
-  padding: 2rem 1.5rem 1.5rem;
+  width: 270px;
+  min-height: 190px;
   margin: 0;
-
-  background: #fff3b8;
-  transform: rotate(-1.5deg);
-
-  box-shadow:
-    2px 5px 0 rgba(50, 40, 20, .04),
-    0 10px 24px rgba(50, 40, 20, .08);
 }
-
 
 .scratch-tape {
   position: absolute;
@@ -1321,10 +1312,6 @@ iframe {
     width: min(270px, 85vw);
     margin: 1.5rem auto 3rem;
   }
-}
-
-.research-section {
-  padding-top: 5rem;
 }
 
 
