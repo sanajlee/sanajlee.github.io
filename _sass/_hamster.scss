@@ -1228,136 +1228,88 @@ iframe {
 }
 
 
+
+/* ========================================
+   Scratchpad sticky note
+======================================== */
+
 .scratch-sticky {
   position: relative;
 
   width: 270px;
-  min-height: 210px;
-  box-sizing: border-box;
+  min-height: 190px;
 
-  margin: -1rem 2.5rem 2.5rem auto;
-  padding: 2rem 1.6rem 1.5rem;
+  margin: -1.5rem 2.5rem 2.5rem auto;
+  padding: 2rem 1.5rem 1.5rem;
 
   background: #fff3b8;
 
   transform: rotate(-1.5deg);
-  transform-origin: center top;
 
   box-shadow:
-    2px 5px 0 rgba(50, 40, 20, .035),
+    2px 5px 0 rgba(50, 40, 20, .04),
     0 10px 24px rgba(50, 40, 20, .08);
-
-  transition:
-    transform .18s ease,
-    box-shadow .18s ease;
 }
-
-.scratch-sticky:hover {
-  transform: rotate(-.3deg) translateY(-3px);
-
-  box-shadow:
-    2px 6px 0 rgba(50, 40, 20, .035),
-    0 14px 28px rgba(50, 40, 20, .10);
-}
-
-
-/* pink masking tape */
 
 .scratch-tape {
   position: absolute;
+  top: -12px;
+  left: 50%;
 
   width: 82px;
   height: 24px;
 
-  top: -12px;
-  left: 50%;
+  background: rgba(243, 169, 194, .75);
 
-  transform:
-    translateX(-50%)
-    rotate(2deg);
-
-  background: rgba(244, 164, 188, .72);
+  transform: translateX(-50%) rotate(2deg);
 }
-
-
-/* little doodle */
 
 .scratch-doodle {
   position: absolute;
-  top: 16px;
+  top: 15px;
   right: 18px;
 
   font-family: "Gaegu", cursive;
-  font-size: 1.15rem;
-
+  font-size: 1.2rem;
   color: #eb718f;
 
   transform: rotate(12deg);
 }
 
-
-/* heading */
-
 .scratch-sticky__header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  gap: .7rem;
 
   margin-bottom: .8rem;
 
   font-family: "Gaegu", cursive;
 }
 
-.scratch-sticky__header > span:first-child {
+.scratch-sticky__label {
   font-size: 1.35rem;
   font-weight: 700;
-  letter-spacing: .03em;
 }
 
 .scratch-sticky__date {
   font-size: .85rem;
-  color: #9a865e;
+  color: #927c50;
 }
-
-
-/* actual note */
 
 .scratch-sticky__text {
   margin: 0;
 
   font-family: "Gaegu", cursive;
-  font-size: 1.08rem;
-  font-weight: 500;
+  font-size: 1.1rem;
   line-height: 1.45;
 
   color: #39352c;
 }
 
-
-/* useless but important ... */
-
-.scratch-sticky__scribble {
-  position: absolute;
-  right: 20px;
-  bottom: 12px;
-
-  font-family: "Gaegu", cursive;
-  font-size: 1.25rem;
-
-  color: rgba(235, 113, 143, .7);
-
-  transform: rotate(-8deg);
-}
-
-
 @media (max-width: 760px) {
   .scratch-sticky {
     width: min(270px, 85vw);
-    min-height: 190px;
-
-    margin: 2rem auto 3rem;
-
-    transform: rotate(-1deg);
+    margin: 1.5rem auto 3rem;
   }
 }
-

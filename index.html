@@ -37,20 +37,20 @@ description: Computational linguist studying language model behavior, mechanisti
 </section>
 
 
+{% assign note = site.data.scratchpad[0] %}
+
 <div class="scratch-sticky">
   <div class="scratch-tape"></div>
 
-  <div class="scratch-doodle">✦</div>
+  <span class="scratch-doodle">✦</span>
 
   <div class="scratch-sticky__header">
-    <span>scratchpad</span>
-    <span class="scratch-sticky__date">
-      {{ site.data.scratchpad[0].date }}
-    </span>
+    <span class="scratch-sticky__label">scratchpad</span>
+    <span class="scratch-sticky__date">{{ note.date }}</span>
   </div>
 
   <p class="scratch-sticky__text">
-    {{ site.data.scratchpad[0].text }}
+    {{ note.text }}
   </p>
 </div>
 
