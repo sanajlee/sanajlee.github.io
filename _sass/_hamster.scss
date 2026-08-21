@@ -1350,29 +1350,6 @@ iframe {
 }
 
 
-/* curled corner */
-
-.scratch-sticky::after {
-  content: "";
-
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  width: 25px;
-  height: 25px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(245, 221, 145, .2) 0%,
-    rgba(245, 221, 145, .2) 48%,
-    #fff8d5 50%,
-    #fff8d5 100%
-  );
-
-  box-shadow: -2px -2px 4px rgba(70, 50, 20, .025);
-}
-
 @media (max-width: 760px) {
   .scratch-sticky {
     width: min(270px, 85vw);
@@ -1384,13 +1361,3 @@ iframe {
   }
 }
 
-
-.scratch-hamster {
-  position: absolute;
-  width: 46px;
-
-  right: 12px;
-  bottom: -8px;
-
-  transform: rotate(6deg);
-}
