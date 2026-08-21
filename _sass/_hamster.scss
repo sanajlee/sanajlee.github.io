@@ -1249,6 +1249,18 @@ iframe {
   width: 270px;
   min-height: 190px;
   margin: 0;
+  padding: 2rem 1.5rem 1.5rem;
+
+  background: #fff3b8;
+  color: #39352c;
+
+  transform: rotate(-1.5deg);
+
+  box-shadow:
+    2px 5px 0 rgba(50, 40, 20, .04),
+    0 10px 24px rgba(50, 40, 20, .08);
+
+  z-index: 10;
 }
 
 .scratch-tape {
