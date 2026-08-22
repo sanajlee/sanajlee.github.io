@@ -1,4 +1,12 @@
 - year: 2026
+  title: "How Do Language Models Represent and Use Phonological Information for Allomorph Selection?"
+  authors:
+    - Sangwoo Kim
+    - Sangah Lee
+  venue: "Accepted to EMNLP 2026"
+  # paper: "https://arxiv.org/pdf/2511.17689"
+
+- year: 2026
   title: "ARISE: Agentic Rubric-Guided Iterative Survey Engine for Automated Scholarly Paper Generation"
   authors:
     - Zi Wang

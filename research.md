@@ -24,6 +24,10 @@ Current directions include layer-wise analysis, probing and causal interventions
 
 ### Related work
 
+- **How Do Language Models Represent and Use Phonological Information for Allomorph Selection?**  
+  Sangwoo Kim and *Sangah Lee*. Accepted to EMNLP 2026.
+  <!-- [[paper]]({{ '/papers/latentlang.pdf' | relative_url }}) -->
+
 - **Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge**  
   *Sangah Lee*. Language and Information, 2025.  
   [[paper]]({{ '/papers/latentlang.pdf' | relative_url }})
