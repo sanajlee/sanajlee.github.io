@@ -1278,14 +1278,21 @@ iframe {
 
 .scratch-doodle {
   position: absolute;
-  top: 15px;
-  right: 18px;
+  top: 14px;
+  right: 14px;
 
-  font-family: "Gaegu", cursive;
-  font-size: 1.2rem;
-  color: #eb718f;
+  width: 42px;
+  height: 42px;
 
-  transform: rotate(12deg);
+  transform: rotate(6deg);
+  z-index: 2;
+}
+
+.scratch-hamster {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .scratch-sticky__header {
@@ -1346,15 +1353,4 @@ iframe {
   .research-section {
     padding-top: 2rem;
   }
-}
-
-
-.scratch-hamster {
-  position: absolute;
-  width: 22px;
-  top: 14px;
-  right: 14px;
-  height: 22px;
-
-  transform: rotate(6deg);
 }
