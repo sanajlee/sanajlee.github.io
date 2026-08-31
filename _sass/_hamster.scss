@@ -1357,79 +1357,93 @@ iframe {
 
 
 /* ----------------------------------
-   bulletin board
+   research + floating bulletin board
 ---------------------------------- */
 
-.bulletin-section {
-  margin: 4rem 0 5rem;
+.research-section {
+  position: relative;
+  overflow: visible;
 }
+
+.research-board-wrap {
+  position: absolute;
+
+  top: -90px;
+  right: -30px;
+
+  width: 360px;
+
+  z-index: 4;
+
+  transform: rotate(1deg);
+}
+
+
+/* board */
 
 .bulletin-board {
   position: relative;
 
-  width: min(880px, calc(100% - 3rem));
-  min-height: 320px;
-  margin: 0 auto;
+  width: 100%;
+  height: 245px;
 
-  background: #f5f0e6;
+  background: #f4f0e7;
 
-  border: 1px solid rgba(75, 64, 50, .14);
-  border-radius: 6px;
+  border: 1px solid rgba(65, 55, 45, .16);
+  border-radius: 5px;
 
   box-shadow:
-    inset 0 0 0 7px rgba(255, 255, 255, .22),
-    0 10px 24px rgba(50, 40, 30, .04);
+    inset 0 0 0 6px rgba(255,255,255,.22),
+    0 8px 18px rgba(45,35,25,.06);
 
   overflow: hidden;
 }
 
 
-/* scratchpad note */
+/* note */
 
 .board-note {
   position: absolute;
-  top: 42px;
-  left: 55px;
 
-  width: 290px;
-  min-height: 190px;
+  top: 34px;
+  left: 28px;
 
-  padding: 2rem 1.5rem 1.4rem;
+  width: 175px;
+  min-height: 130px;
+
+  padding: 1.25rem 1rem 1rem;
 
   background: #fff3b8;
-  color: #39352c;
 
   transform: rotate(-2deg);
 
   box-shadow:
-    2px 4px 0 rgba(50, 40, 20, .04),
-    0 8px 18px rgba(50, 40, 20, .08);
+    1px 3px 0 rgba(50,40,20,.04),
+    0 6px 12px rgba(50,40,20,.07);
 }
 
 .board-note__tape {
   position: absolute;
 
-  top: -12px;
+  top: -9px;
   left: 50%;
 
-  width: 78px;
-  height: 23px;
+  width: 58px;
+  height: 18px;
 
-  background: rgba(243, 169, 194, .78);
+  background: rgba(243,169,194,.78);
 
-  transform:
-    translateX(-50%)
-    rotate(2deg);
+  transform: translateX(-50%) rotate(2deg);
 }
 
 .board-note__hamster {
   position: absolute;
 
-  top: 8px;
-  right: 12px;
+  top: 7px;
+  right: 8px;
 
-  width: 38px;
-  height: 38px;
+  width: 26px;
+  height: 26px;
 
   object-fit: contain;
 
@@ -1441,21 +1455,21 @@ iframe {
   align-items: baseline;
   justify-content: space-between;
 
-  gap: .7rem;
+  gap: .4rem;
 
-  padding-right: 2.5rem;
-  margin-bottom: .8rem;
+  padding-right: 1.8rem;
+  margin-bottom: .55rem;
 
   font-family: "Gaegu", cursive;
 }
 
 .board-note__label {
-  font-size: 1.55rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
 .board-note__date {
-  font-size: .9rem;
+  font-size: .63rem;
   color: #927c50;
 }
 
@@ -1463,130 +1477,111 @@ iframe {
   margin: 0;
 
   font-family: "Gaegu", cursive;
-  font-size: 1.2rem;
-  line-height: 1.45;
+  font-size: .88rem;
+  line-height: 1.4;
 
   color: #39352c;
 }
 
 
-/* temporary visitor stamps */
+/* stamps */
 
 .board-stamp {
   position: absolute;
 
-  width: 66px;
-  height: 66px;
+  width: 34px;
+  height: 34px;
 
   object-fit: contain;
 
   opacity: .72;
-
-  filter: grayscale(.25);
 }
 
 .stamp-1 {
-  top: 65px;
-  right: 125px;
+  top: 47px;
+  right: 38px;
 
   transform: rotate(8deg);
 }
 
 .stamp-2 {
-  top: 160px;
-  right: 260px;
+  top: 112px;
+  right: 100px;
 
-  width: 58px;
-  height: 58px;
+  width: 30px;
+  height: 30px;
 
-  opacity: .63;
+  opacity: .6;
 
-  transform: rotate(-11deg);
+  transform: rotate(-10deg);
 }
 
 .stamp-3 {
-  bottom: 100px;
-  right: 70px;
+  bottom: 44px;
+  right: 42px;
 
-  width: 72px;
-  height: 72px;
+  width: 38px;
+  height: 38px;
 
-  opacity: .72;
-
-  transform: rotate(3deg);
+  transform: rotate(4deg);
 }
 
 
-/* stamp button */
+/* button */
 
 .board-stamp-button {
   position: absolute;
 
-  right: 28px;
-  bottom: 20px;
+  right: 16px;
+  bottom: 14px;
 
-  padding: .5rem .85rem;
+  padding: .35rem .65rem;
 
-  border: 1px solid rgba(55, 50, 45, .25);
+  border: 1px solid rgba(55,50,45,.2);
   border-radius: 999px;
 
-  background: rgba(255,255,255,.55);
+  background: rgba(255,255,255,.62);
 
   font-family: "Gaegu", cursive;
-  font-size: 1rem;
+  font-size: .8rem;
 
   color: #444039;
 
   cursor: pointer;
-
-  transition:
-    transform .12s ease,
-    background .12s ease;
 }
 
 .board-stamp-button:hover {
-  background: rgba(255,255,255,.85);
-  transform: rotate(-1deg);
+  background: rgba(255,255,255,.9);
 }
 
 
-/* mobile */
+/* research text shouldn't run underneath board */
 
-@media (max-width: 760px) {
+.research-section .section-kicker,
+.research-section .research-intro {
+  max-width: 620px;
+}
 
-  .bulletin-section {
-    margin: 3rem 0 4rem;
+
+/* mobile: board returns to normal flow */
+
+@media (max-width: 900px) {
+
+  .research-board-wrap {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: min(360px, 92%);
+
+    margin: 0 0 2.5rem auto;
+
+    transform: rotate(.5deg);
   }
 
-  .bulletin-board {
-    width: calc(100% - 2rem);
-    min-height: 470px;
-  }
-
-  .board-note {
-    top: 48px;
-    left: 28px;
-
-    width: 230px;
-  }
-
-  .stamp-1 {
-    top: 245px;
-    right: 55px;
-  }
-
-  .stamp-2 {
-    top: 330px;
-    right: 175px;
-  }
-
-  .stamp-3 {
-    bottom: 35px;
-    right: 45px;
-  }
-
-  .board-stamp-button {
-    right: 20px;
-    bottom: 20px;
+  .research-section .section-kicker,
+  .research-section .research-intro {
+    max-width: none;
   }
 }

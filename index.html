@@ -37,52 +37,53 @@ description: Computational linguist studying language model behavior, mechanisti
 </section>
 
 
-<section class="bulletin-section">
-  <div class="bulletin-board">
-
-    {% assign note = site.data.scratchpad[0] %}
-
-    <div class="board-note">
-      <div class="board-note__tape"></div>
-
-      <img
-        class="board-note__hamster"
-        src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-        alt=""
-      >
-
-      <div class="board-note__header">
-        <span class="board-note__label">scratchpad</span>
-        <span class="board-note__date">{{ note.date }}</span>
-      </div>
-
-      <p class="board-note__text">
-        {{ note.text }}
-      </p>
-    </div>
-
-    <!-- 임시 visitor stamps -->
-    <img class="board-stamp stamp-1"
-         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-         alt="">
-
-    <img class="board-stamp stamp-2"
-         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-         alt="">
-
-    <img class="board-stamp stamp-3"
-         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-         alt="">
-
-    <button class="board-stamp-button" type="button">
-      leave a stamp
-    </button>
-
-  </div>
-</section>
-
 
 <section class="home-section research-section">
+
+  <div class="research-board-wrap">
+    <div class="bulletin-board">
+
+      {% assign note = site.data.scratchpad[0] %}
+
+      <div class="board-note">
+        <div class="board-note__tape"></div>
+
+        <img
+          class="board-note__hamster"
+          src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+          alt=""
+        >
+
+        <div class="board-note__header">
+          <span class="board-note__label">scratchpad</span>
+          <span class="board-note__date">{{ note.date }}</span>
+        </div>
+
+        <p class="board-note__text">
+          {{ note.text }}
+        </p>
+      </div>
+
+      <img class="board-stamp stamp-1"
+           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+           alt="">
+
+      <img class="board-stamp stamp-2"
+           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+           alt="">
+
+      <img class="board-stamp stamp-3"
+           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+           alt="">
+
+      <button class="board-stamp-button" type="button">
+        leave a stamp
+      </button>
+
+    </div>
+  </div>
+
+
   <div class="section-title-row">
     <h2>WHAT I WORK ON THESE DAYS</h2>
   </div>
