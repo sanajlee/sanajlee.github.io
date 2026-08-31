@@ -1368,17 +1368,17 @@ iframe {
   position: relative;
 
   width: min(880px, calc(100% - 3rem));
-  min-height: 390px;
+  min-height: 320px;
   margin: 0 auto;
 
-  background: #f4f0e7;
+  background: #f5f0e6;
 
-  border: 1px solid rgba(55, 50, 45, .18);
+  border: 1px solid rgba(75, 64, 50, .14);
   border-radius: 6px;
 
   box-shadow:
-    inset 0 0 0 8px rgba(255, 255, 255, .25),
-    0 8px 20px rgba(40, 35, 30, .05);
+    inset 0 0 0 7px rgba(255, 255, 255, .22),
+    0 10px 24px rgba(50, 40, 30, .04);
 
   overflow: hidden;
 }
@@ -1388,13 +1388,13 @@ iframe {
 
 .board-note {
   position: absolute;
-  top: 55px;
-  left: 70px;
+  top: 42px;
+  left: 55px;
 
-  width: 250px;
-  min-height: 175px;
+  width: 290px;
+  min-height: 190px;
 
-  padding: 1.8rem 1.35rem 1.3rem;
+  padding: 2rem 1.5rem 1.4rem;
 
   background: #fff3b8;
   color: #39352c;
@@ -1450,12 +1450,12 @@ iframe {
 }
 
 .board-note__label {
-  font-size: 1.35rem;
+  font-size: 1.55rem;
   font-weight: 700;
 }
 
 .board-note__date {
-  font-size: .82rem;
+  font-size: .9rem;
   color: #927c50;
 }
 
@@ -1463,7 +1463,7 @@ iframe {
   margin: 0;
 
   font-family: "Gaegu", cursive;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.45;
 
   color: #39352c;
@@ -1475,29 +1475,29 @@ iframe {
 .board-stamp {
   position: absolute;
 
-  width: 52px;
-  height: 52px;
+  width: 66px;
+  height: 66px;
 
   object-fit: contain;
 
-  opacity: .78;
+  opacity: .72;
 
   filter: grayscale(.25);
 }
 
 .stamp-1 {
-  top: 75px;
-  right: 145px;
+  top: 65px;
+  right: 125px;
 
   transform: rotate(8deg);
 }
 
 .stamp-2 {
-  top: 190px;
-  right: 280px;
+  top: 160px;
+  right: 260px;
 
-  width: 44px;
-  height: 44px;
+  width: 58px;
+  height: 58px;
 
   opacity: .63;
 
@@ -1505,11 +1505,11 @@ iframe {
 }
 
 .stamp-3 {
-  bottom: 55px;
-  right: 95px;
+  bottom: 100px;
+  right: 70px;
 
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
 
   opacity: .72;
 
@@ -1522,8 +1522,8 @@ iframe {
 .board-stamp-button {
   position: absolute;
 
-  right: 32px;
-  bottom: 24px;
+  right: 28px;
+  bottom: 20px;
 
   padding: .5rem .85rem;
 
