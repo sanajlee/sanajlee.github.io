@@ -37,29 +37,49 @@ description: Computational linguist studying language model behavior, mechanisti
 </section>
 
 
-<div class="scratch-zone">
-  {% assign note = site.data.scratchpad[0] %}
+<section class="bulletin-section">
+  <div class="bulletin-board">
 
-  <div class="scratch-sticky">
-    <div class="scratch-tape"></div>
-    <span class="scratch-doodle">
+    {% assign note = site.data.scratchpad[0] %}
+
+    <div class="board-note">
+      <div class="board-note__tape"></div>
+
       <img
-        class="scratch-hamster"
-        src="{{ '/assets/img/hamface.PNG' | relative_url }}"
+        class="board-note__hamster"
+        src="{{ '/assets/img/hamzzz.png' | relative_url }}"
         alt=""
       >
-    </span>
 
-    <div class="scratch-sticky__header">
-      <span class="scratch-sticky__label">scratchpad</span>
-      <span class="scratch-sticky__date">{{ note.date }}</span>
+      <div class="board-note__header">
+        <span class="board-note__label">scratchpad</span>
+        <span class="board-note__date">{{ note.date }}</span>
+      </div>
+
+      <p class="board-note__text">
+        {{ note.text }}
+      </p>
     </div>
 
-    <p class="scratch-sticky__text">
-      {{ note.text }}
-    </p>
+    <!-- 임시 visitor stamps -->
+    <img class="board-stamp stamp-1"
+         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+         alt="">
+
+    <img class="board-stamp stamp-2"
+         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+         alt="">
+
+    <img class="board-stamp stamp-3"
+         src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+         alt="">
+
+    <button class="board-stamp-button" type="button">
+      leave a stamp
+    </button>
+
   </div>
-</div>
+</section>
 
 
 <section class="home-section research-section">
