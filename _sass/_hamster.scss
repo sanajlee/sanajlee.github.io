@@ -1484,49 +1484,6 @@ iframe {
 }
 
 
-/* stamps */
-
-.board-stamp {
-  position: absolute;
-
-  width: 34px;
-  height: 34px;
-
-  object-fit: contain;
-
-  opacity: .72;
-}
-
-.stamp-1 {
-  top: 47px;
-  right: 38px;
-
-  transform: rotate(8deg);
-}
-
-.stamp-2 {
-  top: 112px;
-  right: 100px;
-
-  width: 30px;
-  height: 30px;
-
-  opacity: .6;
-
-  transform: rotate(-10deg);
-}
-
-.stamp-3 {
-  bottom: 44px;
-  right: 42px;
-
-  width: 38px;
-  height: 38px;
-
-  transform: rotate(4deg);
-}
-
-
 /* button */
 
 .board-stamp-button {
