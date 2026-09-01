@@ -1740,25 +1740,50 @@ iframe {
   cursor: crosshair;
 }
 
-.bulletin-board.is-placing-stamp::after {
-  content: "click somewhere on the board ✦";
-
+.stamp-placement-hint {
   position: absolute;
   left: 50%;
-  bottom: 14px;
+  bottom: 18px;
 
-  transform: translateX(-50%);
+  align-items: center;
+  gap: .4rem;
 
-  padding: .25rem .55rem;
+  transform: translate(-50%, 8px);
 
+  padding: .45rem .8rem;
+
+  background: rgba(255, 255, 255, .92);
+  border: 1px solid rgba(60, 55, 45, .18);
   border-radius: 999px;
 
-  background: rgba(255,255,255,.78);
+  box-shadow: 0 4px 12px rgba(40, 35, 25, .07);
 
   font-family: "Gaegu", cursive;
-  font-size: .78rem;
+  font-size: .9rem;
+  white-space: nowrap;
+  color: #4b463f;
 
-  color: #665f56;
-
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
+
+  transition:
+    opacity .15s ease,
+    transform .15s ease,
+    visibility .15s;
+
+  z-index: 30;
+}
+
+.bulletin-board.is-placing-stamp .stamp-placement-hint {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.stamp-placement-preview {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }

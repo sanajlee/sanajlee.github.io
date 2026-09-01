@@ -44,7 +44,16 @@ description: Computational linguist studying language model behavior, mechanisti
     <div class="bulletin-board">
 
       {% assign note = site.data.scratchpad[0] %}
+
       <div class="my-stamp-slot" id="my-stamp-slot"></div>
+      <div
+        class="stamp-placement-hint"
+        id="stamp-placement-hint"
+        aria-live="polite"
+      >
+        <img id="stamp-placement-preview" src="" alt="">
+        <span>pick a spot and stamp it! ✦</span>
+      </div>
 
       <div class="board-note">
         <div class="board-note__tape"></div>
@@ -222,6 +231,7 @@ description: Computational linguist studying language model behavior, mechanisti
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const placementPreview = document.getElementById("stamp-placement-preview");
   const board = document.querySelector(".bulletin-board");
   const button = document.getElementById("stamp-button");
   const picker = document.getElementById("stamp-picker");
@@ -348,10 +358,22 @@ document.addEventListener("DOMContentLoaded", function () {
         "false"
       );
 
+      placementPreview.src = selectedStamp.image;
+
       isPlacing = true;
 
       board.classList.add("is-placing-stamp");
     });
+  });
+
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key !== "Escape" || !isPlacing) return;
+
+    isPlacing = false;
+    selectedStamp = null;
+
+    board.classList.remove("is-placing-stamp");
   });
 
   /*
