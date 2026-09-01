@@ -222,13 +222,17 @@ description: Computational linguist studying language model behavior, mechanisti
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const board = document.querySelector(".bulletin-board");
   const button = document.getElementById("stamp-button");
   const picker = document.getElementById("stamp-picker");
   const slot = document.getElementById("my-stamp-slot");
 
-  if (!button || !picker || !slot) return;
+  if (!board || !button || !picker || !slot) return;
 
   const STORAGE_KEY = "daily-board-stamp";
+
+  let selectedStamp = null;
+  let isPlacing = false;
 
   function getToday() {
     const now = new Date();
@@ -238,6 +242,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const day = String(now.getDate()).padStart(2, "0");
 
     return `${year}-${month}-${day}`;
+  }
+
+  function saveStamp(data) {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify(data)
+    );
   }
 
   function loadStamp() {
@@ -267,6 +278,17 @@ document.addEventListener("DOMContentLoaded", function () {
     img.src = data.image;
     img.alt = "";
 
+    /*
+      x/y는 0~1 사이 비율로 저장.
+      그래서 화면 크기가 바뀌어도 같은 상대 위치에 유지됨.
+    */
+    slot.style.left = `${data.x * 100}%`;
+    slot.style.top = `${data.y * 100}%`;
+
+    // 약간씩 다른 실제 도장 느낌
+    slot.style.transform =
+      `translate(-50%, -50%) rotate(${data.rotation || 0}deg)`;
+
     slot.appendChild(img);
 
     if (animate) {
@@ -284,33 +306,105 @@ document.addEventListener("DOMContentLoaded", function () {
     button.textContent = "change stamp";
   }
 
-  button.addEventListener("click", function () {
+  /*
+    leave/change 버튼
+  */
+  button.addEventListener("click", function (event) {
+    event.stopPropagation();
+
     const isOpen = picker.classList.toggle("is-open");
 
     button.setAttribute(
       "aria-expanded",
       isOpen ? "true" : "false"
     );
+
+    /*
+      change 도중 다시 버튼 누르면 placement mode 취소
+    */
+    if (!isOpen && isPlacing) {
+      isPlacing = false;
+      selectedStamp = null;
+      board.classList.remove("is-placing-stamp");
+    }
   });
 
+  /*
+    palette에서 stamp 선택
+  */
   picker.querySelectorAll(".stamp-choice").forEach(function (choice) {
-    choice.addEventListener("click", function () {
-      const data = {
-        date: getToday(),
-        stamp: choice.dataset.stamp,
+    choice.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      selectedStamp = {
+        id: choice.dataset.stamp,
         image: choice.dataset.image
       };
 
-      localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify(data)
+      picker.classList.remove("is-open");
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
       );
 
-      renderStamp(data, true);
+      isPlacing = true;
 
-      picker.classList.remove("is-open");
-      button.setAttribute("aria-expanded", "false");
+      board.classList.add("is-placing-stamp");
     });
+  });
+
+  /*
+    board 클릭 → 그 위치에 stamp
+  */
+  board.addEventListener("click", function (event) {
+    if (!isPlacing || !selectedStamp) return;
+
+    /*
+      버튼이나 palette 클릭은 위치 선택으로 처리하지 않음
+    */
+    if (
+      event.target.closest(".stamp-picker") ||
+      event.target.closest(".board-stamp-button")
+    ) {
+      return;
+    }
+
+    const rect = board.getBoundingClientRect();
+
+    let x = (event.clientX - rect.left) / rect.width;
+    let y = (event.clientY - rect.top) / rect.height;
+
+    /*
+      스탬프가 보드 밖으로 반쯤 잘리지 않도록
+      가장자리 제한
+    */
+    x = Math.max(.08, Math.min(.92, x));
+    y = Math.max(.10, Math.min(.88, y));
+
+    const rotation =
+      Math.round(Math.random() * 14 - 7);
+
+    const data = {
+      date: getToday(),
+
+      stamp: selectedStamp.id,
+      image: selectedStamp.image,
+
+      x: x,
+      y: y,
+
+      rotation: rotation
+    };
+
+    saveStamp(data);
+
+    renderStamp(data, true);
+
+    isPlacing = false;
+    selectedStamp = null;
+
+    board.classList.remove("is-placing-stamp");
   });
 
   loadStamp();
