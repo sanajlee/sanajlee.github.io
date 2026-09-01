@@ -44,6 +44,7 @@ description: Computational linguist studying language model behavior, mechanisti
     <div class="bulletin-board">
 
       {% assign note = site.data.scratchpad[0] %}
+      <div class="my-stamp-slot" id="my-stamp-slot"></div>
 
       <div class="board-note">
         <div class="board-note__tape"></div>
@@ -77,34 +78,32 @@ description: Computational linguist studying language model behavior, mechanisti
         {% endfor %}
       </div>
 
-<!--       <button class="board-stamp-button" type="button">
-        leave a stamp
-      </button>
- -->
-      <div class="stamp-picker" id="stamp-picker">
-        {% for stamp in site.data.stamps %}
-          <button
-            type="button"
-            class="stamp-choice"
-            data-stamp="{{ stamp.id }}"
-            aria-label="{{ stamp.label }}"
-          >
-            <img
-              src="{{ stamp.image | relative_url }}"
-              alt=""
-            >
-          </button>
-        {% endfor %}
-      </div>
 
-      <button
-        class="board-stamp-button"
-        id="stamp-button"
-        type="button"
-        aria-expanded="false"
-      >
-        leave a stamp
-      </button>
+    <div class="stamp-picker" id="stamp-picker">
+      {% for stamp in site.data.stamps %}
+        <button
+          type="button"
+          class="stamp-choice"
+          data-stamp="{{ stamp.id }}"
+          data-image="{{ stamp.image | relative_url }}"
+          aria-label="{{ stamp.label }}"
+        >
+          <img
+            src="{{ stamp.image | relative_url }}"
+            alt=""
+          >
+        </button>
+      {% endfor %}
+    </div>
+
+    <button
+      class="board-stamp-button"
+      id="stamp-button"
+      type="button"
+      aria-expanded="false"
+    >
+      leave a stamp
+    </button>
 
     </div>
   </div>
@@ -233,12 +232,70 @@ description: Computational linguist studying language model behavior, mechanisti
   </div>
 </section>
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("stamp-button");
   const picker = document.getElementById("stamp-picker");
+  const slot = document.getElementById("my-stamp-slot");
 
-  if (!button || !picker) return;
+  if (!button || !picker || !slot) return;
+
+  const STORAGE_KEY = "daily-board-stamp";
+
+  function getToday() {
+    const now = new Date();
+
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  }
+
+  function loadStamp() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+
+    if (!saved) return;
+
+    try {
+      const data = JSON.parse(saved);
+
+      if (data.date !== getToday()) {
+        localStorage.removeItem(STORAGE_KEY);
+        return;
+      }
+
+      renderStamp(data);
+    } catch (error) {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  }
+
+  function renderStamp(data, animate = false) {
+    slot.innerHTML = "";
+
+    const img = document.createElement("img");
+
+    img.src = data.image;
+    img.alt = "";
+
+    slot.appendChild(img);
+
+    if (animate) {
+      slot.classList.remove("is-stamping");
+
+      void slot.offsetWidth;
+
+      slot.classList.add("is-stamping");
+
+      setTimeout(function () {
+        slot.classList.remove("is-stamping");
+      }, 250);
+    }
+
+    button.textContent = "change stamp";
+  }
 
   button.addEventListener("click", function () {
     const isOpen = picker.classList.toggle("is-open");
@@ -251,13 +308,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   picker.querySelectorAll(".stamp-choice").forEach(function (choice) {
     choice.addEventListener("click", function () {
-      const stampId = choice.dataset.stamp;
+      const data = {
+        date: getToday(),
+        stamp: choice.dataset.stamp,
+        image: choice.dataset.image
+      };
 
-      console.log("selected:", stampId);
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(data)
+      );
+
+      renderStamp(data, true);
 
       picker.classList.remove("is-open");
       button.setAttribute("aria-expanded", "false");
     });
   });
+
+  loadStamp();
 });
 </script>
