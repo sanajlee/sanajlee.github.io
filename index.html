@@ -294,13 +294,18 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // const visitorId = getVisitorId();
 
-  let visitorId;
+  let visitorId = null;
 
   const {
-    data: { session }
+    data: { session },
+    error: sessionError
   } = await db.auth.getSession();
 
-  if (session) {
+  if (sessionError) {
+    console.error("getSession failed:", sessionError);
+  }
+
+  if (session?.user?.id) {
     visitorId = session.user.id;
   } else {
     const { data, error } =
@@ -308,13 +313,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     if (error) {
       console.error("Anonymous sign-in failed:", error);
-      return;
+    } else {
+      visitorId = data?.user?.id ?? null;
     }
-
-    visitorId = data.user.id;
   }
 
-
+  console.log("visitorId:", visitorId);
   /*
    * -----------------------------
    * dates
