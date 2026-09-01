@@ -294,10 +294,25 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // const visitorId = getVisitorId();
 
-  const { data, error } =
-    await db.auth.signInAnonymously();
+  let visitorId;
 
-  const visitorId = data.user.id;
+  const {
+    data: { session }
+  } = await db.auth.getSession();
+
+  if (session) {
+    visitorId = session.user.id;
+  } else {
+    const { data, error } =
+      await db.auth.signInAnonymously();
+
+    if (error) {
+      console.error("Anonymous sign-in failed:", error);
+      return;
+    }
+
+    visitorId = data.user.id;
+  }
 
 
   /*
