@@ -317,8 +317,12 @@ document.addEventListener("DOMContentLoaded", async function () {
       visitorId = data?.user?.id ?? null;
     }
   }
+ 
+  const { data: { user } } = await db.auth.getUser();
 
-  console.log("visitorId:", visitorId);
+  console.log("auth uid:", user?.id);
+  console.log("visitor id:", visitorId);
+
   /*
    * -----------------------------
    * dates
