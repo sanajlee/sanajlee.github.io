@@ -1587,58 +1587,145 @@ iframe {
 }
 
 
-.board-stamp-demo__item {
+
+.stamp-slot {
   position: absolute;
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  opacity: .82;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
 }
 
-/* 각각 일부러 조금씩 다르게 배치 */
+.stamp-img {
+  display: block;
 
-.board-stamp-demo__item--avis {
-  top: 35px;
-  right: 28px;
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+/* positions */
+
+.stamp-slot--avis {
+  top: 30px;
+  right: 25px;
   transform: rotate(7deg);
 }
 
-.board-stamp-demo__item--coffee {
-  top: 85px;
-  right: 92px;
-  width: 42px;
-  height: 42px;
+.stamp-slot--coffee {
+  top: 82px;
+  right: 90px;
   transform: rotate(-4deg);
 }
 
-.board-stamp-demo__item--guitar {
-  bottom: 46px;
-  right: 115px;
-  width: 55px;
-  height: 55px;
+.stamp-slot--guitar {
+  bottom: 48px;
+  right: 110px;
+
+  width: 54px;
+  height: 54px;
+
   transform: rotate(5deg);
 }
 
-.board-stamp-demo__item--star {
+.stamp-slot--star {
   top: 42px;
-  right: 115px;
+  right: 110px;
+
   width: 34px;
   height: 34px;
+
   transform: rotate(-8deg);
 }
 
-.board-stamp-demo__item--vvv {
-  bottom: 62px;
-  right: 35px;
-  width: 39px;
-  height: 39px;
+.stamp-slot--vvv {
+  bottom: 65px;
+  right: 32px;
+
+  width: 40px;
+  height: 40px;
+
   transform: rotate(10deg);
 }
 
-.board-stamp-demo__item--yay {
-  top: 115px;
-  right: 38px;
-  width: 43px;
-  height: 43px;
+.stamp-slot--yay {
+  top: 118px;
+  right: 35px;
+
+  width: 44px;
+  height: 44px;
+
   transform: rotate(-3deg);
+}
+
+
+.stamp-picker {
+  position: absolute;
+
+  right: 12px;
+  bottom: 52px;
+
+  display: flex;
+  gap: 6px;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, .94);
+  border: 1px solid rgba(60, 55, 45, .18);
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(40, 35, 25, .08);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(6px);
+
+  transition:
+    opacity .15s ease,
+    transform .15s ease,
+    visibility .15s;
+
+  z-index: 20;
+}
+
+.stamp-picker.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.stamp-choice {
+  width: 40px;
+  height: 40px;
+
+  padding: 4px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.stamp-choice:hover {
+  background: rgba(0, 0, 0, .05);
+}
+
+.stamp-choice img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
 }

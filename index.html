@@ -66,16 +66,43 @@ description: Computational linguist studying language model behavior, mechanisti
 
       <div class="board-stamp-demo">
         {% for stamp in site.data.stamps %}
-          <img
-            class="board-stamp-demo__item board-stamp-demo__item--{{ stamp.id }}"
-            src="{{ stamp.image | relative_url }}"
-            alt="{{ stamp.label }}"
-            title="{{ stamp.label }}"
-          >
+          <div class="stamp-slot stamp-slot--{{ stamp.id }}">
+            <img
+              class="stamp-img"
+              src="{{ stamp.image | relative_url }}"
+              alt="{{ stamp.label }}"
+              title="{{ stamp.label }}"
+            >
+          </div>
         {% endfor %}
       </div>
 
-      <button class="board-stamp-button" type="button">
+<!--       <button class="board-stamp-button" type="button">
+        leave a stamp
+      </button>
+ -->
+      <div class="stamp-picker" id="stamp-picker">
+        {% for stamp in site.data.stamps %}
+          <button
+            type="button"
+            class="stamp-choice"
+            data-stamp="{{ stamp.id }}"
+            aria-label="{{ stamp.label }}"
+          >
+            <img
+              src="{{ stamp.image | relative_url }}"
+              alt=""
+            >
+          </button>
+        {% endfor %}
+      </div>
+
+      <button
+        class="board-stamp-button"
+        id="stamp-button"
+        type="button"
+        aria-expanded="false"
+      >
         leave a stamp
       </button>
 
@@ -205,3 +232,32 @@ description: Computational linguist studying language model behavior, mechanisti
 
   </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("stamp-button");
+  const picker = document.getElementById("stamp-picker");
+
+  if (!button || !picker) return;
+
+  button.addEventListener("click", function () {
+    const isOpen = picker.classList.toggle("is-open");
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+  });
+
+  picker.querySelectorAll(".stamp-choice").forEach(function (choice) {
+    choice.addEventListener("click", function () {
+      const stampId = choice.dataset.stamp;
+
+      console.log("selected:", stampId);
+
+      picker.classList.remove("is-open");
+      button.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+</script>
