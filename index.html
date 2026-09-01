@@ -65,19 +65,6 @@ description: Computational linguist studying language model behavior, mechanisti
         </p>
       </div>
 
-      <div class="board-stamp-demo">
-        {% for stamp in site.data.stamps %}
-          <div class="stamp-slot stamp-slot--{{ stamp.id }}">
-            <img
-              class="stamp-img"
-              src="{{ stamp.image | relative_url }}"
-              alt="{{ stamp.label }}"
-              title="{{ stamp.label }}"
-            >
-          </div>
-        {% endfor %}
-      </div>
-
 
     <div class="stamp-picker" id="stamp-picker">
       {% for stamp in site.data.stamps %}
