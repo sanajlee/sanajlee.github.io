@@ -43,7 +43,43 @@ description: Computational linguist studying language model behavior, mechanisti
   <div class="research-board-wrap">
     <div class="bulletin-board">
 
-      {% assign note = site.data.scratchpad[0] %}
+      <div class="board-notes">
+        {% for note in site.data.board_notes %}
+          <div
+            class="board-note board-note--{{ note.color }}"
+            style="
+              left: {{ note.x }}%;
+              top: {{ note.y }}%;
+              transform: rotate({{ note.rotation }}deg);
+            "
+          >
+            <div class="board-note__tape board-note__tape--{{ note.tape }}"></div>
+
+            {% if note.id == "emnlp" %}
+              <img
+                class="board-note__hamster"
+                src="{{ '/assets/img/hamzzz.png' | relative_url }}"
+                alt=""
+              >
+            {% endif %}
+
+            <div class="board-note__header">
+              {% if note.title %}
+                <span class="board-note__label">{{ note.title }}</span>
+              {% endif %}
+
+              {% if note.date %}
+                <span class="board-note__date">{{ note.date }}</span>
+              {% endif %}
+            </div>
+
+            <p class="board-note__text">
+              {{ note.text }}
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+
 
       <div class="my-stamp-slot" id="my-stamp-slot"></div>
       <div
@@ -59,25 +95,6 @@ description: Computational linguist studying language model behavior, mechanisti
         >
         <span>pick a spot and stamp it!</span>
       </div>
-      <div class="board-note">
-        <div class="board-note__tape"></div>
-
-        <img
-          class="board-note__hamster"
-          src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-          alt=""
-        >
-
-        <div class="board-note__header">
-          <span class="board-note__label">memo</span>
-          <span class="board-note__date">{{ note.date }}</span>
-        </div>
-
-        <p class="board-note__text">
-          {{ note.text }}
-        </p>
-      </div>
-
 
     <div class="stamp-picker" id="stamp-picker">
       {% for stamp in site.data.stamps %}

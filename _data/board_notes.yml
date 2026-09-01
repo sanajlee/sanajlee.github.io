@@ -1,0 +1,19 @@
+- id: emnlp
+  date: "2026-08-21"
+  title: "memo"
+  text: "Got accepted to EMNLP 2026 Main!"
+  color: "yellow"
+  tape: "pink"
+  x: 7
+  y: 14
+  rotation: -2
+
+- id: now
+  date: "2026-09-01"
+  title: "hmm"
+  text: "Semester started..."
+  color: "pink"
+  tape: "blue"
+  x: 46
+  y: 55
+  rotation: 1.5

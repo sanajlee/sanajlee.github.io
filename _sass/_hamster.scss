@@ -1405,9 +1405,6 @@ iframe {
 .board-note {
   position: absolute;
 
-  top: 34px;
-  left: 28px;
-
   width: 175px;
   min-height: 130px;
 
@@ -1415,11 +1412,29 @@ iframe {
 
   background: #fff3b8;
 
-  transform: rotate(-2deg);
-
   box-shadow:
     1px 3px 0 rgba(50,40,20,.04),
     0 6px 12px rgba(50,40,20,.07);
+}
+
+.board-note--yellow {
+  background: #fff3b8;
+}
+
+.board-note--pink {
+  background: #f8d7df;
+}
+
+.board-note--lavender {
+  background: #e9def3;
+}
+
+.board-note--blue {
+  background: #dcecf1;
+}
+
+.board-note--green {
+  background: #dfead5;
 }
 
 .board-note__tape {
@@ -1431,9 +1446,25 @@ iframe {
   width: 58px;
   height: 18px;
 
-  background: rgba(243,169,194,.78);
-
   transform: translateX(-50%) rotate(2deg);
+
+  opacity: .82;
+}
+
+.board-note__tape--pink {
+  background: #f3a9c2;
+}
+
+.board-note__tape--blue {
+  background: #a9d9e8;
+}
+
+.board-note__tape--beige {
+  background: #dfc99b;
+}
+
+.board-note__tape--green {
+  background: #b9d4a3;
 }
 
 .board-note__hamster {
