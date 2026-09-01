@@ -64,17 +64,16 @@ description: Computational linguist studying language model behavior, mechanisti
         </p>
       </div>
 
-      <img class="board-stamp stamp-1"
-           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-           alt="">
-
-      <img class="board-stamp stamp-2"
-           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-           alt="">
-
-      <img class="board-stamp stamp-3"
-           src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-           alt="">
+      <div class="board-stamp-demo">
+        {% for stamp in site.data.stamps %}
+          <img
+            class="board-stamp-demo__item board-stamp-demo__item--{{ stamp.id }}"
+            src="{{ stamp.image | relative_url }}"
+            alt="{{ stamp.label }}"
+            title="{{ stamp.label }}"
+          >
+        {% endfor %}
+      </div>
 
       <button class="board-stamp-button" type="button">
         leave a stamp

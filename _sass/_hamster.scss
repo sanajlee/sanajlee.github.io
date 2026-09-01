@@ -1585,3 +1585,60 @@ iframe {
     max-width: none;
   }
 }
+
+
+.board-stamp-demo__item {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  opacity: .82;
+}
+
+/* 각각 일부러 조금씩 다르게 배치 */
+
+.board-stamp-demo__item--avis {
+  top: 35px;
+  right: 28px;
+  transform: rotate(7deg);
+}
+
+.board-stamp-demo__item--coffee {
+  top: 85px;
+  right: 92px;
+  width: 42px;
+  height: 42px;
+  transform: rotate(-4deg);
+}
+
+.board-stamp-demo__item--guitar {
+  bottom: 46px;
+  right: 115px;
+  width: 55px;
+  height: 55px;
+  transform: rotate(5deg);
+}
+
+.board-stamp-demo__item--star {
+  top: 42px;
+  right: 115px;
+  width: 34px;
+  height: 34px;
+  transform: rotate(-8deg);
+}
+
+.board-stamp-demo__item--vvv {
+  bottom: 62px;
+  right: 35px;
+  width: 39px;
+  height: 39px;
+  transform: rotate(10deg);
+}
+
+.board-stamp-demo__item--yay {
+  top: 115px;
+  right: 38px;
+  width: 43px;
+  height: 43px;
+  transform: rotate(-3deg);
+}

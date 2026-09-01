@@ -1,0 +1,23 @@
+- id: avis
+  label: plant
+  image: /assets/stamps/avis.png
+
+- id: coffee
+  label: coffee
+  image: /assets/stamps/coffee.png
+
+- id: guitar
+  label: rock on
+  image: /assets/stamps/guitar.png
+
+- id: star
+  label: star
+  image: /assets/stamps/star.png
+
+- id: vvv
+  label: peace
+  image: /assets/stamps/vvv.png
+
+- id: yay
+  label: yay!
+  image: /assets/stamps/yay.png
