@@ -1831,3 +1831,40 @@ iframe {
 
   box-shadow: none;
 }
+
+.visitor-board-stamp {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  z-index: 6;
+
+  opacity: .82;
+}
+
+.visitor-board-stamp img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+.visitor-board-stamp--mine {
+  z-index: 7;
+}
+
+.visitor-board-stamp--mine img {
+  animation: none;
+}

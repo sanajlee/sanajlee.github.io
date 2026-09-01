@@ -81,7 +81,6 @@ description: Computational linguist studying language model behavior, mechanisti
       </div>
 
 
-      <div class="my-stamp-slot" id="my-stamp-slot"></div>
       <div
         class="stamp-placement-hint"
         id="stamp-placement-hint"
@@ -251,205 +250,473 @@ description: Computational linguist studying language model behavior, mechanisti
 
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const placementPreview = document.getElementById("stamp-placement-preview");
+document.addEventListener("DOMContentLoaded", async function () {
   const board = document.querySelector(".bulletin-board");
   const button = document.getElementById("stamp-button");
   const picker = document.getElementById("stamp-picker");
-  const slot = document.getElementById("my-stamp-slot");
+  const placementPreview =
+    document.getElementById("stamp-placement-preview");
 
-  if (!board || !button || !picker || !slot) return;
+  if (!board || !button || !picker) return;
 
-  const STORAGE_KEY = "daily-board-stamp";
+  const SUPABASE_URL =
+    "https://swxaceppazazkjiuqeki.supabase.co";
+
+  const SUPABASE_ANON_KEY =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN3eGFjZXBwYXphemtqaXVxZWtpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgyNDE0MzMsImV4cCI6MjEwMzgxNzQzM30.VH_Tph3r6ePfQJ9b7nlfNCSwzfkItj3rfpFeC1A8OJ0";
+
+  const db = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+  );
 
   let selectedStamp = null;
   let isPlacing = false;
 
-  function getToday() {
-    const now = new Date();
+  /*
+   * -----------------------------
+   * visitor identity
+   * -----------------------------
+   */
 
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, "0");
-    const day = String(now.getDate()).padStart(2, "0");
+  // function getVisitorId() {
+  //   const key = "board-visitor-id";
+
+  //   let id = localStorage.getItem(key);
+
+  //   if (!id) {
+  //     id = crypto.randomUUID();
+  //     localStorage.setItem(key, id);
+  //   }
+
+  //   return id;
+  // }
+
+  // const visitorId = getVisitorId();
+
+  const { data, error } =
+    await db.auth.signInAnonymously();
+
+  const visitorId = data.user.id;
+
+
+  /*
+   * -----------------------------
+   * dates
+   * -----------------------------
+   */
+
+  function toDateString(date) {
+    const year = date.getFullYear();
+    const month =
+      String(date.getMonth() + 1).padStart(2, "0");
+    const day =
+      String(date.getDate()).padStart(2, "0");
 
     return `${year}-${month}-${day}`;
   }
 
-  function saveStamp(data) {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(data)
-    );
+  function getToday() {
+    return toDateString(new Date());
   }
 
-  function loadStamp() {
-    const saved = localStorage.getItem(STORAGE_KEY);
+  function getMonday() {
+    const date = new Date();
 
-    if (!saved) return;
+    const day = date.getDay();
 
-    try {
-      const data = JSON.parse(saved);
+    const diff =
+      day === 0
+        ? -6
+        : 1 - day;
 
-      if (data.date !== getToday()) {
-        localStorage.removeItem(STORAGE_KEY);
-        return;
-      }
+    date.setDate(date.getDate() + diff);
 
-      renderStamp(data);
-    } catch (error) {
-      localStorage.removeItem(STORAGE_KEY);
+    return toDateString(date);
+  }
+
+
+  /*
+   * -----------------------------
+   * stamp image lookup
+   * -----------------------------
+   *
+   * palette에서 실제 asset 경로를 읽어서
+   * stamp_id -> image URL map을 만듦.
+   */
+
+  const stampImages = {};
+
+  picker
+    .querySelectorAll(".stamp-choice")
+    .forEach(function (choice) {
+      stampImages[choice.dataset.stamp] =
+        choice.dataset.image;
+    });
+
+
+  /*
+   * -----------------------------
+   * render one visitor stamp
+   * -----------------------------
+   */
+
+  function createStampElement(stamp, isMine = false) {
+    const wrapper =
+      document.createElement("div");
+
+    wrapper.className =
+      "visitor-board-stamp";
+
+    if (isMine) {
+      wrapper.classList.add(
+        "visitor-board-stamp--mine"
+      );
     }
-  }
 
-  function renderStamp(data, animate = false) {
-    slot.innerHTML = "";
+    wrapper.dataset.id = stamp.id || "";
+    wrapper.dataset.visitor = stamp.visitor_id;
 
-    const img = document.createElement("img");
+    wrapper.style.left =
+      `${stamp.x * 100}%`;
 
-    img.src = data.image;
+    wrapper.style.top =
+      `${stamp.y * 100}%`;
+
+    wrapper.style.transform =
+      `translate(-50%, -50%)
+       rotate(${stamp.rotation || 0}deg)`;
+
+    const img =
+      document.createElement("img");
+
+    img.src =
+      stampImages[stamp.stamp_id];
+
     img.alt = "";
 
-    /*
-      x/y는 0~1 사이 비율로 저장.
-      그래서 화면 크기가 바뀌어도 같은 상대 위치에 유지됨.
-    */
-    slot.style.left = `${data.x * 100}%`;
-    slot.style.top = `${data.y * 100}%`;
+    wrapper.appendChild(img);
 
-    // 약간씩 다른 실제 도장 느낌
-    slot.style.transform =
-      `translate(-50%, -50%) rotate(${data.rotation || 0}deg)`;
-
-    slot.appendChild(img);
-
-    if (animate) {
-      slot.classList.remove("is-stamping");
-
-      void slot.offsetWidth;
-
-      slot.classList.add("is-stamping");
-
-      setTimeout(function () {
-        slot.classList.remove("is-stamping");
-      }, 250);
-    }
-
-    button.textContent = "change stamp";
+    return wrapper;
   }
 
-  /*
-    leave/change 버튼
-  */
-  button.addEventListener("click", function (event) {
-    event.stopPropagation();
-
-    const isOpen = picker.classList.toggle("is-open");
-
-    button.setAttribute(
-      "aria-expanded",
-      isOpen ? "true" : "false"
-    );
-
-    /*
-      change 도중 다시 버튼 누르면 placement mode 취소
-    */
-    if (!isOpen && isPlacing) {
-      isPlacing = false;
-      selectedStamp = null;
-      board.classList.remove("is-placing-stamp");
-    }
-  });
 
   /*
-    palette에서 stamp 선택
-  */
-  picker.querySelectorAll(".stamp-choice").forEach(function (choice) {
-    choice.addEventListener("click", function (event) {
-      event.stopPropagation();
+   * -----------------------------
+   * render whole wall
+   * -----------------------------
+   */
 
-      selectedStamp = {
-        id: choice.dataset.stamp,
-        image: choice.dataset.image
-      };
+  function renderWall(stamps) {
+    board
+      .querySelectorAll(".visitor-board-stamp")
+      .forEach(function (el) {
+        el.remove();
+      });
 
-      picker.classList.remove("is-open");
+    stamps.forEach(function (stamp) {
+      const isMine =
+        stamp.visitor_id === visitorId &&
+        stamp.stamp_date === getToday();
 
-      button.setAttribute(
-        "aria-expanded",
-        "false"
+      const element =
+        createStampElement(
+          stamp,
+          isMine
+        );
+
+      board.appendChild(element);
+    });
+
+    const mine =
+      stamps.find(function (stamp) {
+        return (
+          stamp.visitor_id === visitorId &&
+          stamp.stamp_date === getToday()
+        );
+      });
+
+    button.textContent =
+      mine
+        ? "change stamp"
+        : "leave a stamp";
+  }
+
+
+  /*
+   * -----------------------------
+   * load this week's wall
+   * -----------------------------
+   */
+
+  async function loadWall() {
+    const monday = getMonday();
+
+    const { data, error } =
+      await db
+        .from("daily_stamps")
+        .select("*")
+        .gte("stamp_date", monday)
+        .order(
+          "created_at",
+          { ascending: true }
+        );
+
+    if (error) {
+      console.error(
+        "Could not load stamps:",
+        error
       );
 
-      placementPreview.src = selectedStamp.image;
-
-      isPlacing = true;
-
-      board.classList.add("is-placing-stamp");
-    });
-  });
-
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key !== "Escape" || !isPlacing) return;
-
-    isPlacing = false;
-    selectedStamp = null;
-
-    board.classList.remove("is-placing-stamp");
-  });
-
-  /*
-    board 클릭 → 그 위치에 stamp
-  */
-  board.addEventListener("click", function (event) {
-    if (!isPlacing || !selectedStamp) return;
-
-    /*
-      버튼이나 palette 클릭은 위치 선택으로 처리하지 않음
-    */
-    if (
-      event.target.closest(".stamp-picker") ||
-      event.target.closest(".board-stamp-button")
-    ) {
       return;
     }
 
-    const rect = board.getBoundingClientRect();
+    renderWall(data || []);
+  }
 
-    let x = (event.clientX - rect.left) / rect.width;
-    let y = (event.clientY - rect.top) / rect.height;
 
-    /*
-      스탬프가 보드 밖으로 반쯤 잘리지 않도록
-      가장자리 제한
-    */
-    x = Math.max(.08, Math.min(.92, x));
-    y = Math.max(.10, Math.min(.88, y));
+  /*
+   * -----------------------------
+   * save / change today's stamp
+   * -----------------------------
+   */
 
-    const rotation =
-      Math.round(Math.random() * 14 - 7);
+  async function saveStamp(stamp) {
+    const payload = {
+      stamp_date: getToday(),
 
-    const data = {
-      date: getToday(),
+      visitor_id: visitorId,
 
-      stamp: selectedStamp.id,
-      image: selectedStamp.image,
+      stamp_id: stamp.id,
 
-      x: x,
-      y: y,
+      x: stamp.x,
+      y: stamp.y,
 
-      rotation: rotation
+      rotation: stamp.rotation,
+
+      updated_at:
+        new Date().toISOString()
     };
 
-    saveStamp(data);
+    const { error } =
+      await db
+        .from("daily_stamps")
+        .upsert(
+          payload,
+          {
+            onConflict:
+              "stamp_date,visitor_id"
+          }
+        );
 
-    renderStamp(data, true);
+    if (error) {
+      console.error(
+        "Could not save stamp:",
+        error
+      );
 
-    isPlacing = false;
-    selectedStamp = null;
+      return false;
+    }
 
-    board.classList.remove("is-placing-stamp");
-  });
+    return true;
+  }
 
-  loadStamp();
+
+  /*
+   * -----------------------------
+   * open palette
+   * -----------------------------
+   */
+
+  button.addEventListener(
+    "click",
+    function (event) {
+      event.stopPropagation();
+
+      const isOpen =
+        picker.classList.toggle(
+          "is-open"
+        );
+
+      button.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      if (!isOpen && isPlacing) {
+        isPlacing = false;
+        selectedStamp = null;
+
+        board.classList.remove(
+          "is-placing-stamp"
+        );
+      }
+    }
+  );
+
+
+  /*
+   * -----------------------------
+   * select stamp
+   * -----------------------------
+   */
+
+  picker
+    .querySelectorAll(".stamp-choice")
+    .forEach(function (choice) {
+      choice.addEventListener(
+        "click",
+        function (event) {
+          event.stopPropagation();
+
+          selectedStamp = {
+            id: choice.dataset.stamp,
+            image: choice.dataset.image
+          };
+
+          if (placementPreview) {
+            placementPreview.src =
+              selectedStamp.image;
+          }
+
+          picker.classList.remove(
+            "is-open"
+          );
+
+          button.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          isPlacing = true;
+
+          board.classList.add(
+            "is-placing-stamp"
+          );
+        }
+      );
+    });
+
+
+  /*
+   * -----------------------------
+   * place stamp
+   * -----------------------------
+   */
+
+  board.addEventListener(
+    "click",
+    async function (event) {
+      if (
+        !isPlacing ||
+        !selectedStamp
+      ) {
+        return;
+      }
+
+      if (
+        event.target.closest(
+          ".stamp-picker"
+        ) ||
+        event.target.closest(
+          ".board-stamp-button"
+        )
+      ) {
+        return;
+      }
+
+      const rect =
+        board.getBoundingClientRect();
+
+      let x =
+        (event.clientX - rect.left) /
+        rect.width;
+
+      let y =
+        (event.clientY - rect.top) /
+        rect.height;
+
+      /*
+       * don't let the stamp
+       * get clipped by edges
+       */
+      x = Math.max(
+        .07,
+        Math.min(.93, x)
+      );
+
+      y = Math.max(
+        .09,
+        Math.min(.91, y)
+      );
+
+      const rotation =
+        Math.round(
+          Math.random() * 14 - 7
+        );
+
+      const stamp = {
+        id: selectedStamp.id,
+        x: x,
+        y: y,
+        rotation: rotation
+      };
+
+      /*
+       * temporarily stop placing
+       * so double clicks don't save twice
+       */
+      isPlacing = false;
+
+      board.classList.remove(
+        "is-placing-stamp"
+      );
+
+      const success =
+        await saveStamp(stamp);
+
+      selectedStamp = null;
+
+      if (!success) {
+        return;
+      }
+
+      await loadWall();
+    }
+  );
+
+
+  /*
+   * ESC = cancel placement
+   */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+      if (
+        event.key !== "Escape" ||
+        !isPlacing
+      ) {
+        return;
+      }
+
+      isPlacing = false;
+      selectedStamp = null;
+
+      board.classList.remove(
+        "is-placing-stamp"
+      );
+    }
+  );
+
+
+  /*
+   * initial load
+   */
+
+  await loadWall();
 });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
