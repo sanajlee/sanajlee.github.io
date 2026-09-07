@@ -11,9 +11,9 @@
 - id: paper-reef
   date: "2026-09-07"
   title: "check"
-  text: "paper-reef🪸"
+  # text: "paper-reef🪸"
   link: "https://sanajlee.github.io/paper-reef/"
-  link_label: "open page →"
+  link_label: "paper-reef🪸 →"
   color: "pink"
   tape: "blue"
   x: 42
