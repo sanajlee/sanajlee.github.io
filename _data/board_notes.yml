@@ -9,9 +9,9 @@
   rotation: -2
 
 - id: now
-  date: "2026-09-01"
-  title: "hmm"
-  text: "Semester started..."
+  date: "2026-09-07"
+  title: "check"
+  text: "https://sanajlee.github.io/paper-reef/"
   color: "pink"
   tape: "blue"
   x: 40
