@@ -1868,3 +1868,22 @@ iframe {
 .visitor-board-stamp--mine img {
   animation: none;
 }
+
+
+.board-note__link {
+  display: inline-block;
+  margin-top: .6rem;
+
+  font-family: "Gaegu", cursive;
+  font-size: .95rem;
+  font-weight: 700;
+
+  color: #008bb2;
+  text-decoration: none;
+
+  border-bottom: 2px solid rgba(25, 189, 229, .35);
+}
+
+.board-note__link:hover {
+  border-bottom-color: rgba(25, 189, 229, .8);
+}

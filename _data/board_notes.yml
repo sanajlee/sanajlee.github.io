@@ -8,12 +8,14 @@
   y: 14
   rotation: -2
 
-- id: now
+- id: paper-reef
   date: "2026-09-07"
   title: "check"
-  text: "https://sanajlee.github.io/paper-reef/"
+  text: "paper-reef🪸"
+  link: "https://sanajlee.github.io/paper-reef/"
+  link_label: "open page →"
   color: "pink"
   tape: "blue"
-  x: 40
-  y: 50
-  rotation: 1.5
+  x: 42
+  y: 48
+  rotation: 1

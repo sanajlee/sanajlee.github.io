@@ -76,6 +76,17 @@ description: Computational linguist studying language model behavior, mechanisti
             <p class="board-note__text">
               {{ note.text }}
             </p>
+
+            {% if note.link %}
+              <a
+                class="board-note__link"
+                href="{{ note.link }}"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ note.link_label | default: "open →" }}
+              </a>
+            {% endif %}
           </div>
         {% endfor %}
       </div>
