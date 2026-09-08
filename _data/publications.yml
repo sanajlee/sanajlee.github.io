@@ -4,7 +4,8 @@
     - Sangwoo Kim
     - Sangah Lee
   venue: "Accepted to EMNLP 2026"
-  # paper: "https://arxiv.org/pdf/2511.17689"
+  paper: "https://arxiv.org/pdf/2609.04708"
+  selected: true
 
 - year: 2026
   title: "ARISE: Agentic Rubric-Guided Iterative Survey Engine for Automated Scholarly Paper Generation"
@@ -50,7 +51,6 @@
     - Jinsik Lee
   venue: "arXiv"
   paper: "https://arxiv.org/pdf/2505.16125"
-  selected: true
 
 - year: 2024
   title: "A Short Note on the Structural Priming in LLM: Focusing on Dative Constructions in Korean"
