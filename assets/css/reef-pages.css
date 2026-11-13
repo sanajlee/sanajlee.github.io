@@ -202,3 +202,109 @@ body.reef-subpage .research-lead { margin-bottom: 0; }
   body.reef-subpage .research-page > h2 { margin-top: 37px; }
   body.reef-subpage .research-page > h2:first-of-type { margin-top: 19px; }
 }
+/* v28 — balanced reading measure and readable paragraphs */
+body.reef-subpage .prose {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .course p,
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: pretty;
+  letter-spacing: 0;
+  line-height: 1.43 !important;
+}
+/* Restrict reading measure, not whole layout or title widths. */
+body.reef-subpage .prose > p,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .research-page > p,
+body.reef-subpage .research-page > ul {
+  max-width: 82ch;
+}
+body.reef-subpage .prose p { margin: 0 0 14px; }
+body.reef-subpage .research-page > h2 + p { margin-bottom: 14px; }
+body.reef-subpage .prose li { padding: 0; margin: 5px 0 8px; }
+body.reef-subpage .prose li p { margin: 0 0 6px; }
+body.reef-subpage .about-now > div { line-height: 1.42 !important; }
+
+/* Papers — separator belongs to the NEXT paper, close to its top. */
+body.reef-subpage .pub-list { margin-top: 0; }
+body.reef-subpage .pub {
+  border-bottom: 0;
+  border-top: 1px solid #9dcdd8;
+  padding: 12px 5px 22px;
+  margin: 0;
+}
+body.reef-subpage .pub + .pub { margin-top: 14px; }
+body.reef-subpage .pub__title { margin-top: 0; margin-bottom: 6px; }
+body.reef-subpage .pub__authors,
+body.reef-subpage .pub__venue { margin: 2px 0 3px; }
+body.reef-subpage .pub__links { margin-top: 9px; }
+body.reef-subpage .pub-year__heading { margin-bottom: 9px; }
+
+/* Teaching — subtitles are labels, never VT323 prose. */
+body.reef-subpage .course .course-subtitle,
+body.reef-subpage .prose .course .course-subtitle {
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0;
+  color: #236889;
+  margin: 4px 0 9px;
+}
+
+/* People — open editorial listing instead of boxed student cards. */
+body.reef-subpage .people-list {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 22px 40px;
+  border: 0;
+}
+body.reef-subpage .person {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 14px 2px 20px;
+  margin: 0;
+  border-bottom: 1px dashed #7bb8ca;
+  grid-template-columns: 76px minmax(0,1fr);
+  gap: 17px;
+  align-items: start;
+}
+body.reef-subpage .person__avatar {
+  width: 74px;
+  height: 74px;
+  border: 2px solid #6eacc2;
+  box-shadow: 3px 3px 0 #a5d6dc;
+  background: #f8fffa;
+}
+body.reef-subpage .person__info h3 { margin: 0 0 5px; }
+body.reef-subpage .person__role { display:block; margin: 0 0 7px; }
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work { margin: 4px 0 0; max-width: 40ch; }
+@media (max-width: 850px) {
+  body.reef-subpage .people-list { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 520px) {
+  body.reef-subpage .prose > p,
+  body.reef-subpage .about-lead,
+  body.reef-subpage .research-lead,
+  body.reef-subpage .teaching-lead { max-width: 100%; }
+  body.reef-subpage .person { grid-template-columns: 60px minmax(0,1fr); gap: 12px; padding: 12px 0 18px; }
+  body.reef-subpage .person__avatar { width: 58px; height: 58px; }
+  body.reef-subpage .pub { padding: 12px 2px 19px; }
+  body.reef-subpage .pub + .pub { margin-top: 11px; }
+}
