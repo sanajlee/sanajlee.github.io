@@ -40,8 +40,11 @@
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "assets/vendor/normalize-css/normalize.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">
-{% if page.layout == "page" %}<link rel="stylesheet" href="{{ 'assets/css/reef-pages.css' | relative_url }}">{% endif %}
-{% if page.layout == "page" %}<link rel="stylesheet" href="{{ 'assets/css/reef-pages.css' | relative_url }}">{% endif %}
+{% if page.url == '/' or page.url == '/index.html' %}
+<link rel="stylesheet" href="{{ 'assets/css/reef-v8.css' | relative_url }}">
+{% elsif page.layout == 'page' %}
+<link rel="stylesheet" href="{{ 'assets/css/reef-pages.css' | relative_url }}">
+{% endif %}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
