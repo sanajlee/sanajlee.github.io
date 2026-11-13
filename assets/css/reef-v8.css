@@ -949,3 +949,56 @@ body.reef-v5 .reef-stamps .stamp-choice:hover {background:#bfe9ee;}
   body.reef-v5 .reef-footbar {width:calc(100% - 16px);padding:8px 10px;gap:7px;font-size:10px;}
   body.reef-v5 .reef-footbar__octopus {width:25px;height:25px;}
 }
+
+
+/* v18: tiny UI pixel detailing, no geometry or stamp behavior changes. */
+body.reef-v5 .reef-os-title { gap:9px; letter-spacing:.015em; }
+body.reef-v5 .reef-os-title > span:first-child {
+  display:inline-flex; align-items:center; min-width:0; gap:7px;
+}
+/* Replace Unicode's uneven icon rendering with crisp 16px pixel sprites. */
+body.reef-v5 .reef-intro .reef-os-title > span:first-child,
+body.reef-v5 .reef-papers .reef-os-title > span:first-child,
+body.reef-v5 .reef-stamps .reef-os-title > span:first-child,
+body.reef-v5 .reef-research .reef-os-title > span:first-child {
+  font-size:0;
+}
+body.reef-v5 .reef-intro .reef-os-title > span:first-child::before,
+body.reef-v5 .reef-papers .reef-os-title > span:first-child::before,
+body.reef-v5 .reef-stamps .reef-os-title > span:first-child::before,
+body.reef-v5 .reef-research .reef-os-title > span:first-child::before {
+  content:"";width:20px;height:20px;display:inline-block;flex:none;
+  background-size:20px 20px;background-repeat:no-repeat;image-rendering:pixelated;
+}
+body.reef-v5 .reef-intro .reef-os-title > span:first-child::before {background-image:url('../img/reef-ui-fish.svg');}
+body.reef-v5 .reef-papers .reef-os-title > span:first-child::before {background-image:url('../img/reef-ui-paper.svg');}
+body.reef-v5 .reef-stamps .reef-os-title > span:first-child::before {background-image:url('../img/reef-ui-shell.svg');}
+body.reef-v5 .reef-research .reef-os-title > span:first-child::before {background-image:url('../img/reef-ui-star.svg');}
+body.reef-v5 .reef-intro .reef-os-title > span:first-child::after {content:'HELLO!';}
+body.reef-v5 .reef-papers .reef-os-title > span:first-child::after {content:'SELECTED PAPERS';}
+body.reef-v5 .reef-stamps .reef-os-title > span:first-child::after {content:'VISITOR STAMPS';}
+body.reef-v5 .reef-research .reef-os-title > span:first-child::after {content:'WHAT I WORK ON THESE DAYS';}
+body.reef-v5 .reef-os-title > span:first-child::after {font:400 12px/1.5 'Silkscreen',monospace; white-space:normal;}
+body.reef-v5 .reef-controls {gap:4px;flex:none;}
+body.reef-v5 .reef-ctl {position:relative;width:18px;height:18px;box-shadow:2px 2px 0 #276b9f,inset 2px 2px 0 #fff;border:2px solid #114475;}
+body.reef-v5 .reef-ctl::after {content:none;}
+body.reef-v5 .reef-ctl--min::before {content:'';position:absolute;left:3px;right:3px;bottom:3px;top:auto;height:2px;background:#17497b;transform:none;}
+body.reef-v5 .reef-ctl--max::before {content:'';position:absolute;inset:3px;border:2px solid #17497b;background:transparent;transform:none;}
+body.reef-v5 .reef-ctl--close::before {content:'';position:absolute;inset:2px;background:url('../img/reef-ui-close.svg') center/10px 10px no-repeat;transform:none;width:auto;height:auto;}
+body.reef-v5 .reef-ctl--close::after {content:none;}
+/* The paper icon was an enlarged text glyph. Use an aligned pixel sprite. */
+body.reef-v5 .reef-paper-icon {font-size:0;width:28px;height:30px;margin:2px auto 0;background:url('../img/reef-ui-paper.svg') left top/28px 28px no-repeat;image-rendering:pixelated;}
+/* Subtle pixel separators, keeping text column sizes unchanged. */
+body.reef-v5 .reef-paper {border-bottom:2px solid transparent;border-image:repeating-linear-gradient(90deg,#86c4df 0 8px,transparent 8px 12px) 1;}
+body.reef-v5 .reef-paper:last-child {border-bottom:0;}
+body.reef-v5 .reef-tags span,body.reef-v5 .reef-links a {border-radius:0;box-shadow:2px 3px 0 #75afc7;}
+body.reef-v5 .reef-stamps .board-stamp-button {background:#d6f4f2;box-shadow:2px 3px 0 #2f79ad,inset 2px 2px #fafff4;}
+body.reef-v5 .reef-stamps .stamp-choice:focus-visible,body.reef-v5 .reef-stamps .board-stamp-button:focus-visible {outline:2px dashed #143f79;outline-offset:3px;}
+@media(max-width:680px) {
+ body.reef-v5 .reef-os-title > span:first-child::after {font-size:10px;}
+ body.reef-v5 .reef-os-title > span:first-child::before {width:16px;height:16px;background-size:16px 16px;}
+ body.reef-v5 .reef-controls {gap:3px;}
+ body.reef-v5 .reef-ctl {width:15px;height:15px;}
+ body.reef-v5 .reef-ctl--max::before {inset:2px;border-width:1px;}
+ body.reef-v5 .reef-ctl--close::before {inset:1px;background-size:9px 9px;}
+}
