@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<article class="page-shell">
-  <header class="page-heading">
-    <p class="kicker">SANGAH LEE / {{ page.title | upcase }}</p>
-    <h1>{{ page.title }}</h1>
+<article class="page-shell reef-os-window reef-content-window">
+  <header class="page-heading reef-os-title">
+    <span class="reef-page-caption"><span class="reef-page-icon" aria-hidden="true">{% case page.title %}{% when 'About' %}✦{% when 'Research' %}✧{% when 'Publications' %}▤{% when 'Teaching' %}✎{% when 'People' %}✿{% else %}◈{% endcase %}</span> {{ page.title | upcase }}</span>
+    <span class="reef-page-controls" aria-hidden="true"><i></i><i></i><i></i></span>
   </header>
-
-  <div class="prose">
-    {{ content }}
+  <div class="reef-page-body">
+    <div class="reef-page-kicker">SANGAH LEE / {{ page.title | upcase }}</div>
+    <div class="prose">{{ content }}</div>
   </div>
 </article>

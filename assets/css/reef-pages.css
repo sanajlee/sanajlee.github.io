@@ -1,0 +1,111 @@
+/* Little Reef v25 — shared subpage UI. Scoped to body.reef-subpage. */
+body.reef-subpage {
+  --reef-ink:#163c75; --reef-line:#1d5689; --reef-cream:#fff9e9; --reef-sky:#78cce9;
+  color:var(--reef-ink); font:400 13px/1.85 'Silkscreen',monospace;
+  background:#54bfdf url('../img/reef-v8/ocean-background.png') center top / cover fixed no-repeat;
+}
+body.reef-subpage *{box-sizing:border-box}
+body.reef-subpage .hamster-site{min-height:100vh;display:flex;flex-direction:column}
+body.reef-subpage .site-main{flex:1;width:min(1120px,calc(100% - 36px));min-height:0;margin:0 auto}
+body.reef-subpage .site-header{border:0;padding:14px 0 8px}
+body.reef-subpage .site-header__inner,
+body.reef-subpage .site-footer__inner{
+ width:min(1190px,calc(100% - 36px));margin:0 auto;
+ background:var(--reef-cream);border:2px solid var(--reef-line);border-radius:3px;
+ outline:2px solid #c9f1f2;box-shadow:0 5px 0 #17477e,inset 0 0 0 3px #fff;
+ padding:12px 18px;min-height:54px;
+}
+body.reef-subpage .site-brand{font:400 15px 'Silkscreen',monospace;letter-spacing:.02em;color:var(--reef-ink)}
+body.reef-subpage .site-brand__hamster{display:none}
+body.reef-subpage .site-brand::before{content:"";flex:0 0 30px;width:30px;height:30px;background:url('../img/reef-v8/nudibranch.png') center / contain no-repeat;image-rendering:pixelated}
+body.reef-subpage .site-nav{font:400 11px 'Silkscreen',monospace;gap:clamp(8px,1.5vw,22px);margin-left:auto;flex-wrap:wrap}
+body.reef-subpage .site-nav a{color:#174a78;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+body.reef-subpage .site-nav a.is-active{color:#077ba5;background:#e3f5f6;box-shadow:0 2px 0 #77bdd1}
+body.reef-subpage .site-nav a::after{background:#4ab9d6}
+body.reef-subpage .page-shell.reef-content-window{
+ padding:0;margin:24px 0 36px;max-width:none;
+ border:3px solid #173f7c;border-radius:4px;background:var(--reef-cream);
+ box-shadow:0 0 0 2px #c6f6f6,0 7px 0 #19477c,inset 0 0 0 3px #fff;
+ overflow:hidden;
+}
+body.reef-subpage .page-heading.reef-os-title{
+ padding:10px 18px;min-height:50px;margin:0;
+ display:flex;justify-content:space-between;align-items:center;
+ background:linear-gradient(#b5ecf7 0%,#83d2eb 18%,#56afd5 85%,#70c3de 100%);
+ border:0;border-bottom:3px solid #235c91;box-shadow:inset 0 3px #e4fcfa,inset 0 -2px #a2e6ed;
+ color:#153e7a;font:400 16px 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-page-caption{display:inline-flex;align-items:center;gap:12px}
+body.reef-subpage .reef-page-icon{color:#196bac;font-size:17px}
+body.reef-subpage .reef-page-controls{display:flex;gap:4px}
+body.reef-subpage .reef-page-controls i{width:15px;height:15px;border:2px solid #17518b;background:#fffdec;box-shadow:1px 2px #255f93;position:relative}
+body.reef-subpage .reef-page-controls i:first-child::after{content:"";position:absolute;bottom:2px;left:2px;right:2px;border-bottom:2px solid #17518b}
+body.reef-subpage .reef-page-controls i:nth-child(2)::after{content:"";position:absolute;inset:2px;border:1px solid #17518b}
+body.reef-subpage .reef-page-controls i:last-child::after{content:'×';position:absolute;inset:-5px 0 0;text-align:center;font:15px monospace;color:#17518b}
+body.reef-subpage .reef-page-body{padding:32px clamp(18px,4vw,55px) 48px}
+body.reef-subpage .reef-page-kicker{font:400 10px 'Silkscreen',monospace;letter-spacing:.045em;color:#2d90a7;border-bottom:2px dashed #62c8da;padding-bottom:13px;margin-bottom:24px}
+body.reef-subpage .prose{max-width:100%;font:400 12px/1.95 'Silkscreen',monospace;overflow-wrap:anywhere}
+body.reef-subpage .prose p{line-height:1.95}
+body.reef-subpage .prose h1,body.reef-subpage .page-heading h1{display:none}
+body.reef-subpage .prose h2,body.reef-subpage .people-section h2,body.reef-subpage .teaching-section h2{
+ font:400 17px/1.5 'Silkscreen',monospace;letter-spacing:.015em;color:#154476;
+ margin:34px 0 20px;
+}
+body.reef-subpage .prose h2::after{width:74px;height:4px;background:#68c5df;margin-top:9px}
+body.reef-subpage .prose h3{font:400 13px/1.75 'Silkscreen',monospace;color:#155184}
+body.reef-subpage .prose a{color:#077da4;text-decoration-color:#57bad5;text-underline-offset:3px}
+body.reef-subpage .prose a:hover{color:#e27c9a}
+body.reef-subpage .prose .me{background-image:linear-gradient(transparent 80%,#f8c5d3 80%);font-weight:400}
+body.reef-subpage .about-page,body.reef-subpage .research-page,body.reef-subpage .publications-page,body.reef-subpage .teaching-page,body.reef-subpage .people-page{max-width:none}
+body.reef-subpage .about-lead,body.reef-subpage .research-lead,body.reef-subpage .teaching-lead{font-size:13px;line-height:1.95;max-width:95ch}
+body.reef-subpage .about-now{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 34px;padding:0;border:0}
+body.reef-subpage .about-now>div{background:#e5f6f1;border:2px solid #97c9d7;padding:16px;box-shadow:3px 3px #bfdeea;font-size:11px;line-height:1.9}
+body.reef-subpage .about-label{display:block;font:400 11px 'Silkscreen',monospace;color:#d46589;margin-bottom:8px;text-transform:uppercase}
+body.reef-subpage .about-ending{margin-top:30px;border-color:#92c9d3}
+body.reef-subpage .research-page h2{font:400 16px/1.6 'Silkscreen',monospace;margin-top:32px;color:#174b82}
+body.reef-subpage .research-page h3{font:400 13px 'Silkscreen',monospace}
+body.reef-subpage .research-page li{line-height:1.9;margin:12px 0}
+body.reef-subpage .research-page ul{border-left:3px solid #88cad6;padding-left:24px}
+body.reef-subpage .pub-year{margin:0 0 30px}
+body.reef-subpage .pub-year__heading{font:400 20px 'Silkscreen',monospace;color:#0e6498;border-bottom:3px solid #82c6d7;padding:12px 0;margin-bottom:6px}
+body.reef-subpage .pub{padding:16px 5px;border-bottom:1px dashed #9dcdd8}
+body.reef-subpage .pub__title{font:400 13px/1.7 'Silkscreen',monospace;color:#1a4679;margin:0 0 8px}
+body.reef-subpage .pub__title::after{display:none}
+body.reef-subpage .pub__authors,body.reef-subpage .pub__venue{font:400 11px/1.8 'Silkscreen',monospace;color:#426f85;margin:5px 0}
+body.reef-subpage .pub__links a{display:inline-block;font:400 11px 'Silkscreen',monospace;background:#e2f7f2;border:2px solid #75b6d2;padding:4px 9px;text-decoration:none;box-shadow:2px 2px #a1c9db}
+body.reef-subpage .course-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+body.reef-subpage .course{background:#e9f8f6;border:2px solid #a0d2dd;padding:18px;box-shadow:3px 3px #c7e5e8;margin:0}
+body.reef-subpage .course h3{font:400 13px/1.7 'Silkscreen',monospace}
+body.reef-subpage .course-term{font:400 10px 'Silkscreen',monospace;color:#b85e82}
+body.reef-subpage .course p{font:400 11px/1.8 'Silkscreen',monospace}
+body.reef-subpage .teaching-year{border-bottom:1px dashed #9dcdd8;padding:12px 0;gap:16px}
+body.reef-subpage .teaching-year__label{font:400 15px 'Silkscreen',monospace;color:#1b75a3}
+body.reef-subpage .people-list{border-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+body.reef-subpage .person{display:grid;grid-template-columns:85px minmax(0,1fr);gap:16px;align-items:start;border:2px solid #a8d7dc;background:#eaf8f6;padding:18px;margin:0;min-width:0;box-shadow:3px 3px #c7e5eb}
+body.reef-subpage .person__avatar{width:80px;height:80px;object-fit:cover;border-radius:0;border:3px solid #78b4ca;image-rendering:auto;background:#fff}
+body.reef-subpage .person__info h3{font:400 13px/1.6 'Silkscreen',monospace}
+body.reef-subpage .person__name-ko{display:inline-block;font:400 12px sans-serif;color:#657e8e}
+body.reef-subpage .person__role{font:400 11px 'Silkscreen',monospace;color:#cf6688}
+body.reef-subpage .person__interests,body.reef-subpage .person__work{font:400 11px/1.8 'Silkscreen',monospace}
+body.reef-subpage .site-footer{border:0;background:none;padding:8px 0 25px}
+body.reef-subpage .site-footer__inner{display:flex;justify-content:space-between;align-items:center;gap:9px;color:#285779;font:400 10px 'Silkscreen',monospace}
+body.reef-subpage .site-footer__sleep{display:none}
+body.reef-subpage .site-footer__inner::before{content:"";width:28px;height:28px;flex:none;background:url('../img/reef-v8/nudibranch.png') center / contain no-repeat;image-rendering:pixelated}
+body.reef-subpage .site-footer__dot{opacity:.6}
+@media(max-width:850px){
+ body.reef-subpage .about-now,body.reef-subpage .people-list,body.reef-subpage .course-list{grid-template-columns:1fr}
+ body.reef-subpage .site-header__inner{flex-wrap:wrap;gap:12px}
+ body.reef-subpage .site-nav{width:100%;justify-content:center}
+}
+@media(max-width:520px){
+ body.reef-subpage{background-attachment:scroll;background-size:auto 100vh}
+ body.reef-subpage .site-main{width:calc(100% - 20px)}
+ body.reef-subpage .site-header__inner,body.reef-subpage .site-footer__inner{width:calc(100% - 20px);padding:11px 12px}
+ body.reef-subpage .page-shell.reef-content-window{margin:18px 0 24px}
+ body.reef-subpage .page-heading.reef-os-title{font-size:13px;padding:9px 10px}
+ body.reef-subpage .reef-page-body{padding:22px 16px 30px}
+ body.reef-subpage .prose{font-size:11px}
+ body.reef-subpage .person{grid-template-columns:66px minmax(0,1fr);padding:12px;gap:10px}
+ body.reef-subpage .person__avatar{width:62px;height:62px}
+ body.reef-subpage .site-footer__dot{display:none}
+}
