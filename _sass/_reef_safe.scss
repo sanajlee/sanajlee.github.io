@@ -1,0 +1,30 @@
+/* Little Reef safe iteration: existing board dimensions, placement and scripts untouched. */
+body.reef-home { background:linear-gradient(180deg,#b6eff1 0%,#81cddb 65%,#6dbace 100%); color:#244d6a; }
+body.reef-home .site-header { border-bottom:0; padding-top:12px; }
+body.reef-home .site-header__inner { padding:8px 18px; border:2px solid #5c99b3; border-radius:10px; background:#fffdf0; box-shadow:4px 5px 0 #4494ac55; }
+body.reef-home .site-brand, body.reef-home .site-nav a { color:#244d6a; }
+body.reef-home .hero { border-bottom:0; gap:32px; padding-top:48px; padding-bottom:44px; min-height:480px; }
+body.reef-home .hero__copy { padding:38px; border:2px solid #5c99b3; border-radius:10px; background:#fffdf0; box-shadow:5px 6px 0 #4494ac55; }
+body.reef-home .hero h1 { color:#244b6c; white-space:normal; font-size:clamp(3rem,5vw,4.6rem); }
+body.reef-home .hero__tagline { color:#315d75; }
+body.reef-home .hero__position { color:#5a7b87; }
+body.reef-home .tiny-button { background:#d8f0e9; color:#315b76; border:2px solid #83b9c0; border-radius:5px; box-shadow:2px 3px 0 #b8dedb; }
+body.reef-home .reef-art { position:relative; display:block; min-height:360px; align-self:stretch; background: radial-gradient(ellipse at 50% 15%,#e5fff0a6,transparent 70%); }
+body.reef-home .reef-art img { position:absolute; object-fit:contain; image-rendering:pixelated; filter:drop-shadow(3px 4px 0 #265e7950); }
+body.reef-home .reef-art__fish { width:150px; max-height:none; left:13%; top:20%; animation: reef-safe-swim 7s ease-in-out infinite alternate; }
+body.reef-home .reef-art__jelly { width:118px; max-height:none; right:7%; top:33%; animation:reef-safe-float 4s ease-in-out infinite alternate; }
+body.reef-home .reef-art__caption { position:absolute; bottom:45px; left:12%; background:#fffdf0; border:2px solid #5c99b3; border-radius:8px; padding:8px 14px; font-size:1rem; color:#396785; font-weight:800; }
+body.reef-home .reef-art__bubble { position:absolute; width:13px;height:13px;border-radius:50%;border:2px solid #dff8f3; }
+body.reef-home .reef-art__bubble--one {left:47%;top:12%;} body.reef-home .reef-art__bubble--two {right:8%;top:10%;width:20px;height:20px;}
+@keyframes reef-safe-swim {to{transform:translate(22px,-10px)}} @keyframes reef-safe-float{to{transform:translateY(-15px)}}
+/* Research section: keeps original absolute-positioned bulletin board ABOVE research content. */
+body.reef-home .home-section { background:#fffdf0; border:2px solid #5c99b3; border-radius:10px; margin-bottom:40px; padding:30px; box-shadow:5px 6px 0 #4494ac55; }
+body.reef-home .research-section { margin-top:75px; }
+body.reef-home .research-board-wrap { z-index:5; }
+body.reef-home .bulletin-board { background:#f4f0e7; }
+body.reef-home .home-section h2,body.reef-home .home-section h3 { color:#244d6a; }
+body.reef-home .home-section p { color:#496e7c; }
+body.reef-home .site-footer { background:#fffdf0; border-top:2px solid #6bacbf; }
+@media(max-width:900px){body.reef-home .hero {gap:14px;min-height:0;} body.reef-home .reef-art{min-height:285px;order:0;} body.reef-home .research-section {margin-top:10px;} body.reef-home .research-board-wrap {position:relative;top:auto;right:auto;width:min(360px,92%);margin:0 0 2.5rem auto;} }
+@media(max-width:600px){body.reef-home .site-header__inner{padding:10px;} body.reef-home .hero__copy{padding:24px;} body.reef-home .hero h1{font-size:clamp(2.6rem,11vw,4rem);} body.reef-home .reef-art{min-height:240px;} body.reef-home .reef-art__fish{width:105px;} body.reef-home .reef-art__jelly{width:85px;} body.reef-home .reef-art__caption{bottom:20px;left:4%;font-size:.85rem;} body.reef-home .home-section{padding:20px 16px;} }
+@media(prefers-reduced-motion:reduce){body.reef-home .reef-art img{animation:none;}}
