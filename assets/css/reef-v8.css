@@ -406,3 +406,61 @@ body.reef-v5 .reef-life-scene .reef-sprite--crab {
   body.reef-v5 .reef-life-scene .reef-sprite--blue-coral {width:37px;}
   body.reef-v5 .reef-life-scene .reef-sprite--rock {width:37px;}
 }
+
+/* V21 — No aquarium inside HELLO: all ocean life goes OUTSIDE in the reef scene. */
+body.reef-v5 .reef-intro-body {padding:27px 27px 24px;min-height:0;}
+body.reef-v5 .reef-intro-body::before,
+body.reef-v5 .reef-intro-body::after {content:none!important;display:none!important;background:none!important;}
+body.reef-v5 .reef-intro h1,
+body.reef-v5 .reef-role,
+body.reef-v5 .reef-wave,
+body.reef-v5 .reef-summary,
+body.reef-v5 .reef-interests,
+body.reef-v5 .reef-links {max-width:none!important;width:auto;}
+body.reef-v5 .reef-intro h1 {font-size:clamp(30px,3vw,39px);white-space:normal;}
+body.reef-v5 .reef-role {font-size:12px;line-height:1.6;}
+body.reef-v5 .reef-summary {max-width:52ch!important;}
+/* The existing right column is the aquarium. Keep assets genuinely small. */
+body.reef-v5 .reef-life-scene {position:relative;min-height:315px;overflow:hidden;isolation:isolate;}
+body.reef-v5 .reef-life-scene::before {content:"";display:block!important;position:absolute;inset:0;pointer-events:none;z-index:0;
+ background:
+   radial-gradient(circle at 19% 25%,rgba(255,255,255,.7) 0 2px,transparent 3px),
+   radial-gradient(circle at 22% 22%,rgba(255,255,255,.4) 0 3px,transparent 4px),
+   radial-gradient(circle at 68% 44%,rgba(255,255,255,.7) 0 2px,transparent 3px),
+   radial-gradient(circle at 72% 38%,rgba(255,255,255,.5) 0 3px,transparent 4px),
+   radial-gradient(ellipse at 45% 26%,rgba(216,250,255,.22),transparent 62%);
+ }
+body.reef-v5 .reef-life-scene::after {content:"";display:block;position:absolute;bottom:0;left:10%;right:5%;height:14px;
+ background:repeating-linear-gradient(90deg,#e9d9a1 0 18px,#f5e3ad 18px 30px,#dcc994 30px 33px);opacity:.65;z-index:0;pointer-events:none;}
+body.reef-v5 .reef-life-scene .reef-sprite {position:absolute!important;width:28px;height:auto;max-width:none;object-fit:contain;image-rendering:pixelated;z-index:1;filter:drop-shadow(1px 2px 0 rgba(16,67,122,.14));}
+body.reef-v5 .reef-life-scene .reef-sprite--angel {width:50px;left:42%;top:22%;}
+body.reef-v5 .reef-life-scene .reef-sprite--clown {width:24px;left:19%;top:43%;}
+body.reef-v5 .reef-life-scene .reef-sprite--gold {width:22px;left:68%;right:auto;top:49%;}
+body.reef-v5 .reef-life-scene .reef-sprite--jelly {width:28px;right:9%;top:17%;}
+body.reef-v5 .reef-life-scene .reef-sprite--pink {width:23px;left:14%;top:17%;}
+body.reef-v5 .reef-life-scene .reef-sprite--castle {width:64px;right:1%;top:10%;left:auto;}
+body.reef-v5 .reef-life-scene .reef-sprite--coral {width:62px;right:4%;bottom:4px;top:auto;}
+body.reef-v5 .reef-life-scene .reef-sprite--weed {width:45px;left:3%;bottom:3px;top:auto;}
+body.reef-v5 .reef-life-scene .reef-sprite--blue-coral {width:47px;left:29%;bottom:4px;top:auto;}
+body.reef-v5 .reef-life-scene .reef-sprite--rock {width:52px;right:25%;bottom:4px;top:auto;}
+body.reef-v5 .reef-life-scene .reef-sprite--bubbles {width:20px;left:59%;top:35%;}
+body.reef-v5 .reef-life-scene .reef-sprite--seahorse {width:20px;left:12%;top:63%;transform:none!important;}
+body.reef-v5 .reef-life-scene .reef-sprite--crab {width:22px;left:58%;top:78%;transform:none!important;}
+/* Home footer nudibranch uses the same compact scale as the header mark. */
+body.reef-v5 .reef-footbar__nudibranch {display:block;width:30px!important;height:30px!important;max-width:30px;object-fit:contain;image-rendering:pixelated;flex:0 0 30px;}
+body.reef-v5 .reef-footbar__identity {display:flex;align-items:center;gap:9px;min-width:0;}
+@media (max-width:980px){
+ body.reef-v5 .reef-intro-body::before,body.reef-v5 .reef-intro-body::after{display:none!important;}
+ body.reef-v5 .reef-life-scene{min-height:235px;}
+}
+@media (max-width:680px){
+ body.reef-v5 .reef-intro-body{padding:19px 17px 21px;}
+ body.reef-v5 .reef-life-scene{min-height:176px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--castle {width:42px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--angel {width:38px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--coral {width:38px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--weed {width:32px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--blue-coral {width:34px;}
+ body.reef-v5 .reef-life-scene .reef-sprite--rock {width:34px;}
+ body.reef-v5 .reef-footbar__nudibranch{width:26px!important;height:26px!important;max-width:26px;flex-basis:26px;}
+}
