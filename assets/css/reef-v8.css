@@ -246,27 +246,25 @@ body.reef-v5 .site-brand::before{background-image:url('../img/reef-v8/octopus.pn
 @media(prefers-reduced-motion:reduce){body.reef-v5 .reef-sprite{animation:none!important;}}
 
 
-/* =============================================================
-   V9: quieter typography + smaller pixel sprites.
-   All stamp board dimensions/data/JS remain untouched.
-   ============================================================= */
+/* V10: Angular, lighter pixel typography. Explicitly covers Research. */
 body.reef-v5 {
-  font-family: 'Pixelify Sans', 'Nunito Sans', sans-serif;
+  font-family: 'VT323', 'IBM Plex Mono', monospace;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 20px;
+  line-height: 1.35;
 }
-/* Silkscreen regular is a display face, not the body face. */
+/* Silkscreen is reserved for compact labels and window headers. */
 body.reef-v5 .site-brand,
 body.reef-v5 .reef-os-title,
 body.reef-v5 .reef-os-title a,
 body.reef-v5 .reef-intro h1,
 body.reef-v5 .reef-interests strong,
-body.reef-v5 .reef-research h2 {
-  font-family: 'Silkscreen', 'Pixelify Sans', monospace;
+body.reef-v5 .reef-research > .section-title-row h2 {
+  font-family: 'Silkscreen', monospace;
   font-weight: 400;
   letter-spacing: 0;
 }
+/* A narrower, squarer terminal pixel font for longer content. */
 body.reef-v5 .site-nav,
 body.reef-v5 .reef-role,
 body.reef-v5 .reef-summary,
@@ -275,27 +273,33 @@ body.reef-v5 .reef-tags,
 body.reef-v5 .reef-links,
 body.reef-v5 .reef-paper h3,
 body.reef-v5 .reef-paper p,
-body.reef-v5 .reef-research h3,
-body.reef-v5 .reef-research p,
-body.reef-v5 .reef-research a,
-body.reef-v5 .reef-research .research-more {
-  font-family: 'Pixelify Sans', 'Nunito Sans', sans-serif;
+body.reef-v5 .reef-research .research-intro h3,
+body.reef-v5 .reef-research .research-intro p,
+body.reef-v5 .reef-research .research-axes .research-number,
+body.reef-v5 .reef-research .research-axes article h3,
+body.reef-v5 .reef-research .research-axes article p,
+body.reef-v5 .reef-research .research-more,
+body.reef-v5 .reef-research a {
+  font-family: 'VT323', 'IBM Plex Mono', monospace;
   font-weight: 400;
-  letter-spacing: 0;
+  letter-spacing: .005em;
 }
-body.reef-v5 .site-nav { font-size: 17px; }
-body.reef-v5 .reef-os-title { font-size: 14px; }
-body.reef-v5 .reef-os-title a { font-size: 12px; }
-body.reef-v5 .reef-intro h1 { font-size: clamp(30px, 3vw, 40px); }
-body.reef-v5 .reef-role { font-size: 17px; line-height: 1.4; }
-body.reef-v5 .reef-summary { font-size: 18px; line-height: 1.4; }
-body.reef-v5 .reef-interests { font-size: 16px; }
-body.reef-v5 .reef-tags { font-size: 15px; }
-body.reef-v5 .reef-links { font-size: 15px; }
-body.reef-v5 .reef-paper h3 { font-size: 17px; line-height: 1.28; }
-body.reef-v5 .reef-paper p { font-size: 14px; line-height: 1.3; }
-body.reef-v5 .reef-research p { font-size: 17px; line-height: 1.45; }
-body.reef-v5 .reef-research h3 { font-size: 18px; }
+body.reef-v5 .site-nav {font-size:21px;}
+body.reef-v5 .reef-os-title {font-size:14px;}
+body.reef-v5 .reef-os-title a {font-size:12px;}
+body.reef-v5 .reef-intro h1 {font-size:clamp(30px,3vw,40px);}
+body.reef-v5 .reef-role {font-size:22px;line-height:1.15;}
+body.reef-v5 .reef-summary {font-size:24px;line-height:1.15;}
+body.reef-v5 .reef-interests {font-size:21px;}
+body.reef-v5 .reef-tags,body.reef-v5 .reef-links {font-size:20px;}
+body.reef-v5 .reef-paper h3 {font-size:23px;line-height:1.1;}
+body.reef-v5 .reef-paper p {font-size:19px;line-height:1.15;}
+body.reef-v5 .reef-research .research-intro h3 {font-size:25px;line-height:1.2;}
+body.reef-v5 .reef-research .research-intro p {font-size:22px;line-height:1.3;}
+body.reef-v5 .reef-research .research-axes article h3 {font-size:23px;line-height:1.2;}
+body.reef-v5 .reef-research .research-axes article p {font-size:21px;line-height:1.3;}
+body.reef-v5 .reef-research .research-axes .research-number {font-size:20px;}
+body.reef-v5 .reef-research .research-more {font-size:21px;}
 body.reef-v5 .reef-sprite {filter: drop-shadow(1px 2px 0 rgba(12,71,115,.12)); }
 body.reef-v5 .reef-sprite--angel {width:74px; left:40%; top:19%;}
 body.reef-v5 .reef-sprite--clown {width:43px; left:17%; top:57%;}
@@ -328,4 +332,14 @@ body.reef-v5 .reef-sprite--weed {width:66px; left:1%; bottom:-3px;}
   body.reef-v5 .reef-sprite--pink {width:22px;}
   body.reef-v5 .reef-sprite--coral {width:68px;}
   body.reef-v5 .reef-sprite--weed {width:46px;}
+}
+
+@media (max-width:680px) {
+ body.reef-v5 .site-nav {font-size:18px;}
+ body.reef-v5 .reef-role {font-size:20px;}
+ body.reef-v5 .reef-summary {font-size:22px;}
+ body.reef-v5 .reef-paper h3 {font-size:21px;}
+ body.reef-v5 .reef-paper p {font-size:18px;}
+ body.reef-v5 .reef-research .research-intro p,
+ body.reef-v5 .reef-research .research-axes article p {font-size:20px;}
 }
