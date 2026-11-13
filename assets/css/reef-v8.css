@@ -585,10 +585,23 @@ body.reef-v5 .reef-research .research-more {
   font-weight: 400 !important;
   line-height: 1.5 !important;
 }
-/* Leave body copy in Mona; only restore a readable, predictable size. */
+/* V24: Research body text uses the same crisp pixel family as its headings. */
 body.reef-v5 .reef-research .research-intro p,
 body.reef-v5 .reef-research .research-axes article p {
-  font-family: 'Mona12', sans-serif !important;
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.95 !important;
+  letter-spacing: 0 !important;
+}
+body.reef-v5 .reef-research .research-number {
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+}
+body.reef-v5 .reef-research .reef-os-title,
+body.reef-v5 .reef-research .reef-os-title a {
+  font-family: 'Silkscreen', monospace !important;
   font-weight: 400 !important;
 }
 @media(max-width:680px) {
