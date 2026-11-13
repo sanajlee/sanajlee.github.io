@@ -573,3 +573,75 @@ body.reef-v5 .reef-research .research-axes article {
   body.reef-v5 .reef-research .research-intro h3 {font-size: 15px;}
   body.reef-v5 .reef-research .research-axes article h3 {font-size: 14px;}
 }
+
+
+/* =============================================================
+   v13: crisp pixel OS frames and spacing corrections.
+   No HTML/stamp/JS/data edits. Keep as final overrides.
+   ============================================================= */
+body.reef-v5 .reef-os-window {
+  border: 3px solid #194d83;
+  border-radius: 0;
+  background: #fffaf0;
+  box-shadow:
+    0 0 0 2px #e4fbff,
+    0 0 0 5px #276fa1,
+    0 5px 0 5px #174978,
+    0 9px 0 5px rgba(14,64,105,.24),
+    inset 0 0 0 3px #fffef6;
+  overflow: hidden;
+}
+body.reef-v5 .reef-os-window::before {
+  inset: 3px;
+  border: 1px solid #a9d8e5;
+  border-radius: 0;
+}
+body.reef-v5 .reef-os-title {
+  min-height: 42px;
+  padding: 6px 12px;
+  background: linear-gradient(180deg,#d5f8fa 0 3px,#91d8ed 3px 7px,#59b1d9 7px 34px,#359bc9 34px 37px,#b8e7f0 37px 100%);
+  border-bottom: 3px solid #195083;
+  box-shadow: inset 0 2px 0 #f0ffff, inset 0 -2px 0 #a0e5f0;
+  border-radius: 0;
+}
+body.reef-v5 .reef-controls {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #f5fcf7;
+  border: 2px solid #174b81;
+  border-radius: 0;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #9cbed1, 3px 3px 0 #246694;
+  font: 400 11px/1.4 'Silkscreen',monospace;
+  white-space: nowrap;
+}
+/* Let the actual column width determine line breaks: the last word
+   should no longer be isolated merely by the former 40-48ch cap. */
+body.reef-v5 .reef-intro .reef-summary,
+body.reef-v5 .reef-summary {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+/* Reduce old hamster.scss margin and padding that created a blank band. */
+body.reef-v5 .reef-research .research-intro {
+  margin-top: 0;
+  margin-bottom: 14px;
+  padding-top: 15px;
+}
+body.reef-v5 .reef-research .research-intro h3 { margin: 0; }
+body.reef-v5 .reef-research .research-intro p {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+body.reef-v5 .reef-research .research-axes {
+  padding-top: 13px;
+  margin-top: 0;
+}
+@media(max-width:680px){
+  body.reef-v5 .reef-research .research-intro {margin-bottom:12px;padding-top:12px;}
+  body.reef-v5 .reef-research .research-axes {padding-top:12px;}
+  body.reef-v5 .reef-summary {font-size:12px;line-height:1.65;}
+}
