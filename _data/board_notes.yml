@@ -9,3 +9,13 @@
   x: 42
   y: 48
   rotation: 1
+
+- id: talk
+  date: "2026-11-21"
+  title: "Talk"
+  text: "Will have a talk at 2026 Fall Conference of The Korean Generative Grammar Circle"
+  color: "yellow"
+  tape: "pink"
+  x: 10
+  y: 11
+  rotation: -5
