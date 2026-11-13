@@ -3,7 +3,7 @@
     <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="Sana Lee home">
     <img
       class="site-brand__hamster"
-      src="{{ '/assets/img/hamface.PNG' | relative_url }}"
+      src="{% if page.url == '/' or page.url == '/index.html' %}{{ '/assets/img/reef-fish.svg' | relative_url }}{% else %}{{ '/assets/img/hamface.PNG' | relative_url }}{% endif %}"
       alt=""
       aria-hidden="true"
     >

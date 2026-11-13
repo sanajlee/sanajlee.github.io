@@ -26,20 +26,13 @@ description: Computational linguist studying language model behavior, mechanisti
     </div>
   </div>
 
-  <div class="hero__art">
-    <img
-      src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
-      alt="A pink hamster playing a blue Telecaster guitar"
-    >
-    <span class="music-note music-note--one">♪</span>
-    <span class="music-note music-note--two">♫</span>
-  </div>
-</section>
-
-
-
-<section class="home-section research-section">
-
+  <div class="reef-scene" aria-label="A tiny underwater reef with pixel fish and your visitor stamp board">
+    <div class="reef-scene__bubbles" aria-hidden="true"></div>
+    <img class="reef-creature reef-creature--fish" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="" aria-hidden="true">
+    <img class="reef-creature reef-creature--jelly" src="{{ '/assets/img/reef-jelly.svg' | relative_url }}" alt="" aria-hidden="true">
+    <div class="reef-speech" aria-hidden="true">welcome to my little reef! <span>✦</span></div>
+    <div class="reef-board-window">
+      <div class="reef-window-title"><span>✿</span> VISITOR STAMPS <span class="reef-window-dots" aria-hidden="true">▁ □ ×</span></div>
   <div class="research-board-wrap">
     <div class="bulletin-board">
 
@@ -134,14 +127,23 @@ description: Computational linguist studying language model behavior, mechanisti
 
     </div>
   </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="home-section research-section reef-window">
+  <div class="reef-window-title"><span>✦</span> WHAT I WORK ON THESE DAYS <span class="reef-window-dots" aria-hidden="true">▁ □ ×</span></div>
+
+
 
 
   <div class="section-title-row">
-    <h2>WHAT I WORK ON THESE DAYS</h2>
+    <h2>Language Model Behavior</h2>
   </div>
 
   <div class="research-intro">
-    <h3>Language Model Behavior</h3>
 
     <p>
       I study what language models know about language,
@@ -186,9 +188,10 @@ description: Computational linguist studying language model behavior, mechanisti
   </a>
 </section>
 
-<section class="home-section home-section--papers">
+<section class="home-section home-section--papers reef-window">
+  <div class="reef-window-title"><span>▤</span> SELECTED PAPERS <span class="reef-window-dots" aria-hidden="true">▁ □ ×</span></div>
   <div class="section-title-row">
-    <h2>SELECTED PAPERS</h2>
+    <h2>Recent publications</h2>
     <a class="text-link" href="{{ '/publications' | relative_url }}">
       all papers →
     </a>

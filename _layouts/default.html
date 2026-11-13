@@ -6,7 +6,7 @@ layout: compress
   <head>
     {% include main/head.html %}
   </head>
-  <body>
+  <body class="{% if page.url == '/' or page.url == '/index.html' %}reef-home{% endif %}">
     <div class="hamster-site">
       {% include main/header.html %}
       <main class="site-main">
