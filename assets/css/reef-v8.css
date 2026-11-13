@@ -516,8 +516,8 @@ body.reef-v5 .reef-paper:last-child { border-bottom: none; }
 body.reef-v5 .reef-paper h3,
 body.reef-v5 .reef-paper h3 a {
   font-family: 'Mona12','Nunito Sans',sans-serif;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.55;
   letter-spacing: 0;
   overflow-wrap: anywhere;
@@ -537,15 +537,15 @@ body.reef-v5 .reef-paper-icon { font-size: 19px; align-self: start; line-height:
 /* Research: the section heading is deliberately small, as the title bar
    already names the section. Silkscreen for headings, Mona for paragraphs. */
 body.reef-v5 .reef-research > .section-title-row h2 {
-  font: 400 12px/1.55 'Silkscreen',monospace;
+  font: 400 13px/1.55 'Silkscreen',monospace;
   letter-spacing: .01em;
 }
 body.reef-v5 .reef-research .research-intro h3 {
-  font: 400 14px/1.55 'Silkscreen',monospace;
+  font: 400 16px/1.55 'Silkscreen',monospace;
   letter-spacing: 0;
 }
 body.reef-v5 .reef-research .research-axes article h3 {
-  font: 400 12px/1.65 'Silkscreen',monospace;
+  font: 400 15px/1.55 'Silkscreen',monospace;
   letter-spacing: 0;
 }
 body.reef-v5 .reef-research .research-axes .research-number {
@@ -567,9 +567,9 @@ body.reef-v5 .reef-research .research-axes article {
   body.reef-v5 .reef-os-title a {font-size: 10px;}
   body.reef-v5 .reef-papers-body {padding: 8px 13px 13px;}
   body.reef-v5 .reef-paper h3,
-  body.reef-v5 .reef-paper h3 a {font-size: 13px;}
+  body.reef-v5 .reef-paper h3 a {font-size: 14px;}
   body.reef-v5 .reef-paper p,
   body.reef-v5 .reef-paper p strong {font-size: 12px;}
-  body.reef-v5 .reef-research .research-intro h3 {font-size: 13px;}
-  body.reef-v5 .reef-research .research-axes article h3 {font-size: 12px;}
+  body.reef-v5 .reef-research .research-intro h3 {font-size: 15px;}
+  body.reef-v5 .reef-research .research-axes article h3 {font-size: 14px;}
 }
