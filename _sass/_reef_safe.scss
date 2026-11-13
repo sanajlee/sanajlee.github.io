@@ -52,3 +52,16 @@ body.reef-home .site-footer{border-top:3px solid #6faebb;background:#fffaf0;colo
 @media(max-width:920px){body.reef-home .hero{grid-template-columns:1fr 1fr}body.reef-home .hero__copy{padding:24px}body.reef-home .stamp-window__content{grid-template-columns:1fr;gap:8px}body.reef-home .stamp-window__intro{padding-left:4px}body.reef-home .stamp-window__board-scroll{width:100%;max-width:100%}}
 @media(max-width:650px){body.reef-home .site-header__inner{padding:12px;justify-content:center}body.reef-home .site-nav{justify-content:center;font-size:.85rem}body.reef-home .hero{grid-template-columns:1fr;gap:20px;padding-top:24px}body.reef-home .hero__copy{padding:28px 24px}body.reef-home .hero h1{font-size:clamp(2.8rem,10vw,4rem)}body.reef-home .reef-art{min-height:310px}body.reef-home .reef-art__fish{width:110px}body.reef-home .reef-art__jelly{width:90px}body.reef-home .stamp-window__content{padding:19px 12px}body.reef-home .home-section{padding:24px 18px;margin:26px 0 32px}body.reef-home .stamp-window__intro{padding:5px 9px 15px}body.reef-home .stamp-window__board-scroll{padding:8px 2px 18px}}
 @media(prefers-reduced-motion:reduce){body.reef-home .reef-art img{animation:none}}
+
+/* Correct the two-column hero and isolate the stamp board from its old floating rules. */
+body.reef-home .hero > .hero__copy { grid-column: 1; grid-row: 1; min-width: 0; }
+body.reef-home .hero > .hero__art { grid-column: 2; grid-row: 1; min-width: 0; }
+body.reef-home .stamp-window { position: relative; width: 100%; min-width: 0; clear: both; }
+body.reef-home .stamp-window__board-scroll { max-width: 100%; }
+body.reef-home .stamp-window .research-board-wrap { position: relative !important; inset: auto !important; width: 440px; max-width: none; margin: 0; transform: none !important; }
+@media (max-width: 650px) {
+  body.reef-home .hero > .hero__copy { grid-column: 1; grid-row: 1; }
+  body.reef-home .hero > .hero__art { grid-column: 1; grid-row: 2; }
+  body.reef-home .stamp-window__content { display: block; }
+  body.reef-home .stamp-window__board-scroll { overflow-x: auto; }
+}
