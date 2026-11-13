@@ -152,3 +152,53 @@ body.reef-subpage .person__role {
     font-size: 19px !important;
   }
 }
+
+
+/* v27 — compact reading rhythm. Keep independent research directions distinct. */
+body.reef-subpage .reef-page-body { padding-top: 26px; padding-bottom: 34px; }
+body.reef-subpage .reef-page-kicker { margin-bottom: 18px; padding-bottom: 10px; }
+body.reef-subpage .prose { line-height: 1.55; }
+body.reef-subpage .prose p { margin-top: 0; margin-bottom: 12px; }
+body.reef-subpage .prose ul,
+body.reef-subpage .prose ol { margin-top: 8px; margin-bottom: 15px; }
+body.reef-subpage .prose li { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .prose li p { margin-bottom: 5px; }
+body.reef-subpage .prose h2,
+body.reef-subpage .people-section h2,
+body.reef-subpage .teaching-section h2 { margin-top: 26px; margin-bottom: 13px; }
+body.reef-subpage .prose h3 { margin-top: 18px; margin-bottom: 9px; line-height: 1.45; }
+body.reef-subpage .about-now { margin-top: 16px; margin-bottom: 22px; }
+body.reef-subpage .about-now > div { line-height: 1.3; padding: 13px; }
+body.reef-subpage .course { padding: 14px; }
+body.reef-subpage .course h3 { margin-top: 3px; margin-bottom: 7px; }
+body.reef-subpage .course p { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .teaching-year { padding-top: 8px; padding-bottom: 8px; }
+body.reef-subpage .person { padding: 14px; }
+body.reef-subpage .person__info h3 { margin: 0 0 6px; }
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .pub { padding-top: 12px; padding-bottom: 12px; }
+body.reef-subpage .pub__title { margin-bottom: 5px; }
+body.reef-subpage .pub__authors,
+body.reef-subpage .pub__venue { margin-top: 3px; margin-bottom: 3px; }
+body.reef-subpage .pub-year { margin-bottom: 23px; }
+
+/* The three primary Research chapters should have breathing room ABOVE their headings,
+   but their paragraphs, subheadings, and citations should read as one tight unit. */
+body.reef-subpage .research-page > h2 {
+  margin-top: 48px;
+  margin-bottom: 15px;
+  padding-top: 9px;
+}
+body.reef-subpage .research-page > h2:first-of-type { margin-top: 24px; padding-top: 0; }
+body.reef-subpage .research-page > h2 + p { margin-top: 0; }
+body.reef-subpage .research-page > h3 { margin-top: 15px; margin-bottom: 7px; }
+body.reef-subpage .research-page > ul { margin-top: 5px; margin-bottom: 13px; }
+body.reef-subpage .research-page > ul li { line-height: 1.35; margin: 8px 0; }
+body.reef-subpage .research-page > ul li p { margin: 2px 0; }
+body.reef-subpage .research-lead { margin-bottom: 0; }
+@media(max-width:520px) {
+  body.reef-subpage .reef-page-body { padding-top: 20px; padding-bottom: 26px; }
+  body.reef-subpage .research-page > h2 { margin-top: 37px; }
+  body.reef-subpage .research-page > h2:first-of-type { margin-top: 19px; }
+}

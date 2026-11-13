@@ -629,3 +629,29 @@ body.reef-v5 .reef-research .research-axes article p {
     line-height: 1.35 !important;
   }
 }
+
+
+/* v27 — home: trim oversized vertical gaps without changing layout or font roles. */
+body.reef-v5 .reef-desktop { row-gap: 18px; }
+body.reef-v5 .reef-intro-body { padding-top: 19px; padding-bottom: 19px; }
+body.reef-v5 .reef-intro h1 { margin-bottom: 10px; }
+body.reef-v5 .reef-role { margin-bottom: 10px; }
+body.reef-v5 .reef-wave { margin-top: 10px; margin-bottom: 11px; }
+body.reef-v5 .reef-summary { margin-bottom: 13px; }
+body.reef-v5 .reef-links { margin-top: 12px; }
+body.reef-v5 .reef-papers-body { padding-top: 6px; padding-bottom: 10px; }
+body.reef-v5 .reef-paper { padding-top: 10px; padding-bottom: 10px; }
+body.reef-v5 .reef-paper p { margin-top: 3px; }
+body.reef-v5 .reef-research { margin-top: 16px; margin-bottom: 28px; }
+body.reef-v5 .reef-research .research-intro { padding-top: 12px; margin-bottom: 12px; }
+body.reef-v5 .reef-research .research-intro h3 { margin-bottom: 8px; }
+body.reef-v5 .reef-research .research-intro p { margin-top: 0; margin-bottom: 9px; }
+body.reef-v5 .reef-research .research-axes { padding-top: 12px; gap: 13px; }
+body.reef-v5 .reef-research .research-axes article { padding: 13px; }
+body.reef-v5 .reef-research .research-axes article h3 { margin-bottom: 7px; }
+body.reef-v5 .reef-research .research-axes article p { margin-top: 6px; margin-bottom: 0; }
+body.reef-v5 .reef-research .research-more { margin-top: 15px; margin-bottom: 16px; }
+@media(max-width:680px) {
+  body.reef-v5 .reef-desktop { row-gap: 15px; }
+  body.reef-v5 .reef-research .research-axes { gap: 12px; }
+}
