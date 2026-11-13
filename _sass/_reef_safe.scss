@@ -38,7 +38,7 @@ body.reef-home .stamp-window h2{font-size:clamp(1.55rem,2.3vw,2rem);letter-spaci
 body.reef-home .stamp-window p{color:#507887;line-height:1.55;max-width:360px}
 body.reef-home .stamp-window__note{display:inline-block;font-family:'Gaegu',cursive;font-size:1.12rem;color:#b66f80;margin-top:12px}
 body.reef-home .stamp-window__board-scroll{width:100%;min-width:0;overflow-x:auto;overflow-y:hidden;padding:8px 8px 18px;scrollbar-color:#81bec2 transparent}
-body.reef-home .research-board-wrap{position:relative;top:auto;right:auto;width:440px;max-width:none;margin:0;transform:none;z-index:3}
+body.reef-home .stamp-window .reef-stamp-holder{display:block;position:relative;top:auto;right:auto;left:auto;bottom:auto;inset:auto;width:440px;min-width:440px;max-width:none;margin:0;transform:none;float:none;z-index:1}
 body.reef-home .bulletin-board{width:440px;height:300px;background:#f4f0e7;border:2px solid #71a1a8;border-radius:7px;box-shadow:4px 5px 0 #9dbfc267}
 body.reef-home .home-section{padding:32px 36px}
 body.reef-home .research-section{margin-top:0;padding-top:32px}
@@ -58,10 +58,31 @@ body.reef-home .hero > .hero__copy { grid-column: 1; grid-row: 1; min-width: 0; 
 body.reef-home .hero > .hero__art { grid-column: 2; grid-row: 1; min-width: 0; }
 body.reef-home .stamp-window { position: relative; width: 100%; min-width: 0; clear: both; }
 body.reef-home .stamp-window__board-scroll { max-width: 100%; }
-body.reef-home .stamp-window .research-board-wrap { position: relative !important; inset: auto !important; width: 440px; max-width: none; margin: 0; transform: none !important; }
+body.reef-home .stamp-window .reef-stamp-holder { position: relative; inset: auto; width: 440px; min-width: 440px; max-width: none; margin: 0; transform: none; float: none; }
 @media (max-width: 650px) {
   body.reef-home .hero > .hero__copy { grid-column: 1; grid-row: 1; }
   body.reef-home .hero > .hero__art { grid-column: 1; grid-row: 2; }
   body.reef-home .stamp-window__content { display: block; }
   body.reef-home .stamp-window__board-scroll { overflow-x: auto; }
 }
+
+/* v3.1: Avoid old floating board positioning by using a NEW class. */
+body.reef-home .stamp-window { display:block; position:relative; width:100%; margin:26px 0 36px; }
+body.reef-home .stamp-window__content { width:100%; min-width:0; }
+body.reef-home .stamp-window__board-scroll { position:relative; width:100%; min-width:0; max-width:100%; overflow-x:auto; overflow-y:visible; }
+body.reef-home .stamp-window .reef-stamp-holder { position:relative; inset:auto; display:block; width:440px; min-width:440px; max-width:none; margin:0; float:none; transform:none; }
+body.reef-home .stamp-window .bulletin-board { position:relative; width:440px; height:300px; }
+body.reef-home .hero > .hero__copy { grid-column:1; grid-row:1; }
+body.reef-home .hero > .hero__art { grid-column:2; grid-row:1; }
+/* Water rays, sandy sea floor, reefs extending beyond the aquarium window. */
+body.reef-home { background: linear-gradient(115deg, transparent 18%, rgba(255,255,235,.20) 25%, transparent 32%, transparent 49%, rgba(255,255,235,.11) 56%, transparent 66%) fixed, linear-gradient(180deg,#c5f1ec 0%,#b1e7e9 35%,#8ed3de 72%,#58b0c5 100%) fixed; }
+body.reef-home .hamster-site { position:relative; isolation:isolate; }
+body.reef-home .hamster-site::before { content:""; position:fixed; left:0; right:0; bottom:0; height:min(390px,48vh); background:url('/assets/img/reef-seafloor.svg') center bottom / 100% auto no-repeat; opacity:.80; pointer-events:none; z-index:-1; image-rendering:pixelated; }
+body.reef-home .hamster-site::after { content:""; position:fixed; inset:0; pointer-events:none; z-index:-1; background-image:radial-gradient(circle at 8% 24%,#eaffffba 0 4px,transparent 5px),radial-gradient(circle at 13% 19%,#eaffff88 0 2px,transparent 3px),radial-gradient(circle at 84% 29%,#eaffffb0 0 7px,transparent 8px),radial-gradient(circle at 88% 25%,#eaffff88 0 3px,transparent 4px),radial-gradient(circle at 67% 60%,#eaffff8a 0 5px,transparent 6px); }
+body.reef-home .reef-art { background:linear-gradient(160deg,#cdf9ed,#75bfd0); }
+body.reef-home .reef-art__scenery { image-rendering:pixelated; }
+@media(max-width:650px) { body.reef-home .hero > .hero__copy {grid-column:1;grid-row:1;} body.reef-home .hero > .hero__art {grid-column:1;grid-row:2;} body.reef-home .hamster-site::before{height:240px;background-size:auto 240px;} }
+
+/* Keep scenery in front of body paint but behind all content. */
+body.reef-home .hamster-site::before, body.reef-home .hamster-site::after{z-index:0;}
+body.reef-home .site-header,body.reef-home .site-main,body.reef-home .site-footer{position:relative;z-index:1;}
