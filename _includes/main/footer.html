@@ -1,3 +1,14 @@
+{% if page.url == '/' or page.url == '/index.html' %}
+<footer class="site-footer" aria-label="Website footer">
+  <div class="reef-footbar">
+    <span class="reef-footbar__identity">
+      <img class="reef-footbar__octopus" src="{{ '/assets/img/reef-v8/octopus.png' | relative_url }}" alt="" aria-hidden="true">
+      <span>© {{ "now" | date: "%Y" }} SANGAH LEE</span>
+    </span>
+    <span class="reef-footbar__status"><span class="reef-footbar__dot" aria-hidden="true"></span><span class="reef-footbar__detail">a little corner of the internet</span></span>
+  </div>
+</footer>
+{% else %}
 <footer class="site-footer">
   <div class="site-footer__inner">
     <span>© {{ "now" | date: "%Y" }} Sangah Lee</span>
@@ -16,3 +27,5 @@
 
   </div>
 </footer>
+
+{% endif %}

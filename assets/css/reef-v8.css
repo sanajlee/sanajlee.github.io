@@ -798,3 +798,62 @@ body.reef-v5 .reef-sprite--weed {width:39px;}
   body.reef-v5 .reef-sprite--coral {width:43px;}
   body.reef-v5 .reef-sprite--weed {width:31px;}
 }
+
+
+/* v16: chunky hand-drawn pixel-window graphics + compact reef footer */
+body.reef-v5 .reef-os-window {
+  border:16px solid transparent;
+  border-image-source:url('../img/reef-window-v16.png');
+  border-image-slice:16;
+  border-image-width:16px;
+  border-image-repeat:stretch;
+  border-radius:0;
+  background:#fff8e8;
+  clip-path:none;
+  box-shadow:6px 8px 0 rgba(9,51,110,.44);
+  overflow:hidden;
+}
+body.reef-v5 .reef-os-window::before { display:none; }
+body.reef-v5 .reef-os-title {
+  margin: -4px -4px 0;
+  padding: 8px 12px 8px 15px;
+  min-height:48px;
+  border-bottom:4px solid #123e7c;
+  border-radius:0;
+  box-shadow:inset 0 4px #d6f8fe,inset 0 -3px #a5e2f4;
+  background:#5eb4dc url('../img/reef-title-v16.png') repeat-x left top/16px 48px;
+  font-family:'Silkscreen',monospace;
+  font-weight:400;
+  text-shadow:1px 1px 0 #b9f5ff;
+}
+body.reef-v5 .reef-ctl {
+  width:22px;height:22px;border:3px solid #144b89;border-radius:0;
+  background:#f8ffeb;box-shadow:3px 3px 0 #165e9c,inset -3px -3px #91c5e5;
+}
+body.reef-v5 .reef-ctl--min::before {left:4px;right:4px;bottom:4px;height:3px;}
+body.reef-v5 .reef-ctl--max::before {inset:3px;border-width:3px;}
+body.reef-v5 .reef-ctl--close::before,body.reef-v5 .reef-ctl--close::after {left:8px;top:2px;height:12px;width:3px;}
+/* Slightly bolder UI accents, preserving the current font hierarchy */
+body.reef-v5 .reef-paper h3,body.reef-v5 .reef-paper h3 a {font-family:'Silkscreen',monospace;font-weight:400;}
+/* Dedicated home footer: no hamster and no giant welcome/banner */
+body.reef-v5 .reef-footbar {
+  max-width:1150px;width:calc(100% - 52px);margin:20px auto 18px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;
+  background:#fff8e8;color:#174a81;
+  border:4px solid #153e7d;
+  box-shadow:inset 0 0 0 3px #7bcde4,5px 5px 0 #103a7a;
+  padding:7px 12px;
+  font:400 11px/1.6 'Silkscreen',monospace;
+}
+body.reef-v5 .reef-footbar__identity,body.reef-v5 .reef-footbar__status {display:flex;align-items:center;gap:9px;}
+body.reef-v5 .reef-footbar__octopus {width:24px;height:24px;object-fit:contain;image-rendering:pixelated;}
+body.reef-v5 .reef-footbar__dot {width:7px;height:7px;background:#6dc7a4;box-shadow:0 0 0 2px #245a92;flex-shrink:0;}
+body.reef-v5 .reef-footbar__detail {font:400 12px/1.5 'Mona12',sans-serif;color:#376c8b;}
+body.reef-v5 .site-footer {background:transparent;border:0;padding:0;margin:0;}
+@media(max-width:680px){
+ body.reef-v5 .reef-os-window {border-width:12px;border-image-width:12px;}
+ body.reef-v5 .reef-os-title {padding:6px 8px;min-height:41px;}
+ body.reef-v5 .reef-ctl {width:17px;height:17px;border-width:2px;box-shadow:2px 2px 0 #165e9c;}
+ body.reef-v5 .reef-ctl--close::before,body.reef-v5 .reef-ctl--close::after {left:6px;top:2px;width:2px;height:9px;}
+ body.reef-v5 .reef-footbar {width:calc(100% - 24px);font-size:10px;margin:16px auto;}
+}
