@@ -66,6 +66,10 @@ This connects linguistic evaluation with broader questions about reasoning, memo
 
 ### Related work
 
+- **How Do Language Models Represent and Use Phonological Information for Allomorph Selection?**  
+  Sangwoo Kim and *Sangah Lee*. EMNLP 2026 Main (Oral Presentation), 2026.
+  [[paper]](https://aclanthology.org/2026.emnlp-main.2316.pdf)
+  
 - **Nunchi-Bench: Benchmarking Language Models on Cultural Reasoning with a Focus on Korean Superstition**  
   Kyuhee Kim and *Sangah Lee*. Findings of ACL 2025.  
   [[paper]](https://aclanthology.org/2025.findings-acl.794.pdf)
