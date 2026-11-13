@@ -436,3 +436,28 @@ body.reef-v5 .reef-research h3 {overflow-wrap:break-word;}
   body.reef-v5 .reef-research .research-intro p {font-size:15px;}
   body.reef-v5 .reef-research .research-axes article p {font-size:14px;}
 }
+
+/* v11 compact type scale: final, homepage-only overrides */
+body.reef-v5 { font-size: 12px; }
+body.reef-v5 .reef-intro h1 { font-size: clamp(27px, 2.8vw, 36px); line-height: 1.2; }
+body.reef-v5 .reef-role { font-size: 12px; line-height: 1.5; }
+body.reef-v5 .reef-summary { font-size: 13px; line-height: 1.55; }
+body.reef-v5 .reef-interests { font-size: 12px; line-height: 1.5; }
+body.reef-v5 .reef-interests strong { font-size: 11px; }
+body.reef-v5 .reef-tags span, body.reef-v5 .reef-links a { font-size: 11px; }
+body.reef-v5 .reef-paper h3 { font-size: 13px; line-height: 1.5; }
+body.reef-v5 .reef-paper p { font-size: 12px; line-height: 1.6; }
+body.reef-v5 .reef-research .research-intro p { font-size: 13px; line-height: 1.6; }
+body.reef-v5 .reef-research .research-axes article p { font-size: 12px; line-height: 1.65; }
+body.reef-v5 .site-footer__inner { font-size: 12px; }
+body.reef-v5 .reef-os-title { font-size: 12px; }
+body.reef-v5 .reef-research .section-title-row h2 { font-size: 12px; }
+@media (max-width: 680px) {
+  body.reef-v5 .reef-intro h1 { font-size: 27px; }
+  body.reef-v5 .reef-role { font-size: 12px; }
+  body.reef-v5 .reef-summary { font-size: 13px; }
+  body.reef-v5 .reef-paper h3 { font-size: 13px; }
+  body.reef-v5 .reef-paper p { font-size: 12px; }
+  body.reef-v5 .reef-research .research-intro p { font-size: 13px; }
+  body.reef-v5 .reef-research .research-axes article p { font-size: 12px; }
+}
