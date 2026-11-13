@@ -5,11 +5,8 @@ layout: compress
 <html lang="en">
   <head>
     {% include main/head.html %}
-    {% if page.url == "/" or page.url == "/index.html" %}
-    <link rel="stylesheet" href="{{ "/assets/css/reef-home.css" | relative_url }}?v=4">
-    {% endif %}
   </head>
-  <body class="{% if page.url == '/' or page.url == '/index.html' %}reef-home{% endif %}">
+  <body class="{% if page.url == '/' or page.url == '/index.html' %}reef-v5{% endif %}">
     <div class="hamster-site">
       {% include main/header.html %}
       <main class="site-main">

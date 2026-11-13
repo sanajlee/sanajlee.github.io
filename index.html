@@ -4,45 +4,46 @@ title: Sana Lee
 description: Computational linguist studying language model behavior, mechanistic interpretability, multilingual and latent language, and linguistic reasoning.
 ---
 
-<section class="hero">
-  <div class="hero__copy">
-    <p class="hero__hello">✦ hello, world! · welcome to my reef</p>
-    <h1>SANGAH LEE<span class="hero__spark">✳</span></h1>
-
-    <p class="hero__tagline">
-      I study how language models represent, reason with,
-      and sometimes mess up language.
-    </p>
-
-    <p class="hero__position">
-      Associate Professor<br>
-      Department of Linguistics · Seoul National University
-    </p>
-
-    <div class="button-row">
-      <a class="tiny-button" href="{{ '/publications' | relative_url }}">papers</a>
-      <a class="tiny-button" href="https://github.com/sanajlee" target="_blank" rel="noopener">github</a>
-      <a class="tiny-button" href="mailto:{{ site.author.mail }}">email</a>
+<div class="reef-desktop">
+  <section class="reef-intro reef-os-window" aria-labelledby="reef-name">
+    <div class="reef-os-title"><span>🐠 &nbsp;HELLO!</span><span class="reef-controls" aria-hidden="true">▁ ▣ ×</span></div>
+    <div class="reef-intro-body">
+      <h1 id="reef-name">SANGAH LEE</h1>
+      <p class="reef-role">Associate Professor<br>Department of Linguistics<br>Seoul National University</p>
+      <div class="reef-wave" aria-hidden="true"></div>
+      <p class="reef-summary">I study how language models represent, reason with, and sometimes mess up language.</p>
+      <div class="reef-interests"><strong>✦ RESEARCH INTERESTS</strong><div class="reef-tags"><span>language models</span><span>interpretability</span><span>multilinguality</span></div></div>
+      <div class="reef-links"><a href="{{ '/publications' | relative_url }}">papers ↗</a><a href="https://github.com/sanajlee" target="_blank" rel="noopener">github ↗</a><a href="mailto:{{ site.author.mail }}">email ↗</a><a href="{{ '/paper-reef/' | relative_url }}">paper-reef 🪸 ↗</a></div>
     </div>
+  </section>
+
+  <div class="reef-life-scene" aria-label="A small underwater world with tropical fish and coral">
+    <img class="reef-fish reef-fish-a" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="" aria-hidden="true">
+    <img class="reef-fish reef-fish-b" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="" aria-hidden="true">
+    <img class="reef-fish reef-fish-c" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="" aria-hidden="true">
+    <img class="reef-jelly" src="{{ '/assets/img/reef-jelly.svg' | relative_url }}" alt="" aria-hidden="true">
   </div>
 
-  <div class="hero__art reef-art" aria-label="Pixel fish, jellyfish, coral and seaweed in a small underwater reef">
-    <img class="reef-art__scenery" src="{{ '/assets/img/reef-scene.svg' | relative_url }}" alt="" aria-hidden="true">
-    <span class="reef-art__bubble reef-art__bubble--one" aria-hidden="true"></span>
-    <span class="reef-art__bubble reef-art__bubble--two" aria-hidden="true"></span>
-    <img class="reef-art__fish" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="Pixel fish">
-    <img class="reef-art__jelly" src="{{ '/assets/img/reef-jelly.svg' | relative_url }}" alt="Pixel jellyfish">
-  </div>
-</section>
+  <section class="reef-papers reef-os-window" aria-labelledby="reef-papers-label">
+    <div class="reef-os-title"><span id="reef-papers-label">▤ &nbsp; SELECTED PAPERS</span><a href="{{ '/publications' | relative_url }}">SEE ALL →</a></div>
+    <div class="reef-papers-body">
+      {% assign selected_pubs = site.data.publications | where: "selected", true %}
+      {% for pub in selected_pubs %}
+      <article class="reef-paper">
+        <div class="reef-paper-icon" aria-hidden="true">▤</div>
+        <div>
+          <h3>{% if pub.paper %}<a href="{{ pub.paper }}" {% if pub.paper contains 'http' %}target="_blank" rel="noopener"{% endif %}>{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+          <p>{{ pub.year }} · {% for author in pub.authors %}{% if author == "Sangah Lee" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %} · {% endunless %}{% endfor %} · {{ pub.venue }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 
-
-
-<section class="reef-window stamp-window" aria-labelledby="stamp-heading">
-  <div class="reef-window__bar"><span><i class="window-dot"></i><i class="window-dot"></i><i class="window-dot"></i> guestbook.exe</span><span class="window-tools" aria-hidden="true">— □ ×</span></div>
-  <div class="stamp-window__content">
-    <div class="stamp-window__intro"><h2 id="stamp-heading">Leave a little trace ♡</h2><p>Visitors welcome! Pick a stamp and leave it on the board.</p></div>
-    <div class="stamp-window__board-scroll">
-  <div class="reef-stamp-holder">
+  <section class="reef-stamps reef-os-window" aria-labelledby="reef-stamps-label">
+    <div class="reef-os-title"><span id="reef-stamps-label">✿ &nbsp; VISITOR STAMPS</span><span class="reef-controls" aria-hidden="true">▁ ▣ ×</span></div>
+    <div class="reef-stamp-scroll">
+<div class="research-board-wrap">
     <div class="bulletin-board">
 
       <div class="board-notes">
@@ -136,15 +137,22 @@ description: Computational linguist studying language model behavior, mechanisti
 
     </div>
   </div>
+    </div>
+  </section>
 
-
+  <div class="reef-aquarium reef-os-window" aria-hidden="true">
+    <div class="reef-mini-scene">
+      <img class="reef-mini-fish" src="{{ '/assets/img/reef-fish.svg' | relative_url }}" alt="">
+      <img class="reef-mini-jelly" src="{{ '/assets/img/reef-jelly.svg' | relative_url }}" alt="">
+      <span class="reef-mini-coral reef-mini-coral-a"></span><span class="reef-mini-coral reef-mini-coral-b"></span>
     </div>
   </div>
-</section>
 
-<section class="home-section research-section">
+  <div class="reef-bottom-note">✿ &nbsp; THANKS FOR VISITING MY PAGE! <span aria-hidden="true">✧⋆｡˚</span></div>
+</div>
 
-  <div class="reef-section-label">✳ RESEARCH LOG · 03</div>
+<section class="reef-research reef-os-window" aria-labelledby="reef-research-label">
+  <div class="reef-os-title"><span id="reef-research-label">✦ &nbsp; WHAT I WORK ON THESE DAYS</span><a href="{{ '/research' | relative_url }}">MORE →</a></div>
   <div class="section-title-row">
     <h2>WHAT I WORK ON THESE DAYS</h2>
   </div>
@@ -193,82 +201,8 @@ description: Computational linguist studying language model behavior, mechanisti
   <a class="research-more" href="{{ '/research' | relative_url }}">
     more about my research →
   </a>
+
 </section>
-
-<section class="home-section home-section--papers">
-  <div class="reef-section-label">✳ PAPER ARCHIVE · 04</div>
-  <div class="section-title-row">
-    <h2>SELECTED PAPERS</h2>
-    <a class="text-link" href="{{ '/publications' | relative_url }}">
-      all papers →
-    </a>
-  </div>
-
-  <div class="selected-papers">
-
-    {% assign selected_pubs = site.data.publications | where: "selected", true %}
-
-    {% for pub in selected_pubs %}
-      <article class="selected-paper">
-
-        <div class="selected-paper__year">
-          {{ pub.year }}
-        </div>
-
-        <div>
-          <h3>
-            {% if pub.paper %}
-              <a href="{{ pub.paper }}" {% if pub.paper contains 'http' %}target="_blank" rel="noopener"{% endif %}>
-                {{ pub.title }}
-              </a>
-            {% else %}
-              {{ pub.title }}
-            {% endif %}
-          </h3>
-
-          <p>
-            {% for author in pub.authors %}
-              {% if author == "Sangah Lee" %}
-                <span class="me">{{ author }}</span>
-              {% else %}
-                {{ author }}
-              {% endif %}
-
-              {% unless forloop.last %}
-                <span class="author-sep"> · </span>
-              {% endunless %}
-            {% endfor %}
-
-            <span class="pub-sep"> · </span>
-            {{ pub.venue }}
-          </p>
-
-          {% if pub.code or pub.project %}
-            <div class="selected-paper__links">
-
-              {% if pub.code %}
-                <a href="{{ pub.code }}" target="_blank" rel="noopener">
-                  code →
-                </a>
-              {% endif %}
-
-              {% if pub.project %}
-                <a href="{{ pub.project }}" target="_blank" rel="noopener">
-                  project →
-                </a>
-              {% endif %}
-
-            </div>
-          {% endif %}
-
-        </div>
-
-      </article>
-    {% endfor %}
-
-  </div>
-</section>
-
 
 <script>
 document.addEventListener("DOMContentLoaded", async function () {
