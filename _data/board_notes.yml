@@ -1,16 +1,6 @@
-- id: emnlp
-  date: "2026-08-21"
-  title: "memo"
-  text: "Got accepted to EMNLP 2026 Main!"
-  color: "yellow"
-  tape: "pink"
-  x: 7
-  y: 14
-  rotation: -2
-
 - id: paper-reef
-  date: "2026-09-07"
-  title: "check"
+  date: "2026-11-11"
+  title: "Random Paper Pick added"
   # text: "paper-reef🪸"
   link: "https://sanajlee.github.io/paper-reef/"
   link_label: "paper-reef🪸 →"

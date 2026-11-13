@@ -3,8 +3,8 @@
   authors:
     - Sangwoo Kim
     - Sangah Lee
-  venue: "Accepted to EMNLP 2026"
-  paper: "https://arxiv.org/pdf/2609.04708"
+  venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing"
+  paper: "https://aclanthology.org/2026.emnlp-main.2316.pdf"
   selected: true
 
 - year: 2026
