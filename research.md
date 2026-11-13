@@ -25,7 +25,7 @@ Current directions include layer-wise analysis, probing and causal interventions
 ### Related work
 
 - **How Do Language Models Represent and Use Phonological Information for Allomorph Selection?**  
-  Sangwoo Kim and *Sangah Lee*. Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (Oral Presentation).
+  Sangwoo Kim and *Sangah Lee*. Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing (Oral Presentation), 2026.
   [[paper]](https://aclanthology.org/2026.emnlp-main.2316.pdf)
 
 - **Do Korean-Adapted LLMs Think in Korean? Analyzing Latent Language and the Preservation of Korean-Specific Knowledge**  
