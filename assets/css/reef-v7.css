@@ -1,0 +1,201 @@
+/* Little Reef v5 — isolated homepage styles; original stamp mechanics preserved */
+body.reef-v5{--ink:#123b70;--edge:#145b9f;--cream:#fff8e7;--glass:#56c9ed; margin:0;background:#36a9cf url('../img/reef-ocean-v7.png') center top / cover fixed no-repeat;color:var(--ink);font-family:'Silkscreen',monospace;font-size:12px;line-height:1.55}
+body.reef-v5 *{box-sizing:border-box}
+body.reef-v5 .hamster-site{min-height:100vh}
+body.reef-v5 .site-header{border:0;padding:12px 0 2px}
+body.reef-v5 .site-header__inner{width:min(1190px,calc(100% - 36px));min-height:53px;display:flex;align-items:center;gap:16px;padding:6px 18px;border:3px solid var(--edge);background:var(--cream);box-shadow:0 4px 0 #083a81,inset 0 0 0 2px white;border-radius:3px}
+body.reef-v5 .site-brand{font-size:17px;letter-spacing:0;font-family:'Silkscreen',monospace;white-space:nowrap;color:var(--ink)}
+body.reef-v5 .site-brand__hamster{width:32px;height:32px;image-rendering:pixelated}
+body.reef-v5 .site-nav{display:flex;gap:clamp(8px,2vw,25px);margin-left:auto;font:700 12px 'Silkscreen',monospace;flex-wrap:wrap}
+body.reef-v5 .site-nav a{color:var(--ink);text-transform:uppercase;white-space:nowrap;text-decoration:none}
+body.reef-v5 .site-nav a:hover{color:#007cbb}
+body.reef-v5 .site-nav a::after{background:#79d2eb}
+body.reef-v5 .site-main{width:min(1150px,calc(100% - 52px));margin:0 auto;min-height:0}
+body.reef-v5 .reef-desktop{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,.9fr);grid-template-areas:'intro scene' 'papers stamps';gap:22px 28px;padding:36px 0 20px;align-items:start}
+body.reef-v5 .reef-os-window{min-width:0;border:4px solid var(--edge);border-radius:7px;background:var(--cream);box-shadow:0 6px 0 #083f7a, inset 0 0 0 3px #fff;overflow:hidden}
+body.reef-v5 .reef-os-title{display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(180deg,#85dbf1,#4facd6);border-bottom:3px solid var(--edge);min-height:38px;padding:5px 12px;color:#113b70;font:700 15px 'Silkscreen',monospace}
+body.reef-v5 .reef-os-title a{font:700 11px 'Silkscreen',monospace;text-decoration:none;color:#113b70;white-space:nowrap}
+body.reef-v5 .reef-controls{color:#1b5b94;letter-spacing:2px;white-space:nowrap}
+body.reef-v5 .reef-intro{grid-area:intro}
+body.reef-v5 .reef-intro-body{padding:22px 27px 20px}
+body.reef-v5 .reef-intro h1{margin:0 0 13px;font:700 clamp(29px,3.3vw,43px)/1.12 'Silkscreen',monospace;letter-spacing:.02em;color:#153b79;white-space:normal}
+body.reef-v5 .reef-role{font:700 14px/1.55 'Silkscreen',monospace;text-transform:uppercase;margin:0 0 12px}
+body.reef-v5 .reef-wave{height:7px;margin:11px 0 15px;background:repeating-linear-gradient(90deg,transparent 0 7px,#35bee1 7px 14px,transparent 14px 21px);clip-path:polygon(0 35%,10% 65%,20% 35%,30% 65%,40% 35%,50% 65%,60% 35%,70% 65%,80% 35%,90% 65%,100% 35%,100% 100%,0 100%)}
+body.reef-v5 .reef-summary{font:400 13px/1.75 'Silkscreen',monospace;margin:0 0 20px;max-width:48ch;color:#25496f}
+body.reef-v5 .reef-interests{border-top:2px solid #5bc0dc;padding-top:12px;font-size:13px}
+body.reef-v5 .reef-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+body.reef-v5 .reef-tags span,body.reef-v5 .reef-links a{font:700 10px 'Silkscreen',monospace;border:2px solid #72abd1;background:#d7f4f4;padding:6px 8px;border-radius:2px;box-shadow:2px 2px 0 #b2c8d3}
+body.reef-v5 .reef-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+body.reef-v5 .reef-links a{text-decoration:none;color:#134978;background:#f0f8e9}
+body.reef-v5 .reef-links a:hover{background:#9fe6ed}
+body.reef-v5 .reef-life-scene{grid-area:scene;min-height:405px;position:relative;overflow:hidden}
+body.reef-v5 .reef-fish,body.reef-v5 .reef-jelly{position:absolute;image-rendering:pixelated;object-fit:contain;filter:drop-shadow(2px 3px 0 #11669a88)}
+body.reef-v5 .reef-fish-a{width:96px;left:25%;top:30%;animation:reefdrift 9s ease-in-out infinite alternate}
+body.reef-v5 .reef-fish-b{width:45px;left:9%;top:53%;animation:reefdrift 7s ease-in-out infinite alternate-reverse}
+body.reef-v5 .reef-fish-c{width:34px;left:56%;top:57%;animation:reefdrift 8s ease-in-out infinite alternate}
+body.reef-v5 .reef-jelly{width:55px;right:8%;top:14%;animation:reefhover 6s ease-in-out infinite alternate}
+@keyframes reefdrift{to{transform:translate(22px,-9px)}}@keyframes reefhover{to{transform:translateY(14px)}}
+body.reef-v5 .reef-papers{grid-area:papers}
+body.reef-v5 .reef-papers-body{padding:7px 17px 14px}
+body.reef-v5 .reef-paper{display:grid;grid-template-columns:42px minmax(0,1fr);gap:12px;padding:13px 4px;border-bottom:2px solid #c0e0e6}
+body.reef-v5 .reef-paper:last-child{border-bottom:0}
+body.reef-v5 .reef-paper-icon{color:#2b99cb;font-size:33px;line-height:1}
+body.reef-v5 .reef-paper h3{font:700 11px/1.65 'Silkscreen',monospace;margin:0;color:#103c70;text-transform:none}
+body.reef-v5 .reef-paper h3 a{text-decoration:none;color:inherit}
+body.reef-v5 .reef-paper h3 a:hover{text-decoration:underline}
+body.reef-v5 .reef-paper p{font:400 10px/1.8 'Silkscreen',monospace;color:#476885;margin:5px 0 0}
+body.reef-v5 .reef-stamps{grid-area:stamps}
+body.reef-v5 .reef-stamp-scroll{padding:10px;overflow-x:auto;overscroll-behavior-x:contain}
+/* Retain absolute stamp coordinates and original 440x300 board. Only its outer holder is reset. */
+body.reef-v5 .reef-stamps .research-board-wrap{position:static!important;top:auto!important;right:auto!important;transform:none!important;width:440px!important;max-width:none!important;margin:0!important;z-index:auto!important}
+body.reef-v5 .reef-stamps .bulletin-board{width:440px!important;height:300px!important;max-width:none!important;position:relative!important;margin:0!important}
+body.reef-v5 .reef-stamps .board-note{max-width:none}
+body.reef-v5 .reef-stamps .stamp-picker{z-index:30}
+body.reef-v5 .reef-aquarium{grid-area:aquarium;padding:6px;background:#e5f8ee;min-height:155px}
+body.reef-v5 .reef-mini-scene{position:relative;min-height:151px;overflow:hidden;background:linear-gradient(180deg,#65c8e8 0%,#32a9ca 77%,#e6d69e 78%,#f7e2a2 100%);border:3px solid #3b8fbc}
+body.reef-v5 .reef-mini-fish,body.reef-v5 .reef-mini-jelly{position:absolute;image-rendering:pixelated}
+body.reef-v5 .reef-mini-fish{width:66px;left:22%;top:24%}
+body.reef-v5 .reef-mini-jelly{width:46px;right:17%;top:10%}
+body.reef-v5 .reef-mini-coral{position:absolute;bottom:15px;width:48px;height:65px;background:repeating-linear-gradient(90deg,transparent 0 8px,#45cfa6 8px 15px,transparent 15px 22px);clip-path:polygon(20% 100%,0 20%,20% 20%,35% 65%,35% 0,55% 0,55% 58%,80% 15%,100% 15%,75% 100%)}
+body.reef-v5 .reef-mini-coral-a{left:5%}
+body.reef-v5 .reef-mini-coral-b{right:3%;transform:scale(.8);background:repeating-linear-gradient(90deg,transparent 0 8px,#f9a1a8 8px 15px,transparent 15px 22px)}
+body.reef-v5 .reef-bottom-note{grid-area:note;justify-self:start;background:var(--cream);border:3px solid var(--edge);box-shadow:0 4px 0 #07417d;padding:12px 24px;font:700 13px 'Silkscreen',monospace;max-width:100%}
+body.reef-v5 .reef-research{margin:24px 0 55px}
+body.reef-v5 .reef-research>.section-title-row,body.reef-v5 .reef-research>.research-intro,body.reef-v5 .reef-research>.research-axes,body.reef-v5 .reef-research>.research-more{margin-left:25px;margin-right:25px}
+body.reef-v5 .reef-research>.section-title-row{display:none}
+body.reef-v5 .reef-research .research-intro{padding-top:22px;max-width:none}
+body.reef-v5 .reef-research .research-intro h3{font:700 16px 'Silkscreen',monospace;color:#184a7b}
+body.reef-v5 .reef-research .research-intro p{font:400 12px/1.8 'Silkscreen',monospace}
+body.reef-v5 .reef-research .research-axes{gap:16px}
+body.reef-v5 .reef-research .research-axes article{background:#e8f7f5;border:2px solid #a6cfd8;padding:17px}
+body.reef-v5 .reef-research .research-axes article h3{font:700 12px/1.6 'Silkscreen',monospace}
+body.reef-v5 .reef-research .research-axes article p{font:400 11px/1.7 'Silkscreen',monospace}
+body.reef-v5 .reef-research .research-more{display:inline-block;margin-top:20px;margin-bottom:23px;font-size:11px}
+body.reef-v5 .site-footer{border-top:3px solid var(--edge);background:#fff6e6d9}
+body.reef-v5 .site-footer__inner{font:400 10px/1.6 'Silkscreen',monospace}
+body.reef-v5 .site-footer__hamster{width:24px;height:24px}
+@media(max-width:900px){body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:16px;grid-template-areas:'intro intro' 'scene scene' 'papers papers' 'stamps stamps'}body.reef-v5 .reef-life-scene{min-height:220px}body.reef-v5 .reef-stamps .reef-stamp-scroll{max-width:100%}}
+@media(max-width:680px){body.reef-v5 .site-main{width:calc(100% - 22px)}body.reef-v5 .site-header__inner{width:calc(100% - 16px);padding:9px;flex-wrap:wrap}body.reef-v5 .site-nav{justify-content:center;gap:12px;width:100%;font-size:10px}body.reef-v5 .site-brand{font-size:14px}body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr);grid-template-areas:'intro' 'scene' 'stamps' 'papers';padding-top:16px;gap:15px}body.reef-v5 .reef-intro-body{padding:17px}body.reef-v5 .reef-intro h1{font-size:27px}body.reef-v5 .reef-role{font-size:11px}body.reef-v5 .reef-summary{font-size:11px}body.reef-v5 .reef-life-scene{min-height:175px}body.reef-v5 .reef-fish-a{top:20%;width:72px}body.reef-v5 .reef-fish-b{top:42%}body.reef-v5 .reef-os-title{font-size:12px}body.reef-v5 .reef-paper h3{font-size:10px}body.reef-v5 .reef-bottom-note{font-size:10px}body.reef-v5 .reef-research .research-axes{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){body.reef-v5 .reef-fish,body.reef-v5 .reef-jelly{animation:none}}
+/* Ocean mark on the homepage only; other pages retain their original header. */
+body.reef-v5 .site-brand__hamster{display:none}
+body.reef-v5 .site-brand::before{content:"";display:inline-block;flex:0 0 32px;width:32px;height:32px;background:url('../img/reef-octopus.png') center/contain no-repeat;image-rendering:pixelated}
+
+/* v6 — deterministic sizing and fuller retro UI, loaded after main.css */
+body.reef-v5 { background-size: cover; background-position:center top; background-repeat:no-repeat; background-attachment:fixed; }
+body.reef-v5 .site-main { width:min(1210px,calc(100% - 44px)); }
+body.reef-v5 .site-header__inner {width:min(1240px,calc(100% - 30px));}
+body.reef-v5 .reef-desktop {
+ grid-template-columns:minmax(0,1fr) 488px;
+ grid-template-areas:'intro scene' 'papers stamps';
+ gap:20px 24px;
+ padding-top:30px;
+}
+body.reef-v5 .reef-os-window { border:3px solid #164a91; box-shadow:0 5px 0 #113e75, inset 0 0 0 2px #fff; }
+body.reef-v5 .reef-os-title {background:linear-gradient(180deg,#85daf3 0%,#3ca6d6 100%);border-bottom:3px solid #164a91;}
+body.reef-v5 .reef-intro-body {padding:23px 26px 25px;}
+body.reef-v5 .reef-intro h1 {font-size:clamp(26px,3.1vw,43px);}
+body.reef-v5 .reef-life-scene {min-height:410px;}
+body.reef-v5 .reef-life-scene::before {content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 38% 30%,rgba(204,250,255,.13),transparent 57%);}
+body.reef-v5 .reef-fish-a {left:26%;top:23%;width:84px;}
+body.reef-v5 .reef-fish-b {left:9%;top:58%;width:38px;}
+body.reef-v5 .reef-fish-c {left:64%;top:52%;width:32px;}
+body.reef-v5 .reef-jelly {right:8%;top:23%;width:49px;}
+body.reef-v5 .reef-stamps { width:100%; }
+body.reef-v5 .reef-stamp-scroll {padding:13px 17px 17px;overflow-x:auto;}
+body.reef-v5 .reef-stamps .research-board-wrap {width:440px!important;max-width:none!important;position:relative!important;right:auto!important;left:auto!important;top:auto!important;bottom:auto!important;transform:none!important;}
+body.reef-v5 .reef-stamps .bulletin-board { width:440px!important;height:300px!important;}
+body.reef-v5 .reef-paper-icon {font-size:25px;padding-top:4px}
+body.reef-v5 .reef-paper h3 {font-size:12px;line-height:1.55;}
+body.reef-v5 .reef-paper p {font-size:10px;}
+body.reef-v5 .reef-papers-body {padding:9px 20px 15px;}
+body.reef-v5 .reef-aquarium{min-height:195px;}
+body.reef-v5 .reef-mini-scene {min-height:181px;background:linear-gradient(180deg,rgba(173,238,245,.9),rgba(31,160,201,.8) 79%,#f4d995 80%,#f8e5af);}
+body.reef-v5 .reef-mini-scene::before {content:"";position:absolute;inset:0;background:repeating-linear-gradient(108deg,transparent 0 33px,rgba(255,255,255,.13) 34px 45px,transparent 46px 80px);}
+body.reef-v5 .reef-mini-fish{top:38%;width:58px;}
+body.reef-v5 .reef-mini-jelly{right:19%;top:24%;width:43px;}
+body.reef-v5 .reef-bottom-note {background:#fffaf0e8;}
+@media(max-width:1080px){
+ body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:'intro scene' 'papers papers' 'stamps stamps';}
+ body.reef-v5 .reef-life-scene {min-height:430px;}
+ body.reef-v5 .reef-stamps .reef-stamp-scroll{overflow-x:auto;}
+}
+@media(max-width:900px){
+ body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr);grid-template-areas:'intro' 'scene' 'papers' 'stamps';gap:16px;}
+ body.reef-v5 .reef-life-scene{min-height:230px;}
+ body.reef-v5 .reef-stamps{width:min(100%,550px);}
+ body.reef-v5 .reef-aquarium {min-height:175px;}
+}
+@media(max-width:680px){
+ body.reef-v5 .site-main{width:calc(100% - 22px);}
+ body.reef-v5 .reef-desktop{padding-top:16px;}
+ body.reef-v5 .reef-life-scene{min-height:165px;}
+ body.reef-v5 .reef-stamp-scroll {padding:9px 8px 12px;}
+ body.reef-v5 .reef-intro h1{font-size:clamp(23px,7vw,30px);}
+ body.reef-v5 .reef-role{font-size:11px;}
+ body.reef-v5 .reef-summary{font-size:11px;}
+ body.reef-v5 .reef-os-title{padding:7px 9px;font-size:12px;}
+}
+
+/* ---- V7: slimmer Mona typography, beveled window chrome, precise reef art ---- */
+body.reef-v5{--ink:#163d64;--edge:#235e91;--cream:#fff9e9;--line:#70b8cf;
+  font-family:'Mona12','Mona10x12','Pixelify Sans',sans-serif;
+  font-size:12px;line-height:1.55;
+  background-color:#3baecc;
+  background-image:url('../img/reef-ocean-v7.png');
+  background-position:center top;
+  background-size:cover;
+  background-attachment:fixed;
+}
+body.reef-v5 .site-main{width:min(1210px,calc(100% - 48px))}
+body.reef-v5 .site-header__inner{width:min(1240px,calc(100% - 42px));min-height:59px;
+  background:#fffaf0;border:2px solid #204f80;border-radius:3px;
+  box-shadow:0 0 0 2px #b7ebf2,0 5px 0 #1d5686,inset 0 0 0 2px #fff}
+body.reef-v5 .site-brand{font:400 20px/1.2 'Mona12','Pixelify Sans',sans-serif;letter-spacing:.015em}
+body.reef-v5 .site-nav{font:400 15px/1.25 'Mona12','Pixelify Sans',sans-serif;gap:clamp(10px,2vw,24px)}
+body.reef-v5 .reef-desktop{grid-template-columns:minmax(0, 1.36fr) minmax(0,1fr);grid-template-areas:'intro scene' 'papers stamps';gap:20px 26px;padding:34px 0 20px}
+body.reef-v5 .reef-os-window{border:2px solid #1a4c7d;border-radius:4px;background:var(--cream);
+  box-shadow:0 0 0 2px #caeaf0,0 6px 0 #164d83,0 9px 0 #2377a1,inset 0 0 0 2px #fff;
+  overflow:hidden;position:relative}
+body.reef-v5 .reef-os-window::before{content:'';position:absolute;inset:1px;pointer-events:none;
+  border:1px solid rgba(56,126,164,.24);z-index:3}
+body.reef-v5 .reef-os-title{min-height:40px;padding:5px 11px 6px;
+  border-bottom:2px solid #276494;
+  background:linear-gradient(180deg,#d6f7f1 0%,#96daeb 18%,#65b7db 65%,#7dcce0 100%);
+  font:400 17px/1.25 'Mona12','Pixelify Sans',sans-serif;letter-spacing:.018em;
+  box-shadow:inset 0 2px #e9fefd,inset 0 -2px #9cd9e7}
+body.reef-v5 .reef-os-title a{font:400 14px 'Mona12','Pixelify Sans',sans-serif}
+body.reef-v5 .reef-controls{font-family:'Mona12',sans-serif;font-size:14px;letter-spacing:1px;background:#f5fff9;
+  border:1px solid #276494;padding:0 5px;box-shadow:1px 1px #276494}
+body.reef-v5 .reef-intro-body{padding:25px 29px 24px}
+body.reef-v5 .reef-intro h1{font:400 clamp(36px,3.7vw,52px)/1.06 'Mona12','Pixelify Sans',sans-serif;
+  letter-spacing:.01em;text-transform:uppercase;margin-bottom:12px;color:#173a73}
+body.reef-v5 .reef-role{font:400 17px/1.45 'Mona12','Pixelify Sans',sans-serif;letter-spacing:.025em}
+body.reef-v5 .reef-summary{font:400 17px/1.4 'Mona12','Pixelify Sans',sans-serif;max-width:40ch;color:#284867}
+body.reef-v5 .reef-interests{font:400 16px/1.4 'Mona12','Pixelify Sans',sans-serif}
+body.reef-v5 .reef-tags span,body.reef-v5 .reef-links a{font:400 13px/1.35 'Mona12','Pixelify Sans',sans-serif;
+  border:1px solid #4296bd;border-radius:2px;box-shadow:1px 2px #7abbd3;padding:5px 8px;background:#e0f8f2}
+body.reef-v5 .reef-wave{height:3px;background:repeating-linear-gradient(90deg,#4bc5df 0 10px,transparent 10px 15px,#4bc5df 15px 25px,transparent 25px 30px);clip-path:none}
+body.reef-v5 .reef-paper-icon{font-size:25px;color:#287cb1}
+body.reef-v5 .reef-paper h3{font:400 17px/1.35 'Mona12','Pixelify Sans',sans-serif}
+body.reef-v5 .reef-paper p{font:400 14px/1.4 'Mona12','Pixelify Sans',sans-serif}
+body.reef-v5 .reef-papers-body{padding:10px 22px 18px}
+body.reef-v5 .reef-paper{border-bottom:1px solid #aad8e0;padding:14px 4px}
+body.reef-v5 .reef-stamp-scroll{padding:16px 17px 18px}
+body.reef-v5 .reef-life-scene{min-height:410px;
+  background:radial-gradient(ellipse at 43% 26%,rgba(218,252,248,.15),transparent 57%);
+  border:none}
+body.reef-v5 .reef-fish-a{width:84px;left:39%;top:30%}
+body.reef-v5 .reef-fish-b{width:40px;left:12%;top:51%}
+body.reef-v5 .reef-fish-c{width:32px;left:70%;top:61%}
+body.reef-v5 .reef-jelly{width:47px;top:18%;right:12%}
+body.reef-v5 .reef-research{margin-top:24px}
+body.reef-v5 .reef-research .research-intro h3{font:400 20px 'Mona12',sans-serif}
+body.reef-v5 .reef-research .research-intro p{font:400 16px/1.45 'Mona12',sans-serif}
+body.reef-v5 .reef-research .research-axes article h3{font:400 16px/1.45 'Mona12',sans-serif}
+body.reef-v5 .reef-research .research-axes article p{font:400 15px/1.5 'Mona12',sans-serif}
+body.reef-v5 .reef-research .research-more{font:400 15px 'Mona12',sans-serif}
+body.reef-v5 .site-footer__inner{font:400 14px 'Mona12',sans-serif}
+@media(max-width:1080px){body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:'intro scene' 'papers papers' 'stamps stamps'}body.reef-v5 .reef-stamps{width:min(100%,540px)} }
+@media(max-width:900px){body.reef-v5 .reef-desktop{grid-template-columns:minmax(0,1fr);grid-template-areas:'intro' 'scene' 'papers' 'stamps'}body.reef-v5 .reef-life-scene{min-height:250px}}
+@media(max-width:680px){body.reef-v5{background-attachment:scroll;background-size:auto 100vh}body.reef-v5 .site-main{width:calc(100% - 24px)}body.reef-v5 .site-header__inner{width:calc(100% - 16px)}body.reef-v5 .site-nav{font-size:13px;gap:9px}body.reef-v5 .site-brand{font-size:17px}body.reef-v5 .reef-desktop{gap:16px}body.reef-v5 .reef-intro-body{padding:19px 18px}body.reef-v5 .reef-intro h1{font-size:33px}body.reef-v5 .reef-role{font-size:14px}body.reef-v5 .reef-summary{font-size:15px}body.reef-v5 .reef-os-title{font-size:15px}body.reef-v5 .reef-paper h3{font-size:16px}body.reef-v5 .reef-paper p{font-size:13px}body.reef-v5 .reef-stamp-scroll{padding:10px 8px 12px}}
