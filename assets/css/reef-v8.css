@@ -857,3 +857,95 @@ body.reef-v5 .site-footer {background:transparent;border:0;padding:0;margin:0;}
  body.reef-v5 .reef-ctl--close::before,body.reef-v5 .reef-ctl--close::after {left:6px;top:2px;width:2px;height:9px;}
  body.reef-v5 .reef-footbar {width:calc(100% - 24px);font-size:10px;margin:16px auto;}
 }
+
+
+/* v17 — light pixel corners, matching header/footer, pixel guestbook */
+/* Go back to the 9-slice artwork but render it with a restrained 9px edge. */
+body.reef-v5 .reef-os-window {
+  border:9px solid transparent;
+  border-image-source:url('../img/pixel-window-frame.png');
+  border-image-slice:12;
+  border-image-width:9px;
+  border-image-repeat:stretch;
+  background:#fff9ec;
+  border-radius:0;
+  clip-path:none;
+  box-shadow:4px 5px 0 #164778;
+  overflow:hidden;
+}
+body.reef-v5 .reef-os-title {
+  margin:0;
+  min-height:41px;
+  padding:6px 12px;
+  border-bottom:2px solid #19538a;
+  box-shadow:inset 0 2px #d9f8ff,inset 0 -2px #9bd8e9;
+  background:#64bfdf url('../img/pixel-title-tile.png') repeat-x left top / 32px 40px;
+  font:400 12px/1.4 'Silkscreen',monospace;
+  text-shadow:none;
+}
+body.reef-v5 .reef-ctl {
+  width:17px;height:17px;border:2px solid #18538c;
+  background:#f6fff6;box-shadow:2px 2px 0 #397eaf,inset -1px -1px 0 #a0d4e6;
+}
+body.reef-v5 .reef-ctl--min::before {left:3px;right:3px;bottom:3px;height:2px;}
+body.reef-v5 .reef-ctl--max::before {inset:3px;border-width:2px;}
+body.reef-v5 .reef-ctl--close::before,body.reef-v5 .reef-ctl--close::after {left:6px;top:2px;width:2px;height:9px;}
+/* Footer inherits the HEADER's cream panel, slim triple-edge and proportions. */
+body.reef-v5 .site-footer {background:transparent;border:0;padding:0 0 16px;margin:0;}
+body.reef-v5 .reef-footbar {
+  width:min(1240px,calc(100% - 30px));max-width:none;
+  min-height:53px;margin:6px auto 0;padding:6px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;
+  color:#123b70;background:#fff8e7;
+  border:3px solid #145b9f;border-radius:3px;
+  box-shadow:0 4px 0 #083a81,inset 0 0 0 2px white;
+  font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-v5 .reef-footbar__octopus {width:30px;height:30px;}
+body.reef-v5 .reef-footbar__detail {font:400 12px/1.5 'Mona12',sans-serif;color:#376c8b;}
+body.reef-v5 .reef-footbar__dot {width:6px;height:6px;background:#54bb9c;box-shadow:0 0 0 2px #29688f;}
+/* Stamp board: fixed 440x300 geometry, only decorative appearance. */
+body.reef-v5 .reef-stamps .reef-stamp-scroll {
+  padding:12px 13px 15px;
+  overflow-x:auto;
+  scrollbar-color:#3d95b6 #d2f1ed;
+}
+body.reef-v5 .reef-stamps .bulletin-board {
+  border:3px solid #2c6e9d!important;
+  border-radius:0;
+  background-color:#f0faf2;
+  background-image:
+    linear-gradient(to right,rgba(77,169,193,.12) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(77,169,193,.12) 1px,transparent 1px);
+  background-size:20px 20px;
+  box-shadow:inset 0 0 0 3px #c9edf0,inset 0 0 0 5px #fffdf0;
+  overflow:hidden;
+}
+body.reef-v5 .reef-stamps .board-note {
+  border:2px solid #366b93;
+  border-radius:0;
+  box-shadow:3px 3px 0 rgba(27,77,119,.24);
+}
+body.reef-v5 .reef-stamps .board-note__tape {opacity:.83;}
+body.reef-v5 .reef-stamps .board-stamp-button {
+  border:2px solid #1c5b91;border-radius:0;
+  padding:6px 9px;bottom:11px;right:11px;
+  background:#d9f4f0;box-shadow:3px 3px 0 #4e9fc4;
+  color:#164574;font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-v5 .reef-stamps .board-stamp-button:hover {background:#bfe9ee;}
+body.reef-v5 .reef-stamps .stamp-picker {
+  border:2px solid #1c5b91;border-radius:0;
+  background:#fffced;box-shadow:3px 3px 0 #4e9fc4;
+}
+body.reef-v5 .reef-stamps .stamp-choice {border-radius:0;}
+body.reef-v5 .reef-stamps .stamp-choice:hover {background:#bfe9ee;}
+/* Never change note x/y, rotations or visitor stamp element transforms. */
+@media(max-width:680px){
+  body.reef-v5 .reef-os-window {border-width:7px;border-image-width:7px;}
+  body.reef-v5 .reef-os-title {min-height:38px;padding:6px 9px;font-size:10px;}
+  body.reef-v5 .reef-ctl {width:15px;height:15px;}
+  body.reef-v5 .reef-ctl--close::before,body.reef-v5 .reef-ctl--close::after{left:5px;top:2px;height:8px;}
+  body.reef-v5 .reef-footbar {width:calc(100% - 16px);padding:8px 10px;gap:7px;font-size:10px;}
+  body.reef-v5 .reef-footbar__octopus {width:25px;height:25px;}
+}
