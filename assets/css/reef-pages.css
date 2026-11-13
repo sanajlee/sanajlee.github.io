@@ -109,3 +109,46 @@ body.reef-subpage .site-footer__dot{opacity:.6}
  body.reef-subpage .person__avatar{width:62px;height:62px}
  body.reef-subpage .site-footer__dot{display:none}
 }
+
+
+/* v26 — readable retro terminal face for paragraphs and long descriptions.
+   Headings, navigation, buttons, labels, titles and bibliographic metadata stay Silkscreen. */
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .prose dd,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .about-now > div,
+body.reef-subpage .course p,
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work {
+  font-family: 'VT323', monospace !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: .01em;
+}
+/* Restore the compact semantic labels nested in prose containers. */
+body.reef-subpage .about-now .about-label,
+body.reef-subpage .course .course-term,
+body.reef-subpage .person__role {
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+}
+@media (max-width: 520px) {
+  body.reef-subpage .prose p,
+  body.reef-subpage .prose li,
+  body.reef-subpage .prose blockquote,
+  body.reef-subpage .prose dd,
+  body.reef-subpage .about-lead,
+  body.reef-subpage .research-lead,
+  body.reef-subpage .teaching-lead,
+  body.reef-subpage .about-now > div,
+  body.reef-subpage .course p,
+  body.reef-subpage .person__interests,
+  body.reef-subpage .person__work {
+    font-size: 19px !important;
+  }
+}
