@@ -464,3 +464,99 @@ body.reef-v5 .reef-footbar__identity {display:flex;align-items:center;gap:9px;mi
  body.reef-v5 .reef-life-scene .reef-sprite--rock {width:34px;}
  body.reef-v5 .reef-footbar__nudibranch{width:26px!important;height:26px!important;max-width:26px;flex-basis:26px;}
 }
+
+/* V22 — distinct interest tags, organic reef scene, header-matched footer */
+/* Interests are descriptive tags, not navigation buttons. */
+body.reef-v5 .reef-interests .reef-tags span {
+  font-family:'Silkscreen',monospace !important;
+  font-weight:400 !important;
+  font-size:10px !important;
+  line-height:1.35 !important;
+  letter-spacing:0 !important;
+  text-transform:lowercase;
+  color:#205a80;
+  background:#d6f1e9;
+  border:2px solid #65a8ae;
+  border-radius:0;
+  box-shadow:2px 2px 0 #8fc7bc;
+  padding:7px 9px;
+}
+/* The bottom row links are actionable: pale blue / stronger outline. */
+body.reef-v5 .reef-intro .reef-links a {
+  font-family:'Silkscreen',monospace !important;
+  font-weight:400 !important;
+  font-size:10px !important;
+  line-height:1.35 !important;
+  color:#144b83;
+  background:#e8f6ff;
+  border:2px solid #317cae;
+  border-radius:0;
+  box-shadow:2px 3px 0 #8fb5d0;
+  padding:7px 10px;
+}
+body.reef-v5 .reef-intro .reef-links a:hover,
+body.reef-v5 .reef-intro .reef-links a:focus-visible {
+  background:#c6eafa;
+  transform:translateY(-1px);
+}
+/* Remove the artificial straight seafloor stripe entirely. */
+body.reef-v5 .reef-life-scene::after {content:none !important;display:none !important;background:none !important;}
+body.reef-v5 .reef-life-scene {background:transparent !important;}
+/* Uneven, visually grouped reef objects; no horizontal baseline. */
+body.reef-v5 .reef-life-scene .reef-sprite--weed {left:4%;bottom:2%;width:43px;}
+body.reef-v5 .reef-life-scene .reef-sprite--blue-coral {left:30%;bottom:6%;width:46px;}
+body.reef-v5 .reef-life-scene .reef-sprite--rock {right:19%;bottom:0;width:51px;}
+body.reef-v5 .reef-life-scene .reef-sprite--coral {right:3%;bottom:3%;width:56px;}
+body.reef-v5 .reef-life-scene .reef-sprite--castle {right:1%;top:4%;width:58px;}
+body.reef-v5 .reef-life-scene .reef-sprite--seahorse {left:12%;top:65%;width:19px;}
+body.reef-v5 .reef-life-scene .reef-sprite--crab {left:61%;top:76%;width:20px;}
+/* Header and footer share one visual vocabulary. */
+body.reef-v5 .site-footer {
+  background:none !important;
+  border:0 !important;
+  margin:2px 0 22px;
+  padding:0 !important;
+}
+body.reef-v5 .reef-footbar {
+  width:min(1240px,calc(100% - 42px));
+  margin:0 auto;
+  padding:10px 18px;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  background:#fffaf0;
+  border:2px solid #204f80;
+  border-radius:3px;
+  box-shadow:0 0 0 2px #b7ebf2,0 5px 0 #1d5686,inset 0 0 0 2px #fff;
+  color:#153c78;
+  font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-v5 .reef-footbar__identity {
+  display:flex;align-items:center;gap:10px;min-width:0;
+  color:#153c78;
+}
+body.reef-v5 .reef-footbar__nudibranch {
+  display:block;width:32px !important;height:32px !important;
+  max-width:32px;flex:0 0 32px;object-fit:contain;image-rendering:pixelated;
+}
+body.reef-v5 .reef-footbar__status {
+  display:flex;align-items:center;gap:9px;color:#24577e;
+  font:400 10px/1.35 'Silkscreen',monospace;
+}
+body.reef-v5 .reef-footbar__dot {
+  display:inline-block;flex:0 0 8px;width:8px;height:8px;
+  background:#4bc5ab;border:1px solid #327f88;box-shadow:1px 1px 0 #9fded0;
+}
+@media(max-width:680px){
+  body.reef-v5 .reef-life-scene .reef-sprite--castle{width:40px;}
+  body.reef-v5 .reef-life-scene .reef-sprite--weed{width:30px;}
+  body.reef-v5 .reef-life-scene .reef-sprite--coral{width:37px;}
+  body.reef-v5 .reef-life-scene .reef-sprite--blue-coral{width:31px;}
+  body.reef-v5 .reef-life-scene .reef-sprite--rock{width:32px;}
+  body.reef-v5 .reef-footbar{width:calc(100% - 16px);padding:9px 12px;gap:7px 12px;font-size:10px;}
+  body.reef-v5 .reef-footbar__nudibranch{width:26px!important;height:26px!important;max-width:26px;flex-basis:26px;}
+  body.reef-v5 .reef-footbar__status{font-size:9px;}
+}
