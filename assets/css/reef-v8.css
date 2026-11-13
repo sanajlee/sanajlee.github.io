@@ -343,3 +343,96 @@ body.reef-v5 .reef-sprite--weed {width:66px; left:1%; bottom:-3px;}
  body.reef-v5 .reef-research .research-intro p,
  body.reef-v5 .reef-research .research-axes article p {font-size:20px;}
 }
+
+
+/* =============================================================
+   v11 — final type system (homepage only)
+   Silkscreen Regular = headings, labels, buttons
+   Mona12 Regular = descriptions, paper entries, metadata
+   Intentionally placed LAST to override inherited `font:` shorthands.
+   ============================================================= */
+body.reef-v5 {
+  font-family: 'Mona12', 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Visual hierarchy: pixel UI labels, but NOT heavy bold text. */
+body.reef-v5 .site-brand,
+body.reef-v5 .site-nav a,
+body.reef-v5 .reef-os-title,
+body.reef-v5 .reef-os-title a,
+body.reef-v5 .reef-controls,
+body.reef-v5 .reef-intro h1,
+body.reef-v5 .reef-interests strong,
+body.reef-v5 .reef-tags span,
+body.reef-v5 .reef-links a,
+body.reef-v5 .reef-research .section-title-row h2,
+body.reef-v5 .reef-research .research-intro h3,
+body.reef-v5 .reef-research .research-axes article h3,
+body.reef-v5 .reef-research .research-axes .research-number,
+body.reef-v5 .reef-research .research-more,
+body.reef-v5 .reef-research .research-more a,
+body.reef-v5 .board-stamp-button {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Everything that carries prose or metadata reads in Mona. */
+body.reef-v5 .reef-role,
+body.reef-v5 .reef-summary,
+body.reef-v5 .reef-interests,
+body.reef-v5 .reef-paper h3,
+body.reef-v5 .reef-paper h3 a,
+body.reef-v5 .reef-paper p,
+body.reef-v5 .reef-paper p strong,
+body.reef-v5 .reef-research .research-intro p,
+body.reef-v5 .reef-research .research-axes article p,
+body.reef-v5 .site-footer__inner {
+  font-family: 'Mona12', 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Explicit sizing; the prior VT323 20–25px rules are overridden. */
+body.reef-v5 .site-brand {font-size: 18px; line-height:1.2;}
+body.reef-v5 .site-nav a {font-size: 12px; line-height:1.5;}
+body.reef-v5 .reef-os-title {font-size: 14px; line-height:1.35;}
+body.reef-v5 .reef-os-title a {font-size: 11px;}
+body.reef-v5 .reef-intro h1 {font-size: clamp(30px,3.25vw,43px); line-height:1.2;}
+body.reef-v5 .reef-role {font-size: 16px; line-height:1.65;}
+body.reef-v5 .reef-summary {font-size: 17px; line-height:1.65;}
+body.reef-v5 .reef-interests {font-size: 15px; line-height:1.6;}
+body.reef-v5 .reef-interests strong {font-size: 12px;}
+body.reef-v5 .reef-tags span, body.reef-v5 .reef-links a {font-size: 11px; line-height:1.5;}
+body.reef-v5 .reef-paper h3 {font-size: 17px; line-height:1.5;}
+body.reef-v5 .reef-paper p {font-size: 14px; line-height:1.65;}
+
+/* Research must be explicit: old `_hamster.scss` and v10 included
+   competing `font:` shorthands for precisely these elements. */
+body.reef-v5 .reef-research .section-title-row h2 {font-size: 14px; line-height:1.5;}
+body.reef-v5 .reef-research .research-intro h3 {font-size: 14px; line-height:1.5;}
+body.reef-v5 .reef-research .research-intro p {font-size: 16px; line-height:1.7;}
+body.reef-v5 .reef-research .research-axes article h3 {font-size: 12px; line-height:1.65;}
+body.reef-v5 .reef-research .research-axes .research-number {font-size: 12px;}
+body.reef-v5 .reef-research .research-axes article p {font-size: 15px; line-height:1.75;}
+body.reef-v5 .reef-research .research-more {font-size: 12px; line-height:1.5;}
+body.reef-v5 .site-footer__inner {font-size: 13px; line-height:1.7;}
+
+/* Long research terms in Silkscreen need safe wrapping. */
+body.reef-v5 .reef-research h2,
+body.reef-v5 .reef-research h3 {overflow-wrap:break-word;}
+@media(max-width:680px) {
+  body.reef-v5 .site-brand {font-size:16px;}
+  body.reef-v5 .site-nav a {font-size:10px;}
+  body.reef-v5 .reef-os-title {font-size:12px;}
+  body.reef-v5 .reef-intro h1 {font-size:27px;}
+  body.reef-v5 .reef-role {font-size:14px;}
+  body.reef-v5 .reef-summary {font-size:16px;}
+  body.reef-v5 .reef-paper h3 {font-size:16px;}
+  body.reef-v5 .reef-paper p {font-size:13px;}
+  body.reef-v5 .reef-research .research-intro p {font-size:15px;}
+  body.reef-v5 .reef-research .research-axes article p {font-size:14px;}
+}
