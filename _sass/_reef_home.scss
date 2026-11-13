@@ -1,0 +1,433 @@
+
+/* =====================================
+   SOFT RETRO × LITTLE REEF (home only)
+===================================== */
+body.reef-home {
+  --reef-ink: #24486b;
+  --reef-edge: #4f89ab;
+  --reef-shadow: #99d4da;
+  --reef-cream: #fffdf1;
+  --reef-mint: #dff5ef;
+  --reef-blue: #a9e6eb;
+  --reef-sand: #f5e9b3;
+  color: var(--reef-ink);
+  background-color: #7fd8e3;
+  background-image:
+    radial-gradient(ellipse 36% 25% at 50% 2%, rgba(255,255,241,.72), transparent 75%),
+    linear-gradient(180deg, rgba(255,255,255,.24) 0%, rgba(255,255,255,0) 20%),
+    linear-gradient(180deg,#bff0f1 0%, #99e1ea 28%, #71c7d8 62%, #5aa6c3 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: "Silkscreen", "Nunito Sans", sans-serif;
+}
+body.reef-home::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .22;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(255,255,255,.7) 0 2px, transparent 3px),
+    radial-gradient(circle at 20% 57%, rgba(255,255,255,.55) 0 3px, transparent 4px),
+    radial-gradient(circle at 84% 20%, rgba(255,255,255,.65) 0 2px, transparent 3px),
+    radial-gradient(circle at 74% 64%, rgba(255,255,255,.5) 0 4px, transparent 5px),
+    radial-gradient(circle at 90% 78%, rgba(255,255,255,.6) 0 2px, transparent 3px);
+}
+body.reef-home .hamster-site { position: relative; z-index: 1; }
+body.reef-home .site-main { width: min(1140px, calc(100% - 42px)); }
+body.reef-home .site-header {
+  border: 0;
+  padding: 12px 0 6px;
+  margin: 0;
+}
+body.reef-home .site-header__inner {
+  width: min(1200px, calc(100% - 32px));
+  min-height: 64px;
+  padding: 8px 18px;
+  background: var(--reef-cream);
+  border: 3px solid var(--reef-edge);
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 3px #e6f7f4, 0 6px 0 #3d90af;
+}
+body.reef-home .site-brand {
+  color: var(--reef-ink);
+  font-size: 1.08rem;
+  letter-spacing: .03em;
+}
+body.reef-home .site-brand__hamster {
+  image-rendering: pixelated;
+  width: 36px;
+  height: 36px;
+}
+body.reef-home .site-nav {
+  gap: clamp(.8rem, 2vw, 1.8rem);
+  font-size: .86rem;
+}
+body.reef-home .site-nav a {
+  border-radius: 6px;
+  padding: 7px 8px;
+  color: var(--reef-ink);
+}
+body.reef-home .site-nav a:hover,
+body.reef-home .site-nav a.is-active { background: #d7f4f1; }
+body.reef-home .site-nav a::after { background: #78c8dc; height: 3px; bottom: 1px; }
+
+body.reef-home .hero {
+  border: 0;
+  padding: 34px 0 22px;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: 24px;
+  align-items: stretch;
+}
+body.reef-home .hero__copy,
+body.reef-home .reef-window,
+body.reef-home .reef-board-window {
+  background: var(--reef-cream);
+  border: 3px solid var(--reef-edge);
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 3px #eefbf8, 5px 7px 0 rgba(31,103,143,.2);
+}
+body.reef-home .hero__copy {
+  padding: 34px 34px 28px;
+  min-height: 0;
+  align-self: start;
+}
+body.reef-home .hero__copy::before {
+  content: "✦ hello, world!";
+  display: block;
+  margin-bottom: 12px;
+  color: #316f8d;
+  font-size: .8rem;
+  letter-spacing: .05em;
+}
+body.reef-home .hero__hello {
+  margin: 0 0 .55rem;
+  font-size: .92rem;
+  color: #4d7c91;
+  display:none;
+}
+body.reef-home .hero h1 {
+  margin: 0;
+  color: #22496b;
+  font-size: clamp(2.7rem, 5.5vw, 4.8rem);
+  line-height: .92;
+  letter-spacing: .01em;
+  white-space: normal;
+  text-shadow: 0 0 0 #22496b;
+}
+body.reef-home .hero__tagline {
+  max-width: 30rem;
+  margin: 1.45rem 0 1.3rem;
+  color: #31556f;
+  font-size: .98rem;
+  line-height: 1.9;
+}
+body.reef-home .hero__position {
+  margin: 0 0 1.45rem;
+  color: #4e7588;
+  font-size: .82rem;
+  line-height: 1.85;
+}
+body.reef-home .button-row { gap: .6rem; }
+body.reef-home .tiny-button {
+  background: #e4f6ec;
+  color: #2c5572;
+  border: 2px solid #7caab8;
+  border-radius: 6px;
+  padding: .45rem .8rem;
+  box-shadow: 2px 3px 0 #9fd3d8;
+  font-size: .78rem;
+}
+body.reef-home .tiny-button:hover {
+  transform: translateY(-2px);
+  background: #d3f0ea;
+  box-shadow: 2px 5px 0 #9fd3d8;
+}
+
+body.reef-home .reef-scene {
+  min-height: 510px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(230,252,255,.35), rgba(230,252,255,.03) 45%, rgba(88,174,198,.06) 100%);
+  border-radius: 12px;
+}
+body.reef-home .reef-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 64% 18%, rgba(255,255,230,.45), transparent 18%),
+    linear-gradient(180deg, rgba(255,255,255,.26), rgba(255,255,255,0) 22%);
+  pointer-events: none;
+}
+body.reef-home .reef-scene__bubbles {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 73% 19%, rgba(255,255,255,.52) 0 3px, transparent 4px),
+    radial-gradient(circle at 78% 25%, rgba(255,255,255,.42) 0 5px, transparent 6px),
+    radial-gradient(circle at 67% 30%, rgba(255,255,255,.4) 0 4px, transparent 5px),
+    radial-gradient(circle at 82% 35%, rgba(255,255,255,.36) 0 3px, transparent 4px),
+    radial-gradient(circle at 22% 27%, rgba(255,255,255,.28) 0 3px, transparent 4px),
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,.22) 0 2px, transparent 3px),
+    radial-gradient(circle at 30% 33%, rgba(255,255,255,.18) 0 2px, transparent 3px);
+}
+body.reef-home .reef-seafloor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 194px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  image-rendering: pixelated;
+  z-index: 0;
+  opacity: .98;
+}
+body.reef-home .reef-creature {
+  position: absolute;
+  display: block;
+  image-rendering: pixelated;
+  filter: drop-shadow(4px 5px 0 rgba(40,90,125,.14));
+  z-index: 1;
+}
+body.reef-home .reef-creature--fish {
+  width: 72px;
+  top: 132px;
+  left: 16%;
+  animation: reef-swim 7s ease-in-out infinite alternate;
+}
+body.reef-home .reef-creature--fish-two {
+  width: 42px;
+  left: auto;
+  right: 24%;
+  top: 104px;
+  transform: scaleX(-1);
+  animation-duration: 6s;
+}
+body.reef-home .reef-creature--fish-three {
+  width: 36px;
+  left: 56%;
+  top: 162px;
+  animation-duration: 5.5s;
+}
+body.reef-home .reef-creature--jelly {
+  width: 66px;
+  right: 10%;
+  top: 114px;
+  animation: reef-float 4.4s ease-in-out infinite alternate;
+}
+body.reef-home .reef-creature--jelly-small {
+  width: 40px;
+  left: 35%;
+  right: auto;
+  top: 98px;
+  animation-duration: 4.8s;
+}
+@keyframes reef-swim {
+  to { transform: translate(28px, -10px); }
+}
+body.reef-home .reef-creature--fish-two,
+body.reef-home .reef-creature--fish-three { animation-name: reef-swim-flip; }
+@keyframes reef-swim-flip {
+  to { transform: scaleX(-1) translate(20px, -6px); }
+}
+@keyframes reef-float {
+  to { transform: translateY(-12px); }
+}
+
+body.reef-home .reef-board-window {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  top: 258px;
+  z-index: 3;
+  padding: 0 12px 12px;
+}
+body.reef-home .reef-window-title {
+  background: linear-gradient(90deg, #caeee9, #edf8f0);
+  color: #244f70;
+  padding: 10px 14px;
+  margin: 3px -9px 14px;
+  border-bottom: 2px solid #89bac8;
+  border-radius: 7px 7px 2px 2px;
+  font-size: .8rem;
+  letter-spacing: .05em;
+}
+body.reef-home .reef-window-title > span:first-child {
+  color: #e28a9e;
+  margin-right: 6px;
+}
+body.reef-home .reef-window-dots {
+  float: right;
+  color: #6798ae;
+  letter-spacing: .2em;
+}
+body.reef-home .research-board-wrap {
+  position: static;
+  width: 100%;
+  transform: none;
+}
+body.reef-home .bulletin-board {
+  height: 232px;
+  border: 2px solid #b8d6d6;
+  border-radius: 5px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0) 20%),
+    repeating-linear-gradient(0deg, transparent 0 22px, rgba(113,181,195,.13) 23px 24px),
+    #f1f9ed;
+  box-shadow: inset 0 0 0 3px #fff;
+  overflow: hidden;
+}
+body.reef-home .board-notes { transform: translateY(2px); }
+body.reef-home .board-note {
+  transform: scale(.86);
+  transform-origin: left top;
+}
+body.reef-home .stamp-placement-hint { font-size: .76rem; }
+body.reef-home .board-stamp-button {
+  background: #d7f3ec;
+  border: 2px solid #72a6b5;
+  border-radius: 5px;
+  color: #254b6b;
+  font-family: "Silkscreen", "Nunito Sans", sans-serif;
+  font-size: .72rem;
+  padding: 6px 10px;
+}
+body.reef-home .stamp-picker { max-width: calc(100% - 16px); flex-wrap: wrap; }
+body.reef-home .stamp-choice img { image-rendering: pixelated; }
+
+body.reef-home .reef-window {
+  padding: 0 24px 24px;
+  border-bottom: 3px solid var(--reef-edge);
+}
+body.reef-home .reef-window .reef-window-title { margin: 3px -21px 18px; padding: 11px 21px; }
+body.reef-home .home-section {
+  border-bottom: 3px solid var(--reef-edge);
+  margin-bottom: 22px;
+}
+body.reef-home .section-title-row {
+  margin-bottom: 14px;
+  align-items: center;
+}
+body.reef-home .section-title-row h2 {
+  color: #234b6d;
+  font-size: .95rem;
+  letter-spacing: .04em;
+}
+body.reef-home .section-title-row h2::after {
+  background: #9bd8d6;
+  width: 68px;
+}
+body.reef-home .research-intro { max-width: 100%; margin: 0 0 18px; }
+body.reef-home .research-intro p {
+  margin: 0;
+  color: #4a6f7f;
+  font-size: .78rem;
+  line-height: 1.9;
+}
+body.reef-home .research-axes {
+  gap: 12px;
+  border-top: 1px dashed #acd7dc;
+  padding-top: 18px;
+}
+body.reef-home .research-axes article {
+  padding: 15px;
+  background: #edf9f3;
+  border: 1px solid #b7dcd5;
+  border-radius: 7px;
+}
+body.reef-home .research-number {
+  color: #c27995;
+  font-size: .78rem;
+}
+body.reef-home .research-axes h3 {
+  color: #245472;
+  background: transparent;
+  font-size: .78rem;
+  line-height: 1.7;
+}
+body.reef-home .research-axes p {
+  margin: 8px 0 0;
+  color: #466d7d;
+  font-size: .72rem;
+  line-height: 1.8;
+}
+body.reef-home .research-more,
+body.reef-home .text-link {
+  color: #197b9b;
+  font-size: .74rem;
+}
+body.reef-home .selected-papers { border-top: 1px dashed #add6d4; }
+body.reef-home .selected-paper {
+  grid-template-columns: 60px 1fr;
+  gap: 12px;
+  border-bottom: 1px dashed #b7dbd8;
+}
+body.reef-home .selected-paper__year {
+  color: #bf7290;
+  font-size: .76rem;
+}
+body.reef-home .selected-paper h3 {
+  color: #255270;
+  font-size: .84rem;
+  line-height: 1.8;
+}
+body.reef-home .selected-paper p,
+body.reef-home .selected-paper__links a {
+  color: #547682;
+  font-size: .71rem;
+  line-height: 1.8;
+}
+body.reef-home .site-footer {
+  background: #fff9e9;
+  border-top: 4px solid #75bcd1;
+}
+body.reef-home .site-footer__inner {
+  color: #42677d;
+  font-size: .75rem;
+}
+body.reef-home .site-footer__hamster {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+}
+body.reef-home .site-footer__sleep span { color:#517b96; }
+
+@media (max-width: 980px) {
+  body.reef-home .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0 16px;
+  }
+  body.reef-home .reef-scene { min-height: 500px; }
+  body.reef-home .reef-board-window { left: 4%; right: 4%; }
+}
+@media (max-width: 680px) {
+  body.reef-home .site-main { width: calc(100% - 20px); }
+  body.reef-home .site-header__inner { padding: 10px 12px; }
+  body.reef-home .site-nav { font-size: .74rem; }
+  body.reef-home .hero__copy { padding: 26px 20px 22px; }
+  body.reef-home .hero h1 { font-size: 2.25rem; }
+  body.reef-home .hero__tagline { font-size: .86rem; }
+  body.reef-home .hero__position { font-size: .72rem; }
+  body.reef-home .tiny-button { font-size: .7rem; }
+  body.reef-home .reef-scene { min-height: 450px; }
+  body.reef-home .reef-seafloor { bottom: 178px; height: 120px; }
+  body.reef-home .reef-creature--fish { width: 58px; }
+  body.reef-home .reef-creature--jelly { width: 54px; }
+  body.reef-home .reef-creature--fish-two,
+  body.reef-home .reef-creature--fish-three,
+  body.reef-home .reef-creature--jelly-small { width: 32px; }
+  body.reef-home .reef-board-window { left: 0; right: 0; top: 234px; }
+  body.reef-home .bulletin-board { height: 206px; }
+  body.reef-home .reef-window { padding: 0 14px 16px; }
+  body.reef-home .reef-window .reef-window-title { margin: 3px -11px 14px; padding: 10px 11px; }
+  body.reef-home .selected-paper { grid-template-columns: 1fr; }
+  body.reef-home .reef-window-dots { display:none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.reef-home .reef-creature { animation: none; }
+}
