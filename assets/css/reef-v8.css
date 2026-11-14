@@ -655,3 +655,17 @@ body.reef-v5 .reef-research .research-more { margin-top: 15px; margin-bottom: 16
   body.reef-v5 .reef-desktop { row-gap: 15px; }
   body.reef-v5 .reef-research .research-axes { gap: 12px; }
 }
+
+
+/* v29 — balance the short home intro without introducing hard breaks. */
+body.reef-v5 .reef-intro .reef-summary {
+  width: 100%;
+  max-width: min(100%, 55ch) !important;
+  text-wrap: balance;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  letter-spacing: 0 !important;
+  line-height: 1.38 !important;
+}

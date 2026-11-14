@@ -308,3 +308,52 @@ body.reef-subpage .person__work { margin: 4px 0 0; max-width: 40ch; }
   body.reef-subpage .pub { padding: 12px 2px 19px; }
   body.reef-subpage .pub + .pub { margin-top: 11px; }
 }
+
+
+/* v29 — readable paragraphs and consistent word wrapping.
+   Keep headings and the spacing between Research chapters unchanged. */
+body.reef-subpage .reef-page-body {
+  padding-top: clamp(20px,2.6vw,28px);
+}
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .research-page > p,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead {
+  white-space: normal;
+  word-break: normal !important;
+  overflow-wrap: break-word;
+  hyphens: none;
+  letter-spacing: 0;
+  line-height: 1.42 !important;
+  text-wrap: pretty;
+}
+/* A comfortable reading measure, including nested research sections. */
+body.reef-subpage .research-page p,
+body.reef-subpage .research-page > ul,
+body.reef-subpage .research-page li p,
+body.reef-subpage .about-page > p,
+body.reef-subpage .teaching-page > p,
+body.reef-subpage .people-page > p {
+  max-width: min(100%, 66ch);
+}
+body.reef-subpage .research-page > p.research-lead {
+  max-width: min(100%, 66ch);
+  margin: 0 0 22px;
+}
+body.reef-subpage .research-page > h2 {
+  /* preserve v27 chapter spacing; only paragraph measure changes */
+  clear: both;
+}
+body.reef-subpage .research-page > h2 + p { margin-top: 0; }
+/* Related-work entries can be a touch wider to preserve paper titles. */
+body.reef-subpage .research-page li p { max-width: min(100%, 75ch); }
+@media(max-width:680px) {
+  body.reef-subpage .research-page p,
+  body.reef-subpage .research-page li p,
+  body.reef-subpage .about-page > p,
+  body.reef-subpage .teaching-page > p,
+  body.reef-subpage .people-page > p { max-width:100%; }
+}
