@@ -708,3 +708,27 @@ body.reef-v5 .reef-life-scene .reef-sprite--crab { display: none !important; }
     right: 11%;
   }
 }
+/* v34 — smaller reef avatar, slightly farther right and visually lower.
+   Append at the very end of assets/css/reef-v8.css if your current
+   stylesheet has local changes after v32. */
+body.reef-v5 .reef-life-scene::after {
+  width: clamp(120px, 14.5vw, 176px) !important;
+  right: 2% !important;
+  bottom: 0 !important;
+}
+
+@media (min-width: 681px) and (max-width: 1080px) {
+  body.reef-v5 .reef-life-scene::after {
+    width: 148px !important;
+    right: 3% !important;
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 680px) {
+  body.reef-v5 .reef-life-scene::after {
+    width: 88px !important;
+    right: 3% !important;
+    bottom: 0 !important;
+  }
+}
