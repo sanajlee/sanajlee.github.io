@@ -357,3 +357,83 @@ body.reef-subpage .research-page li p { max-width: min(100%, 75ch); }
   body.reef-subpage .teaching-page > p,
   body.reef-subpage .people-page > p { max-width:100%; }
 }
+
+/* v30 — slightly wider prose and unboxed People directory.
+   Keep research chapter spacing, typography, and data unchanged. */
+body.reef-subpage .prose > p,
+body.reef-subpage .prose > ul,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .research-page p,
+body.reef-subpage .research-page > ul,
+body.reef-subpage .research-page li p,
+body.reef-subpage .about-page > p,
+body.reef-subpage .teaching-page > p,
+body.reef-subpage .people-page > p {
+  max-width: min(100%, 78ch);
+}
+body.reef-subpage .research-page > p.research-lead {
+  max-width: min(100%, 78ch);
+}
+/* Related work can use slightly more space than long-form prose. */
+body.reef-subpage .research-page li p {max-width:min(100%, 86ch);}
+
+/* Open profile list: no white/colored tiles, shadows, or card borders. */
+body.reef-subpage .people-page .people-list {
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  gap: 0;
+  margin: 4px 0 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body.reef-subpage .people-page .people-list > .person {
+  display: grid;
+  grid-template-columns: 88px minmax(0,1fr);
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  padding: 18px 0 22px;
+  margin: 0;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px dashed #95c5d1 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+body.reef-subpage .people-page .people-list > .person::before,
+body.reef-subpage .people-page .people-list > .person::after {content:none !important;}
+body.reef-subpage .people-page .person__avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #78b4ca;
+  border-radius: 2px;
+  background: transparent;
+  box-shadow: 2px 2px 0 #a8d9df;
+}
+body.reef-subpage .people-page .person__info {min-width:0;}
+body.reef-subpage .people-page .person__info h3 {margin:0 0 7px;}
+body.reef-subpage .people-page .person__interests,
+body.reef-subpage .people-page .person__work {max-width:min(100%, 86ch);}
+@media(max-width:680px) {
+  body.reef-subpage .prose > p,
+  body.reef-subpage .prose > ul,
+  body.reef-subpage .research-page p,
+  body.reef-subpage .research-page li p,
+  body.reef-subpage .about-page > p,
+  body.reef-subpage .teaching-page > p,
+  body.reef-subpage .people-page > p {max-width:100%;}
+  body.reef-subpage .people-page .people-list > .person {
+    grid-template-columns: 62px minmax(0,1fr);
+    gap: 13px;
+    padding: 14px 0 18px;
+  }
+  body.reef-subpage .people-page .person__avatar {width:58px;height:58px;}
+}
