@@ -755,3 +755,105 @@ body.reef-v5 .reef-life-scene::after {
     width: 88px !important;
   }
 }
+
+
+/* Little Reef v36 — pixel bulletin board, VISUAL ONLY.
+   440 × 300 board geometry, note x/y/rotation and stamp JS/data stay unchanged. */
+body.reef-v5 .reef-stamps .reef-stamp-scroll {
+  background: #fff9e9;
+  padding: 13px 15px 17px;
+}
+body.reef-v5 .reef-stamps .bulletin-board {
+  position: relative !important;
+  width: 440px !important;
+  height: 300px !important;
+  max-width: none !important;
+  overflow: hidden !important;
+  border: 3px solid #3978a2 !important;
+  border-radius: 0 !important;
+  background-color: #e5f6ef !important;
+  background-image:
+    linear-gradient(rgba(84,159,172,.09) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(84,159,172,.09) 1px,transparent 1px),
+    linear-gradient(180deg,rgba(255,255,255,.28),transparent 90px) !important;
+  background-size: 16px 16px,16px 16px,100% 100% !important;
+  box-shadow: inset 0 0 0 3px #fffdf1,inset 0 0 0 5px #abdcd7,3px 4px 0 #74b7c7 !important;
+}
+/* Pixel stationery: preserve note positioning and rotation via inline styles. */
+body.reef-v5 .reef-stamps .board-note {
+  width: 175px;
+  min-height: 130px;
+  padding: 21px 12px 12px;
+  border: 2px solid #d0ac67;
+  border-radius: 0 !important;
+  background: #fff2b0;
+  box-shadow: 3px 3px 0 rgba(45,85,115,.27),inset 0 0 0 2px rgba(255,255,255,.24) !important;
+}
+body.reef-v5 .reef-stamps .board-note--yellow {background:#fff2b0;border-color:#d0ac67;}
+body.reef-v5 .reef-stamps .board-note--pink {background:#f8d3dd;border-color:#ce93aa;}
+body.reef-v5 .reef-stamps .board-note--lavender {background:#e8dafa;border-color:#a99bc9;}
+body.reef-v5 .reef-stamps .board-note--blue {background:#d9eef5;border-color:#8bbdce;}
+body.reef-v5 .reef-stamps .board-note--green {background:#e2efd5;border-color:#a4c48c;}
+body.reef-v5 .reef-stamps .board-note__tape {
+  top: -8px;
+  width: 54px;
+  height: 15px;
+  border: 1px solid rgba(65,104,139,.17);
+  border-radius: 0;
+  opacity: .92;
+  clip-path: polygon(0 0,100% 0,100% 75%,93% 75%,93% 100%,7% 100%,7% 75%,0 75%);
+}
+body.reef-v5 .reef-stamps .board-note__header {font-family:'Silkscreen',monospace !important;gap:5px;margin-bottom:9px;}
+body.reef-v5 .reef-stamps .board-note__label {font:400 11px/1.4 'Silkscreen',monospace !important;color:#214e79;letter-spacing:0;}
+body.reef-v5 .reef-stamps .board-note__date {font:400 12px/1.1 'VT323',monospace !important;color:#816d67;white-space:nowrap;}
+body.reef-v5 .reef-stamps .board-note__text {font:400 18px/1.14 'VT323',monospace !important;color:#314963;overflow-wrap:break-word;word-break:normal;}
+body.reef-v5 .reef-stamps .board-note__link {font:400 15px/1.2 'VT323',monospace !important;color:#086d9c;max-width:100%;overflow-wrap:break-word;word-break:normal;text-decoration:none;border-bottom:1px dashed #48b2d0;margin-top:7px;}
+body.reef-v5 .reef-stamps .board-note__hamster {image-rendering:pixelated;}
+body.reef-v5 .reef-stamps .board-stamp-button {
+  position:absolute;
+  right:12px;
+  bottom:11px;
+  z-index:19;
+  padding:7px 9px;
+  border:2px solid #286b9b;
+  border-radius:0 !important;
+  background:#fff9e8;
+  color:#174a7b;
+  font:400 9px/1.3 'Silkscreen',monospace !important;
+  text-transform:uppercase;
+  white-space:nowrap;
+  box-shadow:3px 3px 0 #8cb7c8;
+  cursor:pointer;
+}
+body.reef-v5 .reef-stamps .board-stamp-button:hover {background:#d5f5ed;}
+body.reef-v5 .reef-stamps .board-stamp-button:focus-visible,
+body.reef-v5 .reef-stamps .stamp-choice:focus-visible {outline:3px solid #ec91b3;outline-offset:2px;}
+body.reef-v5 .reef-stamps .stamp-picker {
+  right:10px;
+  bottom:52px;
+  max-width:calc(100% - 20px);
+  flex-wrap:wrap;
+  border:2px solid #276f9b;
+  border-radius:0 !important;
+  background:#fffdf1;
+  padding:7px;
+  box-shadow:3px 3px 0 #89b9ca;
+  z-index:30;
+}
+body.reef-v5 .reef-stamps .stamp-choice {width:39px;height:39px;border:1px solid #8cb7c2;border-radius:0 !important;background:#eaf8f2;padding:4px;image-rendering:pixelated;}
+body.reef-v5 .reef-stamps .stamp-choice:hover {background:#cceeea;border-color:#286b9b;}
+body.reef-v5 .reef-stamps .stamp-choice img,
+body.reef-v5 .reef-stamps .visitor-board-stamp img,
+body.reef-v5 .reef-stamps .my-stamp-slot img {image-rendering:pixelated;}
+body.reef-v5 .reef-stamps .stamp-placement-hint {
+  border:2px solid #276f9b;
+  border-radius:0 !important;
+  background:#fffdf1;
+  box-shadow:2px 2px 0 #8cb7c8;
+  color:#24486b;
+  font:400 15px/1 'VT323',monospace !important;
+}
+/* Scrolling is in the board window, not the page: required on narrow screens. */
+@media(max-width:680px){
+  body.reef-v5 .reef-stamps .reef-stamp-scroll {overflow-x:auto;padding:9px 8px 14px;}
+}
