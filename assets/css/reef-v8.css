@@ -732,3 +732,26 @@ body.reef-v5 .reef-life-scene::after {
     bottom: 0 !important;
   }
 }
+
+/* v35: Fix the avatar anchoring bug. An old ::after rule retained left:10%,
+   so its right position was ignored in left-to-right layout. */
+body.reef-v5 .reef-life-scene::after {
+  left: auto !important;
+  right: 3% !important;
+  width: clamp(120px, 14.5vw, 176px) !important;
+  bottom: 0 !important;
+}
+@media (min-width: 681px) and (max-width: 1080px) {
+  body.reef-v5 .reef-life-scene::after {
+    left: auto !important;
+    right: 3% !important;
+    width: 148px !important;
+  }
+}
+@media (max-width: 680px) {
+  body.reef-v5 .reef-life-scene::after {
+    left: auto !important;
+    right: 3% !important;
+    width: 88px !important;
+  }
+}
