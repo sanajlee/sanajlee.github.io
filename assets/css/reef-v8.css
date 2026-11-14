@@ -669,3 +669,42 @@ body.reef-v5 .reef-intro .reef-summary {
   letter-spacing: 0 !important;
   line-height: 1.38 !important;
 }
+
+
+/* v32 — cameo in the independent reef scene (not inside HELLO!) */
+/* Preserve all homepage content and visitor stamp positioning. */
+body.reef-v5 .reef-life-scene {
+  position: relative;
+  isolation: isolate;
+}
+body.reef-v5 .reef-life-scene::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute;
+  width: clamp(140px, 17vw, 206px);
+  aspect-ratio: 904 / 727;
+  height: auto;
+  bottom: 0;
+  right: 8%;
+  z-index: 2;
+  pointer-events: none;
+  background: url('../img/reef-v8/reef-avatar-rock.png') center / contain no-repeat !important;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 3px 0 rgba(20,75,125,.12));
+}
+/* The avatar art already includes a rock, coral, fish and bubbles. */
+body.reef-v5 .reef-life-scene .reef-sprite--rock,
+body.reef-v5 .reef-life-scene .reef-sprite--coral,
+body.reef-v5 .reef-life-scene .reef-sprite--blue-coral,
+body.reef-v5 .reef-life-scene .reef-sprite--crab { display: none !important; }
+/* Keep other fish and the small castle as part of the shared reef. */
+@media (min-width: 681px) and (max-width: 1080px) {
+  body.reef-v5 .reef-life-scene::after {right: 12%; width: 172px;}
+}
+@media (max-width: 680px) {
+  body.reef-v5 .reef-life-scene::after {
+    width: 105px;
+    bottom: 2px;
+    right: 11%;
+  }
+}
