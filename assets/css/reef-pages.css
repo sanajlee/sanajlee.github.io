@@ -501,3 +501,76 @@ body.reef-subpage .about-page .reef-experience-position {
  body.reef-subpage .about-page .reef-experience-item {grid-template-columns:1fr;row-gap:3px;}
  body.reef-subpage .about-page .reef-experience-position {font-size:19px;}
 }
+
+
+/* v33: the same shared footer markup and visual styling as the main page. */
+body.reef-subpage .site-footer {
+  background:none !important;
+  border:0 !important;
+  margin:2px 0 22px;
+  padding:0 !important;
+}
+body.reef-subpage .reef-footbar {
+  width:min(1240px,calc(100% - 42px));
+  margin:0 auto;
+  padding:10px 18px;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  background:#fffaf0;
+  border:2px solid #204f80;
+  border-radius:3px;
+  box-shadow:0 0 0 2px #b7ebf2,0 5px 0 #1d5686,inset 0 0 0 2px #fff;
+  color:#153c78;
+  font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__identity {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  color:#153c78;
+}
+body.reef-subpage .reef-footbar__nudibranch {
+  display:block;
+  width:32px !important;
+  height:32px !important;
+  max-width:32px;
+  flex:0 0 32px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+body.reef-subpage .reef-footbar__status {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#24577e;
+  font:400 10px/1.35 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__dot {
+  display:inline-block;
+  flex:0 0 8px;
+  width:8px;
+  height:8px;
+  background:#4bc5ab;
+  border:1px solid #327f88;
+  box-shadow:1px 1px 0 #9fded0;
+}
+@media (max-width:680px) {
+  body.reef-subpage .reef-footbar {
+    width:calc(100% - 16px);
+    padding:9px 12px;
+    gap:7px 12px;
+    font-size:10px;
+  }
+  body.reef-subpage .reef-footbar__nudibranch {
+    width:26px !important;
+    height:26px !important;
+    max-width:26px;
+    flex-basis:26px;
+  }
+  body.reef-subpage .reef-footbar__status {font-size:9px;}
+}

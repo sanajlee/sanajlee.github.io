@@ -1,31 +1,14 @@
-{% if page.url == '/' or page.url == '/index.html' %}
 <footer class="site-footer" aria-label="Website footer">
   <div class="reef-footbar">
     <span class="reef-footbar__identity">
-      <img class="reef-footbar__octopus reef-footbar__nudibranch" src="{{ '/assets/img/reef-v8/nudibranch.png' | relative_url }}" alt="" aria-hidden="true">
+      <img class="reef-footbar__octopus reef-footbar__nudibranch"
+           src="{{ '/assets/img/reef-v8/nudibranch.png' | relative_url }}"
+           alt="" aria-hidden="true">
       <span>© {{ "now" | date: "%Y" }} SANGAH LEE</span>
     </span>
-    <span class="reef-footbar__status"><span class="reef-footbar__dot" aria-hidden="true"></span><span class="reef-footbar__detail">a little corner of the internet</span></span>
-  </div>
-</footer>
-{% else %}
-<footer class="site-footer">
-  <div class="site-footer__inner">
-    <span>© {{ "now" | date: "%Y" }} Sangah Lee</span>
-    <span class="site-footer__dot">·</span>
-    <span>built with caffeine and questionable CSS decisions</span>
-
-    <span class="site-footer__sleep">
-      <img
-        class="site-footer__hamster"
-        src="{{ '/assets/img/hamzzz.png' | relative_url }}"
-        alt=""
-        aria-hidden="true"
-      >
-      <span>zzz</span>
+    <span class="reef-footbar__status">
+      <span class="reef-footbar__dot" aria-hidden="true"></span>
+      <span class="reef-footbar__detail">a little corner of the internet</span>
     </span>
-
   </div>
 </footer>
-
-{% endif %}
