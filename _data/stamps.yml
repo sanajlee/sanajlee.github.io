@@ -1,23 +1,31 @@
-- id: avis
-  label: plant
-  image: /assets/stamps/avis.png
+- id: nudibranch
+  label: nudibranch
+  image: /assets/stamps/nudibranch.png
 
-- id: coffee
-  label: coffee
-  image: /assets/stamps/coffee.png
+- id: octopus
+  label: octopus
+  image: /assets/stamps/octopus.png
 
-- id: guitar
-  label: rock on
-  image: /assets/stamps/guitar.png
+- id: jellyfish
+  label: jellyfish
+  image: /assets/stamps/jellyfish.png
 
-- id: star
-  label: star
-  image: /assets/stamps/star.png
+- id: starfish
+  label: starfish
+  image: /assets/stamps/starfish.png
 
-- id: vvv
-  label: peace
-  image: /assets/stamps/vvv.png
+- id: angelfish
+  label: angelfish
+  image: /assets/stamps/angelfish.png
 
-- id: yay
-  label: yay!
-  image: /assets/stamps/yay.png
+- id: clownfish
+  label: clownfish
+  image: /assets/stamps/clownfish.png
+
+- id: seahorse
+  label: seahorse
+  image: /assets/stamps/seahorse.png
+
+- id: crab
+  label: crab
+  image: /assets/stamps/crab.png
