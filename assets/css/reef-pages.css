@@ -437,3 +437,67 @@ body.reef-subpage .people-page .person__work {max-width:min(100%, 86ch);}
   }
   body.reef-subpage .people-page .person__avatar {width:58px;height:58px;}
 }
+
+
+/* V31 — target the actual classes in people.md (.person-card, not .person).
+   Note: inline <style> from people.md is also removed in this patch. */
+body.reef-subpage .people-grid {
+  display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+  margin:5px 0 26px;max-width:none;
+}
+body.reef-subpage .people-grid > .person-card {
+  display:grid;grid-template-columns:96px minmax(0,1fr);
+  align-items:center;gap:20px;
+  padding:20px 0 23px;margin:0;
+  background:transparent;border:0;border-radius:0;
+  box-shadow:none;
+  border-bottom:1px dashed #9ac6d5;
+  color:#163c75;
+}
+body.reef-subpage .people-grid > .person-card:last-child {border-bottom:0;}
+body.reef-subpage .person-card .person-photo {
+  display:block;width:86px;height:86px;object-fit:cover;
+  border:0;border-radius:5px;box-shadow:none;background:transparent;
+}
+body.reef-subpage .person-card .person-text{min-width:0;}
+body.reef-subpage .person-card .person-name{
+  font:400 15px/1.5 'Silkscreen',monospace;
+  color:#174578;margin:0 0 8px;
+}
+body.reef-subpage .person-card .person-role{
+  font:400 11px/1.45 'Silkscreen',monospace;
+  color:#a85a7d;margin:0 0 7px;
+}
+body.reef-subpage .person-card .person-bio{
+  font:400 19px/1.35 'VT323',monospace;
+  color:#32536b;margin:0;
+  overflow-wrap:normal;word-break:normal;max-width:min(100%,95ch);
+}
+/* About Experience: distinguish the dates and positions without hard line-breaks. */
+body.reef-subpage .about-page .reef-experience-list {
+  display:grid;gap:15px;margin:16px 0 30px;
+  max-width:min(100%,1050px);
+}
+body.reef-subpage .about-page .reef-experience-item {
+  display:grid;grid-template-columns:142px minmax(0,1fr);
+  column-gap:22px;align-items:baseline;
+  border:0;padding:0;
+}
+body.reef-subpage .about-page .reef-experience-year {
+  font:400 13px/1.5 'Silkscreen',monospace;
+  color:#246b9e;white-space:nowrap;
+}
+body.reef-subpage .about-page .reef-experience-position {
+  font:400 20px/1.35 'VT323',monospace;
+  color:#1a4578;letter-spacing:0;
+  overflow-wrap:normal;word-break:normal;
+  max-width:none;
+}
+@media(max-width:680px) {
+ body.reef-subpage .people-grid > .person-card {grid-template-columns:70px minmax(0,1fr);gap:13px;padding:14px 0 17px;}
+ body.reef-subpage .person-card .person-photo {width:65px;height:65px;}
+ body.reef-subpage .person-card .person-name{font-size:12px;}
+ body.reef-subpage .person-card .person-bio{font-size:18px;}
+ body.reef-subpage .about-page .reef-experience-item {grid-template-columns:1fr;row-gap:3px;}
+ body.reef-subpage .about-page .reef-experience-position {font-size:19px;}
+}

@@ -44,22 +44,13 @@ Seoul, Korea
 
 ## Experience
 
-**2026–present**  
-Associate Professor, Department of Linguistics, Seoul National University
-
-**2022–2026**  
-Assistant Professor, Department of Linguistics, Seoul National University
-
-**2022**  
-Assistant Teaching Professor, Faculty of Liberal Education, Seoul National University
-
-**2021–2022**  
-Lecturer, Department of Linguistics, Seoul National University
-
-**2021–2022**  
-Postdoctoral Researcher, Graduate School of Data Science, Seoul National University
-
-
+<div class="reef-experience-list">
+  <div class="reef-experience-item"><span class="reef-experience-year">2026–present</span><span class="reef-experience-position">Associate Professor, Department of Linguistics, Seoul National University</span></div>
+  <div class="reef-experience-item"><span class="reef-experience-year">2022–2026</span><span class="reef-experience-position">Assistant Professor, Department of Linguistics, Seoul National University</span></div>
+  <div class="reef-experience-item"><span class="reef-experience-year">2022</span><span class="reef-experience-position">Assistant Teaching Professor, Faculty of Liberal Education, Seoul National University</span></div>
+  <div class="reef-experience-item"><span class="reef-experience-year">2021–2022</span><span class="reef-experience-position">Lecturer, Department of Linguistics, Seoul National University</span></div>
+  <div class="reef-experience-item"><span class="reef-experience-year">2021–2022</span><span class="reef-experience-position">Postdoctoral Researcher, Graduate School of Data Science, Seoul National University</span></div>
+</div>
 
 ## Education
 
