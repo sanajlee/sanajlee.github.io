@@ -90,3 +90,21 @@ body.reef-subpage .sideb-photo-file__caption .ko-text {
   line-height:1.5;
   letter-spacing:0;
 }
+
+/* v46 — Give the taller Cardputer photo more vertical space.
+   Scoped to the retro image so band and bird photos are unchanged. */
+body.reef-subpage .sideb-photo-file__photo--retro {
+  aspect-ratio: 4 / 3 !important;
+}
+body.reef-subpage .sideb-photo-file__photo--retro img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+@media (min-width: 761px) {
+  body.reef-subpage .sideb-desktop-space {
+    height: 1080px !important;
+  }
+  body.reef-subpage .sideb-photo-file--retro {
+    top: 495px !important;
+  }
+}

@@ -683,3 +683,22 @@ body.reef-subpage .reef-research-windows .reef-rwindow__more{margin:19px 0 0;}
 body.reef-subpage .reef-research-windows .reef-rproject{display:flex;flex-direction:column;}
 body.reef-subpage .reef-research-windows .reef-rproject__tag{margin:0 0 12px;}
 body.reef-subpage .reef-research-windows .reef-rwindow__body--compact p{margin:0;}
+
+/* Little Reef v47 — About / People Hangul Mona12 fallback.
+   Preserve existing English Silkscreen and use Mona12 when Silkscreen
+   doesn't contain the requested Hangul glyph. */
+body.reef-subpage .about-page,
+body.reef-subpage .about-page :is(p, li, div, span, a, strong, em, small, h2, h3, h4),
+body.reef-subpage .people-page,
+body.reef-subpage .people-page :is(p, li, div, span, a, strong, em, small, h2, h3, h4) {
+  font-family: 'Silkscreen', 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', monospace !important;
+}
+/* People Korean names previously had `font: 400 12px sans-serif`. */
+body.reef-subpage .people-page .person__name-ko,
+body.reef-subpage .people-page [lang="ko"],
+body.reef-subpage .about-page [lang="ko"],
+body.reef-subpage .people-page .ko-text,
+body.reef-subpage .about-page .ko-text {
+  font-family: 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+}
+
