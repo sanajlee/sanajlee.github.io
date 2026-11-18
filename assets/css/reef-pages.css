@@ -659,3 +659,27 @@ body.reef-subpage .reef-research-windows .reef-rwindow__body--compact strong{fon
   body.reef-subpage .reef-research-windows .reef-rtopic{grid-template-columns:35px minmax(0,1fr);gap:7px}
   body.reef-subpage .reef-research-windows .reef-rtopic h3{font-size:12px}
 }
+
+/* v43 Research spacing: consistent vertical rhythm and separator clearances. */
+body.reef-subpage .reef-research-windows .reef-rwindow__body{display:flow-root;}
+body.reef-subpage .reef-research-windows .reef-rtopics{gap:0;}
+body.reef-subpage .reef-research-windows .reef-rtopic{
+  padding:19px 0 20px;
+  border-top:0;
+  border-bottom:1px dashed #9ec8d5;
+  align-items:start;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic:first-child{padding-top:0;}
+body.reef-subpage .reef-research-windows .reef-rtopic:last-child{border-bottom:0;padding-bottom:0;}
+body.reef-subpage .reef-research-windows .reef-rtopic > div{min-width:0;display:flex;flex-direction:column;align-items:flex-start;}
+body.reef-subpage .reef-research-windows .reef-rtopic h3,
+body.reef-subpage .reef-research-windows .reef-rproject h3{margin:0;}
+body.reef-subpage .reef-research-windows .reef-rtopic p,
+body.reef-subpage .reef-research-windows .reef-rproject p{margin:9px 0 0;}
+body.reef-subpage .reef-research-windows .reef-rtopic a{margin:11px 0 0;}
+body.reef-subpage .reef-research-windows .reef-rwindow__lead{margin:0 0 21px;}
+body.reef-subpage .reef-research-windows .reef-rwindow__hint{margin:0 0 19px;}
+body.reef-subpage .reef-research-windows .reef-rwindow__more{margin:19px 0 0;}
+body.reef-subpage .reef-research-windows .reef-rproject{display:flex;flex-direction:column;}
+body.reef-subpage .reef-research-windows .reef-rproject__tag{margin:0 0 12px;}
+body.reef-subpage .reef-research-windows .reef-rwindow__body--compact p{margin:0;}

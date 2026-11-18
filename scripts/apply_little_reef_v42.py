@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply v39 Mona + SIDE B + v40 Research windows + v41 scrapbook as one patch.
+"""Apply unified v43: Mona, SIDE B scrapbook with two bird photos, and Research spacing.
 Run from repository root: python3 scripts/apply_little_reef_v42.py
 Safe to re-run: navigation, head imports, styles and layout changes are idempotent.
 """
@@ -68,6 +68,10 @@ write_change(layout,t)
 # Append Research-only CSS exactly once.
 css=page_css.read_text(encoding='utf-8')
 additional=page_add.read_text(encoding='utf-8').strip()
-if '/* v40 Research-only:' not in css:css=css.rstrip()+'\n\n'+additional+'\n'
+if '/* v40 Research-only:' not in css:
+    css=css.rstrip()+'\n\n'+additional+'\n'
+elif '/* v43 Research spacing:' not in css:
+    suffix=additional.split('/* v43 Research spacing:',1)[1]
+    css=css.rstrip()+'\n\n/* v43 Research spacing:'+suffix.rstrip()+'\n'
 write_change(page_css,css)
-print('v42 done: SIDE B + Mona + Research windows/projects. No stamp or Supabase files changed.')
+print('v43 done: SIDE B two bird photos + Mona + Research windows/projects/spacing. No stamp or Supabase files changed.')

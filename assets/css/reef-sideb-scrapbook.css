@@ -50,3 +50,14 @@ body.reef-subpage .sideb-desktop-footnote {position:absolute;right:4%;bottom:17p
   body.reef-subpage .sideb-photo-file__caption {font-size:9px;}
 }
 @media(prefers-reduced-motion:reduce) {body.reef-subpage .sideb-photo-file {transition:none;}}
+
+/* v43 SIDE B: no section-jump buttons; two bird photos share one window. */
+body.reef-subpage .sideb-scrapbook .sideb-shortcuts{display:none!important;}
+body.reef-subpage .sideb-scrapbook .sideb-intro{margin-bottom:24px;}
+body.reef-subpage .sideb-bird-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:stretch;min-width:0;}
+body.reef-subpage .sideb-bird-gallery .sideb-photo-file__photo{min-width:0;aspect-ratio:3/4;}
+body.reef-subpage .sideb-bird-gallery .sideb-photo-file__empty{font-size:8px;gap:5px;padding:4px;}
+body.reef-subpage .sideb-bird-gallery .sideb-photo-file__empty span:first-child{font-size:26px;}
+body.reef-subpage .sideb-photo-file--birds{width:42%;right:4%;}
+@media(max-width:760px){body.reef-subpage .sideb-photo-file--birds{width:min(82%,420px);}}
+@media(max-width:430px){body.reef-subpage .sideb-photo-file--birds{width:89%;}}
