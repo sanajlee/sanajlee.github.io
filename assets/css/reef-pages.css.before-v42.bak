@@ -1,0 +1,576 @@
+/* Little Reef v25 — shared subpage UI. Scoped to body.reef-subpage. */
+body.reef-subpage {
+  --reef-ink:#163c75; --reef-line:#1d5689; --reef-cream:#fff9e9; --reef-sky:#78cce9;
+  color:var(--reef-ink); font:400 13px/1.85 'Silkscreen',monospace;
+  background:#54bfdf url('../img/reef-v8/ocean-background.png') center top / cover fixed no-repeat;
+}
+body.reef-subpage *{box-sizing:border-box}
+body.reef-subpage .hamster-site{min-height:100vh;display:flex;flex-direction:column}
+body.reef-subpage .site-main{flex:1;width:min(1120px,calc(100% - 36px));min-height:0;margin:0 auto}
+body.reef-subpage .site-header{border:0;padding:14px 0 8px}
+body.reef-subpage .site-header__inner,
+body.reef-subpage .site-footer__inner{
+ width:min(1190px,calc(100% - 36px));margin:0 auto;
+ background:var(--reef-cream);border:2px solid var(--reef-line);border-radius:3px;
+ outline:2px solid #c9f1f2;box-shadow:0 5px 0 #17477e,inset 0 0 0 3px #fff;
+ padding:12px 18px;min-height:54px;
+}
+body.reef-subpage .site-brand{font:400 15px 'Silkscreen',monospace;letter-spacing:.02em;color:var(--reef-ink)}
+body.reef-subpage .site-brand__hamster{display:none}
+body.reef-subpage .site-brand::before{content:"";flex:0 0 30px;width:30px;height:30px;background:url('../img/reef-v8/nudibranch.png') center / contain no-repeat;image-rendering:pixelated}
+body.reef-subpage .site-nav{font:400 11px 'Silkscreen',monospace;gap:clamp(8px,1.5vw,22px);margin-left:auto;flex-wrap:wrap}
+body.reef-subpage .site-nav a{color:#174a78;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+body.reef-subpage .site-nav a.is-active{color:#077ba5;background:#e3f5f6;box-shadow:0 2px 0 #77bdd1}
+body.reef-subpage .site-nav a::after{background:#4ab9d6}
+body.reef-subpage .page-shell.reef-content-window{
+ padding:0;margin:24px 0 36px;max-width:none;
+ border:3px solid #173f7c;border-radius:4px;background:var(--reef-cream);
+ box-shadow:0 0 0 2px #c6f6f6,0 7px 0 #19477c,inset 0 0 0 3px #fff;
+ overflow:hidden;
+}
+body.reef-subpage .page-heading.reef-os-title{
+ padding:10px 18px;min-height:50px;margin:0;
+ display:flex;justify-content:space-between;align-items:center;
+ background:linear-gradient(#b5ecf7 0%,#83d2eb 18%,#56afd5 85%,#70c3de 100%);
+ border:0;border-bottom:3px solid #235c91;box-shadow:inset 0 3px #e4fcfa,inset 0 -2px #a2e6ed;
+ color:#153e7a;font:400 16px 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-page-caption{display:inline-flex;align-items:center;gap:12px}
+body.reef-subpage .reef-page-icon{color:#196bac;font-size:17px}
+body.reef-subpage .reef-page-controls{display:flex;gap:4px}
+body.reef-subpage .reef-page-controls i{width:15px;height:15px;border:2px solid #17518b;background:#fffdec;box-shadow:1px 2px #255f93;position:relative}
+body.reef-subpage .reef-page-controls i:first-child::after{content:"";position:absolute;bottom:2px;left:2px;right:2px;border-bottom:2px solid #17518b}
+body.reef-subpage .reef-page-controls i:nth-child(2)::after{content:"";position:absolute;inset:2px;border:1px solid #17518b}
+body.reef-subpage .reef-page-controls i:last-child::after{content:'×';position:absolute;inset:-5px 0 0;text-align:center;font:15px monospace;color:#17518b}
+body.reef-subpage .reef-page-body{padding:32px clamp(18px,4vw,55px) 48px}
+body.reef-subpage .reef-page-kicker{font:400 10px 'Silkscreen',monospace;letter-spacing:.045em;color:#2d90a7;border-bottom:2px dashed #62c8da;padding-bottom:13px;margin-bottom:24px}
+body.reef-subpage .prose{max-width:100%;font:400 12px/1.95 'Silkscreen',monospace;overflow-wrap:anywhere}
+body.reef-subpage .prose p{line-height:1.95}
+body.reef-subpage .prose h1,body.reef-subpage .page-heading h1{display:none}
+body.reef-subpage .prose h2,body.reef-subpage .people-section h2,body.reef-subpage .teaching-section h2{
+ font:400 17px/1.5 'Silkscreen',monospace;letter-spacing:.015em;color:#154476;
+ margin:34px 0 20px;
+}
+body.reef-subpage .prose h2::after{width:74px;height:4px;background:#68c5df;margin-top:9px}
+body.reef-subpage .prose h3{font:400 13px/1.75 'Silkscreen',monospace;color:#155184}
+body.reef-subpage .prose a{color:#077da4;text-decoration-color:#57bad5;text-underline-offset:3px}
+body.reef-subpage .prose a:hover{color:#e27c9a}
+body.reef-subpage .prose .me{background-image:linear-gradient(transparent 80%,#f8c5d3 80%);font-weight:400}
+body.reef-subpage .about-page,body.reef-subpage .research-page,body.reef-subpage .publications-page,body.reef-subpage .teaching-page,body.reef-subpage .people-page{max-width:none}
+body.reef-subpage .about-lead,body.reef-subpage .research-lead,body.reef-subpage .teaching-lead{font-size:13px;line-height:1.95;max-width:95ch}
+body.reef-subpage .about-now{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 34px;padding:0;border:0}
+body.reef-subpage .about-now>div{background:#e5f6f1;border:2px solid #97c9d7;padding:16px;box-shadow:3px 3px #bfdeea;font-size:11px;line-height:1.9}
+body.reef-subpage .about-label{display:block;font:400 11px 'Silkscreen',monospace;color:#d46589;margin-bottom:8px;text-transform:uppercase}
+body.reef-subpage .about-ending{margin-top:30px;border-color:#92c9d3}
+body.reef-subpage .research-page h2{font:400 16px/1.6 'Silkscreen',monospace;margin-top:32px;color:#174b82}
+body.reef-subpage .research-page h3{font:400 13px 'Silkscreen',monospace}
+body.reef-subpage .research-page li{line-height:1.9;margin:12px 0}
+body.reef-subpage .research-page ul{border-left:3px solid #88cad6;padding-left:24px}
+body.reef-subpage .pub-year{margin:0 0 30px}
+body.reef-subpage .pub-year__heading{font:400 20px 'Silkscreen',monospace;color:#0e6498;border-bottom:3px solid #82c6d7;padding:12px 0;margin-bottom:6px}
+body.reef-subpage .pub{padding:16px 5px;border-bottom:1px dashed #9dcdd8}
+body.reef-subpage .pub__title{font:400 13px/1.7 'Silkscreen',monospace;color:#1a4679;margin:0 0 8px}
+body.reef-subpage .pub__title::after{display:none}
+body.reef-subpage .pub__authors,body.reef-subpage .pub__venue{font:400 11px/1.8 'Silkscreen',monospace;color:#426f85;margin:5px 0}
+body.reef-subpage .pub__links a{display:inline-block;font:400 11px 'Silkscreen',monospace;background:#e2f7f2;border:2px solid #75b6d2;padding:4px 9px;text-decoration:none;box-shadow:2px 2px #a1c9db}
+body.reef-subpage .course-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+body.reef-subpage .course{background:#e9f8f6;border:2px solid #a0d2dd;padding:18px;box-shadow:3px 3px #c7e5e8;margin:0}
+body.reef-subpage .course h3{font:400 13px/1.7 'Silkscreen',monospace}
+body.reef-subpage .course-term{font:400 10px 'Silkscreen',monospace;color:#b85e82}
+body.reef-subpage .course p{font:400 11px/1.8 'Silkscreen',monospace}
+body.reef-subpage .teaching-year{border-bottom:1px dashed #9dcdd8;padding:12px 0;gap:16px}
+body.reef-subpage .teaching-year__label{font:400 15px 'Silkscreen',monospace;color:#1b75a3}
+body.reef-subpage .people-list{border-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+body.reef-subpage .person{display:grid;grid-template-columns:85px minmax(0,1fr);gap:16px;align-items:start;border:2px solid #a8d7dc;background:#eaf8f6;padding:18px;margin:0;min-width:0;box-shadow:3px 3px #c7e5eb}
+body.reef-subpage .person__avatar{width:80px;height:80px;object-fit:cover;border-radius:0;border:3px solid #78b4ca;image-rendering:auto;background:#fff}
+body.reef-subpage .person__info h3{font:400 13px/1.6 'Silkscreen',monospace}
+body.reef-subpage .person__name-ko{display:inline-block;font:400 12px sans-serif;color:#657e8e}
+body.reef-subpage .person__role{font:400 11px 'Silkscreen',monospace;color:#cf6688}
+body.reef-subpage .person__interests,body.reef-subpage .person__work{font:400 11px/1.8 'Silkscreen',monospace}
+body.reef-subpage .site-footer{border:0;background:none;padding:8px 0 25px}
+body.reef-subpage .site-footer__inner{display:flex;justify-content:space-between;align-items:center;gap:9px;color:#285779;font:400 10px 'Silkscreen',monospace}
+body.reef-subpage .site-footer__sleep{display:none}
+body.reef-subpage .site-footer__inner::before{content:"";width:28px;height:28px;flex:none;background:url('../img/reef-v8/nudibranch.png') center / contain no-repeat;image-rendering:pixelated}
+body.reef-subpage .site-footer__dot{opacity:.6}
+@media(max-width:850px){
+ body.reef-subpage .about-now,body.reef-subpage .people-list,body.reef-subpage .course-list{grid-template-columns:1fr}
+ body.reef-subpage .site-header__inner{flex-wrap:wrap;gap:12px}
+ body.reef-subpage .site-nav{width:100%;justify-content:center}
+}
+@media(max-width:520px){
+ body.reef-subpage{background-attachment:scroll;background-size:auto 100vh}
+ body.reef-subpage .site-main{width:calc(100% - 20px)}
+ body.reef-subpage .site-header__inner,body.reef-subpage .site-footer__inner{width:calc(100% - 20px);padding:11px 12px}
+ body.reef-subpage .page-shell.reef-content-window{margin:18px 0 24px}
+ body.reef-subpage .page-heading.reef-os-title{font-size:13px;padding:9px 10px}
+ body.reef-subpage .reef-page-body{padding:22px 16px 30px}
+ body.reef-subpage .prose{font-size:11px}
+ body.reef-subpage .person{grid-template-columns:66px minmax(0,1fr);padding:12px;gap:10px}
+ body.reef-subpage .person__avatar{width:62px;height:62px}
+ body.reef-subpage .site-footer__dot{display:none}
+}
+
+
+/* v26 — readable retro terminal face for paragraphs and long descriptions.
+   Headings, navigation, buttons, labels, titles and bibliographic metadata stay Silkscreen. */
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .prose dd,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .about-now > div,
+body.reef-subpage .course p,
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work {
+  font-family: 'VT323', monospace !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.35 !important;
+  letter-spacing: .01em;
+}
+/* Restore the compact semantic labels nested in prose containers. */
+body.reef-subpage .about-now .about-label,
+body.reef-subpage .course .course-term,
+body.reef-subpage .person__role {
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+}
+@media (max-width: 520px) {
+  body.reef-subpage .prose p,
+  body.reef-subpage .prose li,
+  body.reef-subpage .prose blockquote,
+  body.reef-subpage .prose dd,
+  body.reef-subpage .about-lead,
+  body.reef-subpage .research-lead,
+  body.reef-subpage .teaching-lead,
+  body.reef-subpage .about-now > div,
+  body.reef-subpage .course p,
+  body.reef-subpage .person__interests,
+  body.reef-subpage .person__work {
+    font-size: 19px !important;
+  }
+}
+
+
+/* v27 — compact reading rhythm. Keep independent research directions distinct. */
+body.reef-subpage .reef-page-body { padding-top: 26px; padding-bottom: 34px; }
+body.reef-subpage .reef-page-kicker { margin-bottom: 18px; padding-bottom: 10px; }
+body.reef-subpage .prose { line-height: 1.55; }
+body.reef-subpage .prose p { margin-top: 0; margin-bottom: 12px; }
+body.reef-subpage .prose ul,
+body.reef-subpage .prose ol { margin-top: 8px; margin-bottom: 15px; }
+body.reef-subpage .prose li { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .prose li p { margin-bottom: 5px; }
+body.reef-subpage .prose h2,
+body.reef-subpage .people-section h2,
+body.reef-subpage .teaching-section h2 { margin-top: 26px; margin-bottom: 13px; }
+body.reef-subpage .prose h3 { margin-top: 18px; margin-bottom: 9px; line-height: 1.45; }
+body.reef-subpage .about-now { margin-top: 16px; margin-bottom: 22px; }
+body.reef-subpage .about-now > div { line-height: 1.3; padding: 13px; }
+body.reef-subpage .course { padding: 14px; }
+body.reef-subpage .course h3 { margin-top: 3px; margin-bottom: 7px; }
+body.reef-subpage .course p { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .teaching-year { padding-top: 8px; padding-bottom: 8px; }
+body.reef-subpage .person { padding: 14px; }
+body.reef-subpage .person__info h3 { margin: 0 0 6px; }
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work { margin-top: 5px; margin-bottom: 5px; }
+body.reef-subpage .pub { padding-top: 12px; padding-bottom: 12px; }
+body.reef-subpage .pub__title { margin-bottom: 5px; }
+body.reef-subpage .pub__authors,
+body.reef-subpage .pub__venue { margin-top: 3px; margin-bottom: 3px; }
+body.reef-subpage .pub-year { margin-bottom: 23px; }
+
+/* The three primary Research chapters should have breathing room ABOVE their headings,
+   but their paragraphs, subheadings, and citations should read as one tight unit. */
+body.reef-subpage .research-page > h2 {
+  margin-top: 48px;
+  margin-bottom: 15px;
+  padding-top: 9px;
+}
+body.reef-subpage .research-page > h2:first-of-type { margin-top: 24px; padding-top: 0; }
+body.reef-subpage .research-page > h2 + p { margin-top: 0; }
+body.reef-subpage .research-page > h3 { margin-top: 15px; margin-bottom: 7px; }
+body.reef-subpage .research-page > ul { margin-top: 5px; margin-bottom: 13px; }
+body.reef-subpage .research-page > ul li { line-height: 1.35; margin: 8px 0; }
+body.reef-subpage .research-page > ul li p { margin: 2px 0; }
+body.reef-subpage .research-lead { margin-bottom: 0; }
+@media(max-width:520px) {
+  body.reef-subpage .reef-page-body { padding-top: 20px; padding-bottom: 26px; }
+  body.reef-subpage .research-page > h2 { margin-top: 37px; }
+  body.reef-subpage .research-page > h2:first-of-type { margin-top: 19px; }
+}
+/* v28 — balanced reading measure and readable paragraphs */
+body.reef-subpage .prose {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .course p,
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: pretty;
+  letter-spacing: 0;
+  line-height: 1.43 !important;
+}
+/* Restrict reading measure, not whole layout or title widths. */
+body.reef-subpage .prose > p,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .research-page > p,
+body.reef-subpage .research-page > ul {
+  max-width: 82ch;
+}
+body.reef-subpage .prose p { margin: 0 0 14px; }
+body.reef-subpage .research-page > h2 + p { margin-bottom: 14px; }
+body.reef-subpage .prose li { padding: 0; margin: 5px 0 8px; }
+body.reef-subpage .prose li p { margin: 0 0 6px; }
+body.reef-subpage .about-now > div { line-height: 1.42 !important; }
+
+/* Papers — separator belongs to the NEXT paper, close to its top. */
+body.reef-subpage .pub-list { margin-top: 0; }
+body.reef-subpage .pub {
+  border-bottom: 0;
+  border-top: 1px solid #9dcdd8;
+  padding: 12px 5px 22px;
+  margin: 0;
+}
+body.reef-subpage .pub + .pub { margin-top: 14px; }
+body.reef-subpage .pub__title { margin-top: 0; margin-bottom: 6px; }
+body.reef-subpage .pub__authors,
+body.reef-subpage .pub__venue { margin: 2px 0 3px; }
+body.reef-subpage .pub__links { margin-top: 9px; }
+body.reef-subpage .pub-year__heading { margin-bottom: 9px; }
+
+/* Teaching — subtitles are labels, never VT323 prose. */
+body.reef-subpage .course .course-subtitle,
+body.reef-subpage .prose .course .course-subtitle {
+  font-family: 'Silkscreen', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0;
+  color: #236889;
+  margin: 4px 0 9px;
+}
+
+/* People — open editorial listing instead of boxed student cards. */
+body.reef-subpage .people-list {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 22px 40px;
+  border: 0;
+}
+body.reef-subpage .person {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 14px 2px 20px;
+  margin: 0;
+  border-bottom: 1px dashed #7bb8ca;
+  grid-template-columns: 76px minmax(0,1fr);
+  gap: 17px;
+  align-items: start;
+}
+body.reef-subpage .person__avatar {
+  width: 74px;
+  height: 74px;
+  border: 2px solid #6eacc2;
+  box-shadow: 3px 3px 0 #a5d6dc;
+  background: #f8fffa;
+}
+body.reef-subpage .person__info h3 { margin: 0 0 5px; }
+body.reef-subpage .person__role { display:block; margin: 0 0 7px; }
+body.reef-subpage .person__interests,
+body.reef-subpage .person__work { margin: 4px 0 0; max-width: 40ch; }
+@media (max-width: 850px) {
+  body.reef-subpage .people-list { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 520px) {
+  body.reef-subpage .prose > p,
+  body.reef-subpage .about-lead,
+  body.reef-subpage .research-lead,
+  body.reef-subpage .teaching-lead { max-width: 100%; }
+  body.reef-subpage .person { grid-template-columns: 60px minmax(0,1fr); gap: 12px; padding: 12px 0 18px; }
+  body.reef-subpage .person__avatar { width: 58px; height: 58px; }
+  body.reef-subpage .pub { padding: 12px 2px 19px; }
+  body.reef-subpage .pub + .pub { margin-top: 11px; }
+}
+
+
+/* v29 — readable paragraphs and consistent word wrapping.
+   Keep headings and the spacing between Research chapters unchanged. */
+body.reef-subpage .reef-page-body {
+  padding-top: clamp(20px,2.6vw,28px);
+}
+body.reef-subpage .prose p,
+body.reef-subpage .prose li,
+body.reef-subpage .prose blockquote,
+body.reef-subpage .research-page > p,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead {
+  white-space: normal;
+  word-break: normal !important;
+  overflow-wrap: break-word;
+  hyphens: none;
+  letter-spacing: 0;
+  line-height: 1.42 !important;
+  text-wrap: pretty;
+}
+/* A comfortable reading measure, including nested research sections. */
+body.reef-subpage .research-page p,
+body.reef-subpage .research-page > ul,
+body.reef-subpage .research-page li p,
+body.reef-subpage .about-page > p,
+body.reef-subpage .teaching-page > p,
+body.reef-subpage .people-page > p {
+  max-width: min(100%, 66ch);
+}
+body.reef-subpage .research-page > p.research-lead {
+  max-width: min(100%, 66ch);
+  margin: 0 0 22px;
+}
+body.reef-subpage .research-page > h2 {
+  /* preserve v27 chapter spacing; only paragraph measure changes */
+  clear: both;
+}
+body.reef-subpage .research-page > h2 + p { margin-top: 0; }
+/* Related-work entries can be a touch wider to preserve paper titles. */
+body.reef-subpage .research-page li p { max-width: min(100%, 75ch); }
+@media(max-width:680px) {
+  body.reef-subpage .research-page p,
+  body.reef-subpage .research-page li p,
+  body.reef-subpage .about-page > p,
+  body.reef-subpage .teaching-page > p,
+  body.reef-subpage .people-page > p { max-width:100%; }
+}
+
+/* v30 — slightly wider prose and unboxed People directory.
+   Keep research chapter spacing, typography, and data unchanged. */
+body.reef-subpage .prose > p,
+body.reef-subpage .prose > ul,
+body.reef-subpage .about-lead,
+body.reef-subpage .research-lead,
+body.reef-subpage .teaching-lead,
+body.reef-subpage .research-page p,
+body.reef-subpage .research-page > ul,
+body.reef-subpage .research-page li p,
+body.reef-subpage .about-page > p,
+body.reef-subpage .teaching-page > p,
+body.reef-subpage .people-page > p {
+  max-width: min(100%, 78ch);
+}
+body.reef-subpage .research-page > p.research-lead {
+  max-width: min(100%, 78ch);
+}
+/* Related work can use slightly more space than long-form prose. */
+body.reef-subpage .research-page li p {max-width:min(100%, 86ch);}
+
+/* Open profile list: no white/colored tiles, shadows, or card borders. */
+body.reef-subpage .people-page .people-list {
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  gap: 0;
+  margin: 4px 0 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+body.reef-subpage .people-page .people-list > .person {
+  display: grid;
+  grid-template-columns: 88px minmax(0,1fr);
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  padding: 18px 0 22px;
+  margin: 0;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-bottom: 1px dashed #95c5d1 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+body.reef-subpage .people-page .people-list > .person::before,
+body.reef-subpage .people-page .people-list > .person::after {content:none !important;}
+body.reef-subpage .people-page .person__avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid #78b4ca;
+  border-radius: 2px;
+  background: transparent;
+  box-shadow: 2px 2px 0 #a8d9df;
+}
+body.reef-subpage .people-page .person__info {min-width:0;}
+body.reef-subpage .people-page .person__info h3 {margin:0 0 7px;}
+body.reef-subpage .people-page .person__interests,
+body.reef-subpage .people-page .person__work {max-width:min(100%, 86ch);}
+@media(max-width:680px) {
+  body.reef-subpage .prose > p,
+  body.reef-subpage .prose > ul,
+  body.reef-subpage .research-page p,
+  body.reef-subpage .research-page li p,
+  body.reef-subpage .about-page > p,
+  body.reef-subpage .teaching-page > p,
+  body.reef-subpage .people-page > p {max-width:100%;}
+  body.reef-subpage .people-page .people-list > .person {
+    grid-template-columns: 62px minmax(0,1fr);
+    gap: 13px;
+    padding: 14px 0 18px;
+  }
+  body.reef-subpage .people-page .person__avatar {width:58px;height:58px;}
+}
+
+
+/* V31 — target the actual classes in people.md (.person-card, not .person).
+   Note: inline <style> from people.md is also removed in this patch. */
+body.reef-subpage .people-grid {
+  display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+  margin:5px 0 26px;max-width:none;
+}
+body.reef-subpage .people-grid > .person-card {
+  display:grid;grid-template-columns:96px minmax(0,1fr);
+  align-items:center;gap:20px;
+  padding:20px 0 23px;margin:0;
+  background:transparent;border:0;border-radius:0;
+  box-shadow:none;
+  border-bottom:1px dashed #9ac6d5;
+  color:#163c75;
+}
+body.reef-subpage .people-grid > .person-card:last-child {border-bottom:0;}
+body.reef-subpage .person-card .person-photo {
+  display:block;width:86px;height:86px;object-fit:cover;
+  border:0;border-radius:5px;box-shadow:none;background:transparent;
+}
+body.reef-subpage .person-card .person-text{min-width:0;}
+body.reef-subpage .person-card .person-name{
+  font:400 15px/1.5 'Silkscreen',monospace;
+  color:#174578;margin:0 0 8px;
+}
+body.reef-subpage .person-card .person-role{
+  font:400 11px/1.45 'Silkscreen',monospace;
+  color:#a85a7d;margin:0 0 7px;
+}
+body.reef-subpage .person-card .person-bio{
+  font:400 19px/1.35 'VT323',monospace;
+  color:#32536b;margin:0;
+  overflow-wrap:normal;word-break:normal;max-width:min(100%,95ch);
+}
+/* About Experience: distinguish the dates and positions without hard line-breaks. */
+body.reef-subpage .about-page .reef-experience-list {
+  display:grid;gap:15px;margin:16px 0 30px;
+  max-width:min(100%,1050px);
+}
+body.reef-subpage .about-page .reef-experience-item {
+  display:grid;grid-template-columns:142px minmax(0,1fr);
+  column-gap:22px;align-items:baseline;
+  border:0;padding:0;
+}
+body.reef-subpage .about-page .reef-experience-year {
+  font:400 13px/1.5 'Silkscreen',monospace;
+  color:#246b9e;white-space:nowrap;
+}
+body.reef-subpage .about-page .reef-experience-position {
+  font:400 20px/1.35 'VT323',monospace;
+  color:#1a4578;letter-spacing:0;
+  overflow-wrap:normal;word-break:normal;
+  max-width:none;
+}
+@media(max-width:680px) {
+ body.reef-subpage .people-grid > .person-card {grid-template-columns:70px minmax(0,1fr);gap:13px;padding:14px 0 17px;}
+ body.reef-subpage .person-card .person-photo {width:65px;height:65px;}
+ body.reef-subpage .person-card .person-name{font-size:12px;}
+ body.reef-subpage .person-card .person-bio{font-size:18px;}
+ body.reef-subpage .about-page .reef-experience-item {grid-template-columns:1fr;row-gap:3px;}
+ body.reef-subpage .about-page .reef-experience-position {font-size:19px;}
+}
+
+
+/* v33: the same shared footer markup and visual styling as the main page. */
+body.reef-subpage .site-footer {
+  background:none !important;
+  border:0 !important;
+  margin:2px 0 22px;
+  padding:0 !important;
+}
+body.reef-subpage .reef-footbar {
+  width:min(1240px,calc(100% - 42px));
+  margin:0 auto;
+  padding:10px 18px;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  background:#fffaf0;
+  border:2px solid #204f80;
+  border-radius:3px;
+  box-shadow:0 0 0 2px #b7ebf2,0 5px 0 #1d5686,inset 0 0 0 2px #fff;
+  color:#153c78;
+  font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__identity {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  color:#153c78;
+}
+body.reef-subpage .reef-footbar__nudibranch {
+  display:block;
+  width:32px !important;
+  height:32px !important;
+  max-width:32px;
+  flex:0 0 32px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+body.reef-subpage .reef-footbar__status {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#24577e;
+  font:400 10px/1.35 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__dot {
+  display:inline-block;
+  flex:0 0 8px;
+  width:8px;
+  height:8px;
+  background:#4bc5ab;
+  border:1px solid #327f88;
+  box-shadow:1px 1px 0 #9fded0;
+}
+@media (max-width:680px) {
+  body.reef-subpage .reef-footbar {
+    width:calc(100% - 16px);
+    padding:9px 12px;
+    gap:7px 12px;
+    font-size:10px;
+  }
+  body.reef-subpage .reef-footbar__nudibranch {
+    width:26px !important;
+    height:26px !important;
+    max-width:26px;
+    flex-basis:26px;
+  }
+  body.reef-subpage .reef-footbar__status {font-size:9px;}
+}

@@ -1,0 +1,19 @@
+/* Little Reef v39 — additive, isolated page design and Korean typography. */
+/* Keep English pixel text as-is; use Mona for Korean-labelled content. */
+:lang(ko), .ko-text {font-family: "Mona", "Mona Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;}
+body.reef-subpage .nonacademic-page{max-width:960px;margin:0 auto;}
+body.reef-subpage .nonacademic-lead{font-size:inherit;max-width:66ch;margin:0 0 30px;}
+body.reef-subpage .offduty-index{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 36px;}
+body.reef-subpage .offduty-index a{font:400 11px/1.5 'Silkscreen',monospace;display:inline-block;padding:9px 13px;border:2px solid #18538b;background:#e8faf9;box-shadow:3px 3px 0 #77c7d7;color:#174475;text-decoration:none;}
+body.reef-subpage .offduty-index a:hover{background:#f5cdda;transform:translateY(-1px);}
+body.reef-subpage .offduty-section{margin:32px 0 36px;scroll-margin-top:20px;}
+body.reef-subpage .offduty-heading{display:flex;align-items:center;gap:12px;padding:12px 15px;border:2px solid #15477d;background:#9cdbec;box-shadow:3px 3px 0 #b3eff1;font:400 clamp(12px,1.6vw,16px)/1.5 'Silkscreen',monospace;color:#164678;}
+body.reef-subpage .offduty-icon{min-width:31px;text-align:center;color:#d64c84;font-size:24px;}
+body.reef-subpage .offduty-panel{padding:21px 25px 25px;border:2px solid #1d5689;border-top:0;background:#fffdf1;box-shadow:3px 3px 0 #b3eff1;}
+body.reef-subpage .offduty-panel p{max-width:67ch;margin:0 0 15px;}
+body.reef-subpage .offduty-note{display:block;margin-top:18px;padding-top:12px;border-top:2px dashed #add6d7;font:400 10px/1.7 'Silkscreen',monospace;color:#277f9b;}
+body.reef-subpage .offduty-ending{text-align:center;margin:35px 0 0;font:400 11px/1.8 'Silkscreen',monospace;color:#326f98;}
+/* Six navigation items must remain usable on narrower screens. */
+body.reef-v5 .site-nav,body.reef-subpage .site-nav{display:flex;flex-wrap:wrap;gap:clamp(7px,1vw,16px);}
+body.reef-v5 .site-nav a,body.reef-subpage .site-nav a{white-space:nowrap;}
+@media(max-width:680px){body.reef-subpage .offduty-panel{padding:16px;}body.reef-subpage .offduty-heading{font-size:12px;}body.reef-subpage .offduty-index a{font-size:10px;}}

@@ -574,3 +574,88 @@ body.reef-subpage .reef-footbar__dot {
   }
   body.reef-subpage .reef-footbar__status {font-size:9px;}
 }
+
+/* v40 Research-only: separate OS-style windows, without changing other tabs. */
+body.reef-subpage .reef-research-windows{
+  display:grid; gap:24px; padding:24px 0 36px;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow{
+  min-width:0; margin:0;
+  background:#fff9e9; border:3px solid #173f7c; border-radius:4px;
+  box-shadow:0 0 0 2px #c6f6f6,0 7px 0 #19477c,inset 0 0 0 3px #fff;
+  overflow:hidden;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__bar{
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  min-height:48px; padding:10px 17px;
+  background:linear-gradient(#b5ecf7 0%,#83d2eb 18%,#56afd5 85%,#70c3de 100%);
+  border-bottom:3px solid #235c91;
+  box-shadow:inset 0 3px #e4fcfa,inset 0 -2px #a2e6ed;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__bar h2{
+  font:400 15px/1.35 'Silkscreen',monospace; letter-spacing:0;
+  margin:0; padding:0; color:#153e7a; border:0;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__bar h2::after{display:none}
+body.reef-subpage .reef-research-windows .reef-rwindow__bar > span{
+  color:#17518b; white-space:nowrap; font:400 17px/1 monospace;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__body{
+  padding:25px clamp(20px,4vw,45px) 27px;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__lead,
+body.reef-subpage .reef-research-windows .reef-rwindow__hint,
+body.reef-subpage .reef-research-windows .reef-rwindow__body p{
+  max-width:77ch; margin:0; color:#295576;
+  font:400 21px/1.35 'VT323',monospace; letter-spacing:0;
+  overflow-wrap:break-word;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__lead{font-size:23px;margin-bottom:21px;color:#17467a}
+body.reef-subpage .reef-research-windows .reef-rwindow__hint{margin-bottom:19px;color:#527b8d}
+body.reef-subpage .reef-research-windows .reef-rtopics{display:grid;gap:0}
+body.reef-subpage .reef-research-windows .reef-rtopic{
+  display:grid;grid-template-columns:46px minmax(0,1fr);gap:12px;
+  padding:16px 0 18px;border-top:1px dashed #9ec8d5;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic__number{
+  font:400 17px/1.6 'Silkscreen',monospace;color:#d46d95;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic h3,
+body.reef-subpage .reef-research-windows .reef-rproject h3{
+  margin:0 0 6px;font:400 14px/1.55 'Silkscreen',monospace;
+  color:#174578;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic a,
+body.reef-subpage .reef-research-windows .reef-rwindow__more{
+  display:inline-block;margin-top:9px;color:#057fa4;
+  font:400 11px/1.6 'Silkscreen',monospace;
+  text-decoration:underline;text-decoration-color:#70bdcb;text-underline-offset:3px;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__more{margin-top:18px}
+body.reef-subpage .reef-research-windows .reef-rprojects{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;
+}
+body.reef-subpage .reef-research-windows .reef-rproject{
+  padding:15px 14px 17px; background:#eaf8f6;
+  border:2px solid #9acbd6;box-shadow:3px 3px 0 #c2e5e8;
+  min-width:0;
+}
+body.reef-subpage .reef-research-windows .reef-rproject__tag{
+  display:inline-block;margin-bottom:13px;color:#a54e7a;
+  font:400 10px/1.5 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-research-windows .reef-rproject h3{font-size:12px;margin-bottom:8px}
+body.reef-subpage .reef-research-windows .reef-rproject p{font-size:19px}
+body.reef-subpage .reef-research-windows .reef-rwindow__body--compact{padding-top:21px;padding-bottom:24px}
+body.reef-subpage .reef-research-windows .reef-rwindow__body--compact strong{font-weight:700;color:#164c7b}
+@media(max-width:800px){
+  body.reef-subpage .reef-research-windows .reef-rprojects{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  body.reef-subpage .reef-research-windows{padding-top:18px;gap:19px}
+  body.reef-subpage .reef-research-windows .reef-rwindow__bar{padding:9px 11px}
+  body.reef-subpage .reef-research-windows .reef-rwindow__bar h2{font-size:12px}
+  body.reef-subpage .reef-research-windows .reef-rwindow__body{padding:20px 17px 23px}
+  body.reef-subpage .reef-research-windows .reef-rtopic{grid-template-columns:35px minmax(0,1fr);gap:7px}
+  body.reef-subpage .reef-research-windows .reef-rtopic h3{font-size:12px}
+}
