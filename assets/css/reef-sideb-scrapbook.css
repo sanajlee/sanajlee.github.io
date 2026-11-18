@@ -61,3 +61,22 @@ body.reef-subpage .sideb-bird-gallery .sideb-photo-file__empty span:first-child{
 body.reef-subpage .sideb-photo-file--birds{width:42%;right:4%;}
 @media(max-width:760px){body.reef-subpage .sideb-photo-file--birds{width:min(82%,420px);}}
 @media(max-width:430px){body.reef-subpage .sideb-photo-file--birds{width:89%;}}
+
+/* v44 SIDE B: rebalance photo sizes without changing photo sources or markup.
+   Smaller band, larger Cardputer window, taller desktop so nothing is clipped. */
+@media (min-width: 761px) {
+  body.reef-subpage .sideb-desktop-space {
+    height: 940px !important;
+  }
+  body.reef-subpage .sideb-photo-file--band {
+    width: 40% !important;
+    left: 7% !important;
+    top: 48px !important;
+  }
+  body.reef-subpage .sideb-photo-file--retro {
+    width: 56% !important;
+    left: 14% !important;
+    top: 535px !important;
+  }
+}
+/* The mobile layout keeps its original staggered vertical flow. */
