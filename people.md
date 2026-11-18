@@ -16,7 +16,7 @@ published: true
     <img class="person-photo" src="uploads/hachiware.png" alt="손욱염">
     
     <div class="person-text">
-      <div class="person-name">손욱염 Sun, Xuran</div>
+      <div class="person-name"><span lang="ko">손욱염</span> Sun, Xuran</div>
       <div class="person-role">M.A. Student</div>
 
       <div class="person-bio">
@@ -34,7 +34,7 @@ published: true
     <img class="person-photo" src="uploads/kitty.png" alt="강민지">
     
     <div class="person-text">
-      <div class="person-name">강민지 Kang, Minji</div>
+      <div class="person-name"><span lang="ko">강민지</span> Kang, Minji</div>
       <div class="person-role">Former M.A. Student</div>
 
       <div class="person-bio">

@@ -1,0 +1,55 @@
+/* Little Reef v48 — precise typography repair. */
+/* Keep English About prose in the original, readable VT323.
+   Korean glyphs fall through to Mona12, not Silkscreen. */
+body.reef-subpage .about-page p,
+body.reef-subpage .about-page .about-lead,
+body.reef-subpage .about-page li,
+body.reef-subpage .about-page .about-now > div,
+body.reef-subpage .about-page .reef-experience-position,
+body.reef-subpage .about-page .education-item .detail {
+  font-family: 'VT323', 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', monospace !important;
+}
+/* Keep the original pixel-font titles, dates and labels. */
+body.reef-subpage .about-page :is(h2,h3,h4),
+body.reef-subpage .about-page .about-label,
+body.reef-subpage .about-page .reef-experience-year,
+body.reef-subpage .about-page .education-item :is(.year,.degree) {
+  font-family: 'Silkscreen', 'Mona12', 'Apple SD Gothic Neo', monospace !important;
+}
+/* Explicitly marked Korean should never inherit the neighboring English font. */
+body.reef-subpage .about-page [lang="ko"],
+body.reef-subpage .people-page [lang="ko"],
+body.reef-subpage .person-name [lang="ko"],
+body.reef-subpage .person__name-ko,
+body.reef-subpage .people-page .ko-text {
+  font-family: 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-weight: 400;
+}
+/* Mixed-language People names: leave the English portion in Silkscreen. */
+body.reef-subpage .people-page .person-name,
+body.reef-subpage .people-page .person__info h3 {
+  font-family: 'Silkscreen', 'Mona12', 'Apple SD Gothic Neo', monospace !important;
+}
+/* Research: force paper links onto their own line, with reliable whitespace. */
+body.reef-subpage .reef-research-windows .reef-rtopic > div > p {
+  display: block !important;
+  width: 100%;
+  margin: 10px 0 0 !important;
+  line-height: 1.4 !important;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic > div > a {
+  display: block !important;
+  align-self: flex-start;
+  clear: both;
+  margin: 17px 0 0 !important;
+  line-height: 1.65 !important;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic {
+  padding-bottom: 25px !important;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic + .reef-rtopic {
+  padding-top: 25px !important;
+}
+body.reef-subpage .reef-research-windows .reef-rtopic:last-child {
+  padding-bottom: 0 !important;
+}
