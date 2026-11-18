@@ -1,6 +1,6 @@
 /* Little Reef v39 — additive, isolated page design and Korean typography. */
 /* Keep English pixel text as-is; use Mona for Korean-labelled content. */
-:lang(ko), .ko-text {font-family: "Mona", "Mona Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;}
+:lang(ko), .ko-text {font-family: "Mona12", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;}
 body.reef-subpage .nonacademic-page{max-width:960px;margin:0 auto;}
 body.reef-subpage .nonacademic-lead{font-size:inherit;max-width:66ch;margin:0 0 30px;}
 body.reef-subpage .offduty-index{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 36px;}
@@ -17,3 +17,10 @@ body.reef-subpage .offduty-ending{text-align:center;margin:35px 0 0;font:400 11p
 body.reef-v5 .site-nav,body.reef-subpage .site-nav{display:flex;flex-wrap:wrap;gap:clamp(7px,1vw,16px);}
 body.reef-v5 .site-nav a,body.reef-subpage .site-nav a{white-space:nowrap;}
 @media(max-width:680px){body.reef-subpage .offduty-panel{padding:16px;}body.reef-subpage .offduty-heading{font-size:12px;}body.reef-subpage .offduty-index a{font-size:10px;}}
+
+/* v45: use the actual font-family defined by Mona's official mona.css. */
+/* The imported webfont is Mona12, not Mona or Mona Sans. */
+:lang(ko), [lang="ko"], .ko-text {
+  font-family: 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+  font-synthesis: none;
+}

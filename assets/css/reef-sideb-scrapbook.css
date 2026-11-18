@@ -21,7 +21,7 @@ body.reef-subpage .sideb-photo-file__empty {position:absolute;inset:0;display:fl
 body.reef-subpage .sideb-photo-file__empty span:first-child {font:400 44px/1 'Silkscreen',monospace;opacity:.75;}
 body.reef-subpage .sideb-photo-file__caption {display:flex;flex-direction:column;gap:3px;padding:8px 4px 3px;color:#174a7d;font:400 10px/1.55 'Silkscreen',monospace;overflow-wrap:anywhere;}
 body.reef-subpage .sideb-photo-file__caption strong {font:inherit;font-weight:400;font-size:12px;}
-body.reef-subpage .sideb-photo-file__caption [lang=ko] {font-family:'Mona','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;}
+body.reef-subpage .sideb-photo-file__caption [lang=ko] {font-family:'Mona12','Apple SD Gothic Neo','Malgun Gothic',sans-serif!important;}
 /* Three windows are deliberately offset rather than placed in a three-column grid. */
 body.reef-subpage .sideb-photo-file--band {--tilt:-2deg;left:6%;top:35px;width:49%;}
 body.reef-subpage .sideb-photo-file--birds {--tilt:2.3deg;right:5%;top:164px;width:38%;z-index:2;}
@@ -80,3 +80,13 @@ body.reef-subpage .sideb-photo-file--birds{width:42%;right:4%;}
   }
 }
 /* The mobile layout keeps its original staggered vertical flow. */
+
+/* v45 — Korean captions: preserve the Silkscreen English label,
+   render Hangul with Mona12 (font name as registered by mona.css). */
+body.reef-subpage .sideb-photo-file__caption [lang="ko"],
+body.reef-subpage .sideb-photo-file__caption .ko-text {
+  font-family:'Mona12','Apple SD Gothic Neo','Malgun Gothic',sans-serif !important;
+  font-size:12px;
+  line-height:1.5;
+  letter-spacing:0;
+}
