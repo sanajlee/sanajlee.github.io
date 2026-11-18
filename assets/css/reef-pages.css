@@ -219,72 +219,183 @@ body.reef-subpage .reef-research-windows .reef-rproject{display:flex;flex-direct
 body.reef-subpage .reef-research-windows .reef-rproject__tag{margin:0 0 12px;}
 body.reef-subpage .reef-research-windows .reef-rwindow__body--compact p{margin:0;}
 
-/* People Korean names previously had `font: 400 12px sans-serif`. */
-body.reef-subpage .people-page .person__name-ko,
-body.reef-subpage .people-page [lang="ko"],
-body.reef-subpage .about-page [lang="ko"],
-body.reef-subpage .people-page .ko-text,
-body.reef-subpage .about-page .ko-text {
-  font-family: 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
+/* Restored from the site's own pre-v42 backup: v31 People rows + About experience. */
+/* V31 — target the actual classes in people.md (.person-card, not .person).
+   Note: inline <style> from people.md is also removed in this patch. */
+body.reef-subpage .people-grid {
+  display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+  margin:5px 0 26px;max-width:none;
+}
+body.reef-subpage .people-grid > .person-card {
+  display:grid;grid-template-columns:96px minmax(0,1fr);
+  align-items:center;gap:20px;
+  padding:20px 0 23px;margin:0;
+  background:transparent;border:0;border-radius:0;
+  box-shadow:none;
+  border-bottom:1px dashed #9ac6d5;
+  color:#163c75;
+}
+body.reef-subpage .people-grid > .person-card:last-child {border-bottom:0;}
+body.reef-subpage .person-card .person-photo {
+  display:block;width:86px;height:86px;object-fit:cover;
+  border:0;border-radius:5px;box-shadow:none;background:transparent;
+}
+body.reef-subpage .person-card .person-text{min-width:0;}
+body.reef-subpage .person-card .person-name{
+  font:400 15px/1.5 'Silkscreen',monospace;
+  color:#174578;margin:0 0 8px;
+}
+body.reef-subpage .person-card .person-role{
+  font:400 11px/1.45 'Silkscreen',monospace;
+  color:#a85a7d;margin:0 0 7px;
+}
+body.reef-subpage .person-card .person-bio{
+  font:400 19px/1.35 'VT323',monospace;
+  color:#32536b;margin:0;
+  overflow-wrap:normal;word-break:normal;max-width:min(100%,95ch);
+}
+/* About Experience: distinguish the dates and positions without hard line-breaks. */
+body.reef-subpage .about-page .reef-experience-list {
+  display:grid;gap:15px;margin:16px 0 30px;
+  max-width:min(100%,1050px);
+}
+body.reef-subpage .about-page .reef-experience-item {
+  display:grid;grid-template-columns:142px minmax(0,1fr);
+  column-gap:22px;align-items:baseline;
+  border:0;padding:0;
+}
+body.reef-subpage .about-page .reef-experience-year {
+  font:400 13px/1.5 'Silkscreen',monospace;
+  color:#246b9e;white-space:nowrap;
+}
+body.reef-subpage .about-page .reef-experience-position {
+  font:400 20px/1.35 'VT323',monospace;
+  color:#1a4578;letter-spacing:0;
+  overflow-wrap:normal;word-break:normal;
+  max-width:none;
+}
+@media(max-width:680px) {
+ body.reef-subpage .people-grid > .person-card {grid-template-columns:70px minmax(0,1fr);gap:13px;padding:14px 0 17px;}
+ body.reef-subpage .person-card .person-photo {width:65px;height:65px;}
+ body.reef-subpage .person-card .person-name{font-size:12px;}
+ body.reef-subpage .person-card .person-bio{font-size:18px;}
+ body.reef-subpage .about-page .reef-experience-item {grid-template-columns:1fr;row-gap:3px;}
+ body.reef-subpage .about-page .reef-experience-position {font-size:19px;}
 }
 
-/* Little Reef v48 — precise typography repair. */
-/* Keep English About prose in the original, readable VT323.
-   Korean glyphs fall through to Mona12, not Silkscreen. */
-body.reef-subpage .about-page p,
+/* Restored from the site's own pre-v42 backup: unified footer. */
+/* v33: the same shared footer markup and visual styling as the main page. */
+body.reef-subpage .site-footer {
+  background:none !important;
+  border:0 !important;
+  margin:2px 0 22px;
+  padding:0 !important;
+}
+body.reef-subpage .reef-footbar {
+  width:min(1240px,calc(100% - 42px));
+  margin:0 auto;
+  padding:10px 18px;
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  background:#fffaf0;
+  border:2px solid #204f80;
+  border-radius:3px;
+  box-shadow:0 0 0 2px #b7ebf2,0 5px 0 #1d5686,inset 0 0 0 2px #fff;
+  color:#153c78;
+  font:400 11px/1.4 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__identity {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  color:#153c78;
+}
+body.reef-subpage .reef-footbar__nudibranch {
+  display:block;
+  width:32px !important;
+  height:32px !important;
+  max-width:32px;
+  flex:0 0 32px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+body.reef-subpage .reef-footbar__status {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#24577e;
+  font:400 10px/1.35 'Silkscreen',monospace;
+}
+body.reef-subpage .reef-footbar__dot {
+  display:inline-block;
+  flex:0 0 8px;
+  width:8px;
+  height:8px;
+  background:#4bc5ab;
+  border:1px solid #327f88;
+  box-shadow:1px 1px 0 #9fded0;
+}
+@media (max-width:680px) {
+  body.reef-subpage .reef-footbar {
+    width:calc(100% - 16px);
+    padding:9px 12px;
+    gap:7px 12px;
+    font-size:10px;
+  }
+  body.reef-subpage .reef-footbar__nudibranch {
+    width:26px !important;
+    height:26px !important;
+    max-width:26px;
+    flex-basis:26px;
+  }
+  body.reef-subpage .reef-footbar__status {font-size:9px;}
+}
+
+/* v51 — stable typography, scoped to actual elements. */
+/* About paragraph text is VT323, while headings, dates, labels and degree titles
+   retain the earlier Silkscreen rules. */
+body.reef-subpage .about-page > p,
 body.reef-subpage .about-page .about-lead,
-body.reef-subpage .about-page li,
 body.reef-subpage .about-page .about-now > div,
 body.reef-subpage .about-page .reef-experience-position,
 body.reef-subpage .about-page .education-item .detail {
-  font-family: 'VT323', 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', monospace !important;
+  font-family:'VT323','Mona12',monospace;
 }
-/* Keep the original pixel-font titles, dates and labels. */
 body.reef-subpage .about-page :is(h2,h3,h4),
 body.reef-subpage .about-page .about-label,
 body.reef-subpage .about-page .reef-experience-year,
 body.reef-subpage .about-page .education-item :is(.year,.degree) {
-  font-family: 'Silkscreen', 'Mona12', 'Apple SD Gothic Neo', monospace !important;
+  font-family:'Silkscreen',monospace;
 }
-/* Explicitly marked Korean should never inherit the neighboring English font. */
+/* Korean in an otherwise English sentence/name needs its own span. */
 body.reef-subpage .about-page [lang="ko"],
-body.reef-subpage .people-page [lang="ko"],
-body.reef-subpage .person-name [lang="ko"],
-body.reef-subpage .person__name-ko,
-body.reef-subpage .people-page .ko-text {
-  font-family: 'Mona12', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif !important;
-  font-weight: 400;
+body.reef-subpage .person-card .person-name [lang="ko"] {
+  font-family:'Mona12','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  font-weight:400;
+  letter-spacing:0;
 }
-/* Mixed-language People names: leave the English portion in Silkscreen. */
-body.reef-subpage .people-page .person-name,
-body.reef-subpage .people-page .person__info h3 {
-  font-family: 'Silkscreen', 'Mona12', 'Apple SD Gothic Neo', monospace !important;
+/* Keep People English names and the existing pixel UI. */
+body.reef-subpage .person-card .person-name {
+  font-family:'Silkscreen',monospace;
 }
-/* Research: force paper links onto their own line, with reliable whitespace. */
+/* Research interests: no ad-hoc <br> between lead and first row. */
+body.reef-subpage .reef-research-windows .reef-rwindow__lead {
+  margin:0 0 38px;
+}
+body.reef-subpage .reef-research-windows .reef-rwindow__hint {
+  margin:0 0 25px;
+}
 body.reef-subpage .reef-research-windows .reef-rtopic > div > p {
-  display: block !important;
-  width: 100%;
-  margin: 10px 0 0 !important;
-  line-height: 1.4 !important;
+  margin:12px 0 0;
+  line-height:1.4;
 }
 body.reef-subpage .reef-research-windows .reef-rtopic > div > a {
-  display: block !important;
-  align-self: flex-start;
-  clear: both;
-  margin: 17px 0 0 !important;
-  line-height: 1.65 !important;
-}
-body.reef-subpage .reef-research-windows .reef-rtopic {
-  padding-bottom: 25px !important;
-}
-body.reef-subpage .reef-research-windows .reef-rtopic + .reef-rtopic {
-  padding-top: 25px !important;
-}
-body.reef-subpage .reef-research-windows .reef-rtopic:last-child {
-  padding-bottom: 0 !important;
-}
-/* Little Reef v49 — breathing room below the Research Interests introduction.
-   Paste at the VERY END of assets/css/reef-pages.css (after v48 rules). */
-body.reef-subpage .reef-research-windows .reef-rwindow__lead + .reef-rtopics {
-  margin-top: 38px !important;
+  display:block;
+  margin:17px 0 0;
+  line-height:1.65;
 }

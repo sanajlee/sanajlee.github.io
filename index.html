@@ -325,7 +325,16 @@ document.addEventListener("DOMContentLoaded", async function () {
    * stamp_id -> image URL map을 만듦.
    */
 
-  const stampImages = {};
+  // Read-only legacy IDs: preserve past visitors without adding picker buttons.
+  const legacyStampImages = {
+    avis: {{ '/assets/stamps/avis.png' | relative_url | jsonify }},
+    coffee: {{ '/assets/stamps/coffee.png' | relative_url | jsonify }},
+    guitar: {{ '/assets/stamps/guitar.png' | relative_url | jsonify }},
+    star: {{ '/assets/stamps/star.png' | relative_url | jsonify }},
+    vvv: {{ '/assets/stamps/vvv.png' | relative_url | jsonify }},
+    yay: {{ '/assets/stamps/yay.png' | relative_url | jsonify }}
+  };
+  const stampImages = Object.assign({}, legacyStampImages);
 
   picker
     .querySelectorAll(".stamp-choice")
