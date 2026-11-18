@@ -8,7 +8,7 @@ published: true
 <div class="about-page" markdown="1">
 
 <p class="about-lead">
-I'm <strong>Sangah Lee</strong>, an associate professor of linguistics at Seoul National University.
+I'm <strong>Sangah Lee</strong>이상아, an associate professor of linguistics at Seoul National University.
 I study language model behavior, with a particular interest in how linguistic knowledge is
 represented internally and how those representations shape model behavior.
 </p>
