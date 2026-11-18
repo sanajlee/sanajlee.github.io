@@ -11,6 +11,7 @@ research_windows: true
     <header class="reef-rwindow__bar"><h2 id="research-topics">✦ RESEARCH INTERESTS</h2><span aria-hidden="true">▁ ▣ ×</span></header>
     <div class="reef-rwindow__body">
       <p class="reef-rwindow__lead">I study how language models represent linguistic knowledge internally — and how those representations shape their behavior.</p>
+      <br>
       <div class="reef-rtopics">
         <article class="reef-rtopic">
           <span class="reef-rtopic__number">01</span>
@@ -33,6 +34,7 @@ research_windows: true
     <header class="reef-rwindow__bar"><h2 id="research-projects">▣ CURRENT PROJECTS</h2><span aria-hidden="true">▁ ▣ ×</span></header>
     <div class="reef-rwindow__body">
       <p class="reef-rwindow__hint">Questions I'm currently exploring.</p>
+      <br>
       <div class="reef-rprojects">
         <article class="reef-rproject">
           <span class="reef-rproject__tag">MULTILINGUAL LLMS</span>
