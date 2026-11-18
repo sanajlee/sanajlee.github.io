@@ -73,19 +73,3 @@ Seoul, Korea
   <div class="degree">B.A. in Linguistics & B.Eng. in Computer Science and Engineering, Seoul National University</div>
 </div>
 
-
-<div class="about-ending">
-  <p class="about-off-duty">
-    Mostly language models.
-  </p>
-  <br>
-  <p class="about-off-duty">
-    Sometimes amplifiers.
-  </p>
-
-  <img
-    class="about-hamster"
-    src="{{ '/assets/img/hamtele.PNG' | relative_url }}"
-    alt="A pink hamster playing a blue Telecaster"
-  >
-</div>
